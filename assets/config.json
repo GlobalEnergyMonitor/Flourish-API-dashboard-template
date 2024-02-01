@@ -1,3 +1,5 @@
 {
-    "flourish-ids": ["15821879", "16566530", "16487492", "16535555"]
+    "flourish_ids": ["15821879", "16659638", "16659864"],
+    "input_type": "dropdown",
+    "input_key": "Country"
 }

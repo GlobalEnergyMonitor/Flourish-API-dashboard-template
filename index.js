@@ -1,6 +1,6 @@
 console.log('hello 12345');
 // https://docs.google.com/spreadsheets/d/e/2PACX-1vST2HEnH9gSQbpcsqJBMWOJZ6vuBtvl4n-PwpxJldD4GzyI_uRZ6hXcYOhkWRo_ZJmA32OfVNUJs99a/pub?gid=0&single=true&output=csv
-
+const temp = '16566530';
 const config = {};
 getData();
 
@@ -22,7 +22,10 @@ async function getData() {
             })
             console.log('config', config)
         })
-        .then(() => implementDropdown())
+        .then(() => {
+            if (config.dashboard.input_type === 'dropdown') implementDropdown();
+            // add another to implement buttons
+        })
         .then(() => renderVisualisation());
 }
 
@@ -31,7 +34,7 @@ function implementDropdown() {
     label.text = config.text.dropdown_label;
     const dropdownEl = document.createElement('select');
     dropdownEl.id = "country-selection";
-    const dropdownData = config.text.dropdown.map(entry => entry.Country);
+    const dropdownData = config.text.dropdown.map(entry => entry[config.dashboard.input_key]);
     dropdownData.forEach(input => {
         const opt = document.createElement('option');
         opt.value = formatName(input);
@@ -47,9 +50,8 @@ function implementDropdown() {
 }
 
 function renderVisualisation() {
-    const temp = ["16535555"];
-    const graphs = config.dashboard['flourish-ids'];
-    temp.forEach(id => {
+    const graphs = config.dashboard.flourish_ids;
+    [temp].forEach(id => {
         const container = document.createElement('div');
         container.id = `chart-${id}`;
         document.querySelector('.flourish-container').appendChild(container);
@@ -81,18 +83,12 @@ function implentGraph(id) {
         console.log((JSON.stringify(filteredData)));
 
         new Flourish.Live({
-                container: `#chart-16535555`,
+                container: `#chart-${temp}`,
                 api_key: config.gem.key,
-                base_visualisation_id: "16535555",
+                base_visualisation_id: temp,
                 data: {
                     data: filteredData
                 }
-            // bindings: {
-            //     data: {
-            //         label: 'Year',
-            //         value: ['Country', 'Year', 'Net change', 'Added', 'Retired', 'description']
-            //     }
-            // },
         });
 }
 
