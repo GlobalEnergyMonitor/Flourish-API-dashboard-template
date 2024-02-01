@@ -1,0 +1,20 @@
+{
+  "name": "flourish-api-test",
+  "version": "1.0.0",
+  "description": "testing ground for flourish api dashbaord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flourish",
+    "flourish",
+    "api",
+    "dashboard"
+  ],
+  "author": "rushlet",
+  "license": "ISC",
+  "dependencies": {
+    "require": "^2.4.20"
+  }
+}
