@@ -1,10 +1,10 @@
 console.log('hello 12345');
 // https://docs.google.com/spreadsheets/d/e/2PACX-1vST2HEnH9gSQbpcsqJBMWOJZ6vuBtvl4n-PwpxJldD4GzyI_uRZ6hXcYOhkWRo_ZJmA32OfVNUJs99a/pub?gid=0&single=true&output=csv
-const temp = '16566530';
+const temp = '16659638';
 const config = {};
 getData();
 
-
+// TO DO: read data from google sheets if poss, currently would need to download data for each vis and convert -> feels like could get unweildy and have performance issues
 
 async function getData() {
     const urls = ["./config.json", "./assets/config.json", "./assets/text.json", "./assets/data_cumulative.json"];
@@ -31,9 +31,10 @@ async function getData() {
 
 function implementDropdown() {
     const label = document.createElement('label');
-    label.text = config.text.dropdown_label;
+    label.innerText = config.text.dropdown_label;
+    label.for = "dropdown-selection"
     const dropdownEl = document.createElement('select');
-    dropdownEl.id = "country-selection";
+    dropdownEl.id = "dropdown-selection";
     const dropdownData = config.text.dropdown.map(entry => entry[config.dashboard.input_key]);
     dropdownData.forEach(input => {
         const opt = document.createElement('option');
@@ -41,7 +42,9 @@ function implementDropdown() {
         opt.text = input;
         dropdownEl.appendChild(opt);
     })
-    document.querySelector('.controls-container').appendChild(label.appendChild(dropdownEl));
+    const controlsContainer = document.querySelector('.controls-container');
+    controlsContainer.appendChild(label);
+    controlsContainer.appendChild(dropdownEl);
 
     dropdownEl.addEventListener('change', (evt) => {
         const selectedCountry = evt.target.value;
