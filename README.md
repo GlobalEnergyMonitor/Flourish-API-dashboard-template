@@ -1,4 +1,4 @@
-# Flourish-API-dashboard-template
+# Flourish API dashboard template
 Creating a template for dashboards powered by the Flourish API - currently WIP
 
 ## To use locally
