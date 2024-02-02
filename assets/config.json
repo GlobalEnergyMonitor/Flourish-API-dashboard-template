@@ -60,7 +60,7 @@
             "text"
         ],
         "dataset": "data_status",
-        "initial_state": "united_kingdom",
+        "initial_state": "Global",
         "filterable": true,
         "filter_by": "Country"
     },
