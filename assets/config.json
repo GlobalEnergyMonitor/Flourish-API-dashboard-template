@@ -65,7 +65,7 @@
         "filter_by": "Country"
     },
     "16659864": {
-        "title": "How much coal power capacity has been added and retired in {{country}} each year since 2000?",
+        "title": "How much coal power capacity has been added and retired each year since 2000?",
         "x_axis": "Year",
         "bar_values": [
             "Net change",

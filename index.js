@@ -147,7 +147,8 @@ function updateGraphs(key) {
             graphs[id].opts.data = {
                 data: filteredData
             };
-            graphs[id].opts.state.layout.title = config.dashboard[id].title.replace('{{country}}', `${filteredData[0].Country}`)
+            const replacementString = key === 'global' ? 'globally' : `in ${filteredData[0].Country}`
+            graphs[id].opts.state.layout.title = config.dashboard[id].title.replace('?', ` ${replacementString}?`)
             graphs[id].flourish.update(graphs[id].opts)
         }
     });
