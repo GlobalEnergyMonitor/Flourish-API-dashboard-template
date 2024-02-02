@@ -96,8 +96,6 @@ function renderVisualisation() {
 function implentGraph(id) {
     graphs[id] = {};
     graphs[id].opts = {
-        // template: "@flourish/line-bar-pie",
-        // version: "27",
         container: `#chart-${id}`,
         api_key: config.gem.key,
         base_visualisation_id: id,
@@ -112,30 +110,15 @@ function implentGraph(id) {
         data: {
             data: initialData(id),
         },
-        // metadata: {
-        //     data: config.dashboard[id].dataTypes
-        // },
         state: {
-            // chart_type: "column_stacked_line",
             layout: {
                 title: config.dashboard[id].title.replace('{{country}}', '')
             }
         }
-        // container: `#chart-${id}`,
-        // api_key: config.gem.key,
-        // base_visualisation_id: id,
-        // bindings: {
-        //     data: {
-        //         x: "pos_x",
-        //         y: "pos_y",
-        //         metadata: ["country"]
-        //     }
-        // },
     };
     if (config.dashboard[id].filterable) {
         graphs[id].opts.bindings.data.metadata = config.dashboard[id].pop_up; // this is pop ups, can have multiple values
     }
-    console.log('opts', graphs[id].opts);
     graphs[id].flourish = new Flourish.Live(graphs[id].opts);
 }
 
@@ -153,6 +136,7 @@ function updateGraphs(key) {
             graphs[id].flourish.update(graphs[id].opts)
         }
     });
+    // add check - if no data to update to, show some sort of overlay to show no data / reduce opacity / default to global
 }
 
 function formatName(string) {
@@ -160,12 +144,9 @@ function formatName(string) {
 }
 
 function initialData(id) {
-    console.log('data filter id', id, config.datasets);
     let data = config.datasets[id];
-    console.log('check: ', config.dashboard.filter_key, config.dashboard[id].initial_state);
     if (config.dashboard[id].filterable) {
         data = config.datasets[id].filter(entry => entry[config.dashboard.filter_key] === config.dashboard[id].initial_state);
     }
-    console.log('initial data', data);
     return data;
 }
