@@ -52,7 +52,8 @@ async function getData() {
                     if (config.dashboard.input_type === 'dropdown') implementDropdown();
                     // add another to implement buttons
                 })
-                .then(() => renderVisualisation());
+                .then(() => renderVisualisation())
+                .then(() => updateGraphs('global'));
         })
 }
 
