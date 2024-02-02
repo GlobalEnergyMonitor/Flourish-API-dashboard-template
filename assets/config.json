@@ -48,8 +48,8 @@
         "filter_by": "Country"
     },
     "flourish_ids": [
-        "15821879",
-        "16659864"
+        "16659864",
+        "15821879"
     ],
     "input_type": "dropdown",
     "filter_key": "Country"
