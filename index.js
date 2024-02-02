@@ -95,9 +95,11 @@ function renderVisualisation() {
 function implentGraph(id) {
     graphs[id] = {};
     graphs[id].opts = {
+        template: "@flourish/line-bar-pie",
         version: 25,
         container: `#chart-${id}`,
-        api_key: process.env.API_KEY,
+        api_url: "/flourish",
+        api_key: "", //filled in server side
         base_visualisation_id: id,
         bindings: {
             data: {
@@ -136,7 +138,7 @@ function updateGraphs(key) {
             graphs[id].flourish.update(graphs[id].opts)    
             // add check - if no data to update to, show some sort of overlay to show no data / reduce opacity / default to global
             if (filteredData.length === 0) {
-
+                // get id of current div and reduce opacity, remember to reset
             }
         }
     });
