@@ -60,7 +60,7 @@
             "text"
         ],
         "dataset": "data_status",
-        "initial_state": "Global",
+        "initial_state": "united_kingdom",
         "filterable": true,
         "filter_by": "Country"
     },
@@ -80,10 +80,6 @@
         "filterable": true,
         "filter_by": "Country"
     },
-    "working-ids": [
-        "16659864",
-        "15821879"
-    ],
     "flourish_ids": [
         "16659638",
         "16659864",
