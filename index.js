@@ -12,8 +12,8 @@ getData();
 // TO DO: read data from google sheets if poss, currently would need to download data for each vis and convert -> feels like could get unweildy and have performance issues
 
 async function getData() {
-    const urls = ["./config.json", "./assets/config.json", "./assets/text.json"];
-    const keys = ["gem", "dashboard", "text"];
+    const urls = ["./assets/config.json", "./assets/text.json"];
+    const keys = ["dashboard", "text"];
     const promises = [];
     for (const url of urls) {
         promises.push(fetch(url));
@@ -97,7 +97,7 @@ function implentGraph(id) {
     graphs[id] = {};
     graphs[id].opts = {
         container: `#chart-${id}`,
-        api_key: config.gem.key,
+        api_key: process.env.API_KEY,
         base_visualisation_id: id,
         bindings: {
             data: {
