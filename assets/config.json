@@ -1,5 +1,55 @@
 {
-    "flourish_ids": ["15821879", "16659638", "16659864"],
+    "15821879": {
+        "title": "Coal plant capacity starting construction outside China is on track for record annual low",
+        "x_axis": "Period",
+        "bar_values": [
+            "Yearly Construction Starts"
+        ],
+        "pop_up": [""],
+        "dataset": "data_construction",
+        "filterable": false
+    },
+    "16659638": {
+        "title": "How has coal power capacity changed status in past decade?",
+        "x_axis": "Year",
+        "bar_values": [
+            "operating",
+            "construction",
+            "permitted",
+            "pre-permit",
+            "announced",
+            "mothballed",
+            "shelved",
+            "cancelled",
+            "retired"
+        ],
+        "pop_up": [
+            "text"
+        ],
+        "dataset": "data_status",
+        "initial_state": "Global",
+        "filterable": true,
+        "filter_by": "Country"
+    },
+    "16659864": {
+        "title": "How much coal power capacity has been added and retired in {{country}} each year since 2000?",
+        "x_axis": "Year",
+        "bar_values": [
+            "Net change",
+            "Added",
+            "Retired"
+        ],
+        "pop_up": [
+            "description"
+        ],
+        "dataset": "data_change",
+        "initial_state": "Global",
+        "filterable": true,
+        "filter_by": "Country"
+    },
+    "flourish_ids": [
+        "16659864"
+    ],
     "input_type": "dropdown",
-    "input_key": "Country"
+    "filter_key": "Country"
 }
