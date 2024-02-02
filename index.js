@@ -85,6 +85,7 @@ function renderVisualisation() {
     graphIDs.forEach(id => {
         const container = document.createElement('div');
         container.id = `chart-${id}`;
+        container.classList.add('chart-container');
         document.querySelector('.flourish-container').appendChild(container);
         console.log('id', id, config.dashboard[id].title);
         implentGraph(id);

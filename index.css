@@ -1,0 +1,25 @@
+body {
+    position: relative;
+    font-size: 16px;
+    font-family: 'Open Sans';
+    text-align: center;
+}
+
+label {
+    margin-right: 0.5rem;
+}
+
+.chart-container {
+
+}
+
+@media only screen and (min-width: 600px) {
+    .flourish-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .chart-container {
+        flex: 45%;
+        margin: 1rem;
+    }
+  }
