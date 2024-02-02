@@ -53,7 +53,6 @@ async function getData() {
                     // add another to implement buttons
                 })
                 .then(() => renderVisualisation())
-                .then(() => updateGraphs('global'));
         })
 }
 
@@ -96,6 +95,7 @@ function renderVisualisation() {
 function implentGraph(id) {
     graphs[id] = {};
     graphs[id].opts = {
+        version: 25,
         container: `#chart-${id}`,
         api_key: process.env.API_KEY,
         base_visualisation_id: id,
