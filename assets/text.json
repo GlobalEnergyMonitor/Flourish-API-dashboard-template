@@ -1,6 +1,9 @@
 {
     "title": "This is a test title",
     "dropdown_label": "Select a country",
+    "title_variation_initial": "globally",
+    "title_variation_filtered": "in {{country}}",
+    "title_flag": "{{country}}",
     "dropdown": [
         {
           "Country": "Global",
