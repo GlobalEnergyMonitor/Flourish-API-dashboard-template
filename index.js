@@ -106,7 +106,6 @@ function implentGraph(id) {
                 value: config.dashboard[id].bar_values, // this is the actual bar
                 // facet: "Year",
                 // filter: "DataHeader5", // assume this would be for a drop down or something
-                metadata: config.dashboard[id].pop_up, // this is pop ups, can have multiple values
             }
         },
         data: {
@@ -129,20 +128,25 @@ function implentGraph(id) {
         //     }
         // },
     };
+    if (config.dashboard[id].filterable) {
+        graphs[id].opts.bindings.data.metadata = config.dashboard[id].pop_up; // this is pop ups, can have multiple values
+    }
     console.log('opts', graphs[id].opts);
     graphs[id].flourish = new Flourish.Live(graphs[id].opts);
 }
 
 function updateGraphs(key) {
-    // Add a check to the data so only filtering if needed
     const graphIDs = config.dashboard.flourish_ids;
-    [temp].forEach(id => {
-        const filteredData = config.datasets[id].filter(entry => formatName(entry[config.dashboard.input_key]) === key);
-        graphs[id].opts.data = {data: filteredData};
-        graphs[id].opts.state.layout.title = config.text.title.replace('{{country}}', `${filteredData[0].Country}`)
-        graphs[id].flourish.update(graphs[id].opts)
+    graphIDs.forEach(id => {
+        if (config.dashboard[id].filterable) {
+            const filteredData = config.datasets[id].filter(entry => formatName(entry[config.dashboard.filter_key]) === key);
+            graphs[id].opts.data = {
+                data: filteredData
+            };
+            graphs[id].opts.state.layout.title = config.text.title.replace('{{country}}', `${filteredData[0].Country}`)
+            graphs[id].flourish.update(graphs[id].opts)
+        }
     });
-
 }
 
 function formatName(string) {
