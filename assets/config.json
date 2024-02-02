@@ -9,6 +9,39 @@
         "dataset": "data_construction",
         "filterable": false
     },
+    "16566530": {
+        "title": "What is the age breakdown of coal plants?",
+        "x_axis": "decade",
+        "bar_values": [
+            "CFB",
+            "IGCC",
+            "Subcritical",
+            "Supercritical",
+            "Ultra-supercritical",
+            "Unknown"
+        ],
+        "pop_up": [
+            "text"
+        ],
+        "dataset": "data_age",
+        "initial_state": "Global",
+        "filterable": true,
+        "filter_by": "Country"
+    },
+    "16533187": {
+        "title": "How has coal power capacity changed since 2000?",
+        "x_axis": "Year",
+        "bar_values": [
+            "Capacity"
+        ],
+        "pop_up": [
+            "description"
+        ],
+        "dataset": "data_cumulative",
+        "initial_state": "Global",
+        "filterable": true,
+        "filter_by": "Country"
+    },
     "16659638": {
         "title": "How has coal power capacity changed status in past decade?",
         "x_axis": "Year",
@@ -47,9 +80,17 @@
         "filterable": true,
         "filter_by": "Country"
     },
-    "flourish_ids": [
+    "working-ids": [
         "16659864",
         "15821879"
+    ],
+    "flourish_ids": [
+        "16659638",
+        "16659864",
+        "15821879",
+        "16533187",
+        "16566530"
+
     ],
     "input_type": "dropdown",
     "filter_key": "Country"

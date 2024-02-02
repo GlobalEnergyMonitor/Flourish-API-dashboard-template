@@ -25,7 +25,6 @@ async function getData() {
             jsonObjects.forEach((obj, i) => {
                 config[keys[i]] = obj;
             })
-            console.log('config', config)
         })
         .then(() => {
             const dataURLS = [];
@@ -86,7 +85,7 @@ function renderVisualisation() {
         const container = document.createElement('div');
         container.id = `chart-${id}`;
         document.querySelector('.flourish-container').appendChild(container);
-        console.log('id', id);
+        console.log('id', id, config.dashboard[id].title);
         implentGraph(id);
     })
     // console.log('building', config);
@@ -111,6 +110,9 @@ function implentGraph(id) {
         data: {
             data: initialData(id),
         },
+        // metadata: {
+        //     data: config.dashboard[id].dataTypes
+        // },
         state: {
             // chart_type: "column_stacked_line",
             layout: {
@@ -136,6 +138,7 @@ function implentGraph(id) {
 }
 
 function updateGraphs(key) {
+    console.log('updating');
     const graphIDs = config.dashboard.flourish_ids;
     graphIDs.forEach(id => {
         if (config.dashboard[id].filterable) {
