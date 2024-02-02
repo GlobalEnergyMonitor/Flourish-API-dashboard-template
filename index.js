@@ -29,7 +29,7 @@ async function getData() {
         .then(() => {
             const dataURLS = [];
             config.dashboard.flourish_ids.forEach(id => {
-                dataURLS.push(`./assets/${config.dashboard[id].dataset}.json`);
+                dataURLS.push(`./assets/data/${config.dashboard[id].dataset}.json`);
                 config.datasets[id] = [];
             })
             const fetches = [];
@@ -133,10 +133,13 @@ function updateGraphs(key) {
             const { title_variation_initial, title_variation_filtered, title_flag } = config.text;
             const replacementString = key === config.dashboard[id].initial_state.toLowerCase() ? title_variation_initial : title_variation_filtered.replace(title_flag, filteredData[0].Country);
             graphs[id].opts.state.layout.title = config.dashboard[id].title.replace('?', ` ${replacementString}?`)
-            graphs[id].flourish.update(graphs[id].opts)
+            graphs[id].flourish.update(graphs[id].opts)    
+            // add check - if no data to update to, show some sort of overlay to show no data / reduce opacity / default to global
+            if (filteredData.length === 0) {
+
+            }
         }
     });
-    // add check - if no data to update to, show some sort of overlay to show no data / reduce opacity / default to global
 }
 
 function formatName(string) {
