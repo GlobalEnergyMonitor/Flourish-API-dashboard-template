@@ -4,7 +4,7 @@ Creating a template for dashboards powered by the Flourish API - currently WIP
 ## To use locally
 * open your terminal
 * clone repo
-* `cd`` into project run `npm install`
+* `cd` into project run `npm install`
 * get a flourish API key [following instructions here](https://developers.flourish.studio/api/getting-started/)
 * create `.env` file in the root of the project (this is important so the code knows where to find it and it doesn't get commited to github)
 * copy the below into it and save:
