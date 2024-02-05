@@ -86,6 +86,8 @@ function implementDropdown() {
 }
 
 function renderIntroVis() {
+    // TO DO: checks for no tickers / error handling
+    // Are the only intro vis types tickers?
     const container = document.createElement('div');
     container.classList.add('tickers-container');
     document.querySelector('.dashboard-intro').appendChild(container);
@@ -98,8 +100,10 @@ function renderIntroVis() {
         api_key: "", //filled in server side
         state: {
             ...state,
+            font_size: 2.5,
             font_unit: 'rem'
         }
+        // TO DO: get font size and colour from config
     };
 
     config.dashboard.tickers.forEach((entry, i) => {
@@ -121,6 +125,8 @@ function renderIntroVis() {
         tickers[id] = new Flourish.Live(tickers[id].options);
     })
 }
+
+// TO DO: Add update tickers method
 
 function renderVisualisation() {
     const graphIDs = config.dashboard.flourish_ids;
@@ -246,4 +252,4 @@ function filterDropdownSummaries(key, selected) {
     return config.text.dropdown.filter(entry => entry[key] === selected)[0];
 }
 
-// Add markdown to html handling for summary text and titles
+// TO DO: Add markdown to html handling for summary text and titles
