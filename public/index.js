@@ -86,11 +86,9 @@ function renderVisualisation() {
         container.id = `chart-${id}`;
         container.classList.add('chart-container');
         document.querySelector('.flourish-container').appendChild(container);
-        console.log('id', id, config.dashboard[id].title);
         insertSummary(id);
         implentGraph(id);
     })
-    // console.log('building', config);
 }
 
 function insertSummary(id) {
@@ -98,7 +96,8 @@ function insertSummary(id) {
     if (currentGraph.summary) {
         const summary = document.createElement('p');
         summary.classList.add('chart-summary');
-        summary.innerText = initialData(id)[0][currentGraph.summary]
+        const summaryTextObj = filterDropdownSummaries(config.dashboard.filter_key, config.dashboard[id].initial_state);
+        summary.innerText = summaryTextObj[currentGraph.summary];
         document.querySelector(`#chart-${id}`).appendChild(summary);
     }
 }
@@ -112,11 +111,10 @@ function updateSummary(key) {
         const currentGraph = config.dashboard[id];
         if (currentGraph.filterable) {
             const filteredData = config.datasets[id].filter(entry => formatName(entry[config.dashboard.filter_key]) === key);
+            const summaryTextObj = filterDropdownSummaries(config.dashboard.filter_key, selectedText);
             const summary = document.querySelector(`#chart-${id} .chart-summary`);
-            
-            
             if (summary) {
-                summary.innerText = (filteredData.length <= 0) ? `No data available for ${selectedText}` : filteredData[0][currentGraph.summary]
+                summary.innerText = (filteredData.length <= 0 || !summaryTextObj[currentGraph.summary]) ? `No data available for ${selectedText}` : summaryTextObj[currentGraph.summary];
             }
         }
     });
@@ -159,8 +157,6 @@ function updateGraphs(key) {
     graphIDs.forEach(id => {
         if (config.dashboard[id].filterable) {
             const filteredData = config.datasets[id].filter(entry => formatName(entry[config.dashboard.filter_key]) === key);
-            console.log('filtered: ', filteredData); 
-            // add check - if no data to update to, show some sort of overlay to show no data / reduce opacity / default to global
             if (filteredData.length !== 0) {
                 graphs[id].opts.data = {
                     data: filteredData
@@ -170,7 +166,6 @@ function updateGraphs(key) {
                 graphs[id].opts.state.layout.title = config.dashboard[id].title.replace('?', ` ${replacementString}?`)
                 graphs[id].flourish.update(graphs[id].opts)   
                 document.querySelector(`#chart-${id} iframe`).style.opacity = 1;
-            // currently data is zeroed so graphs render but empty - eg
             }
             else {
                 document.querySelector(`#chart-${id} iframe`).style.opacity = 0.3;
@@ -189,4 +184,8 @@ function initialData(id) {
         data = config.datasets[id].filter(entry => entry[config.dashboard.filter_key] === config.dashboard[id].initial_state);
     }
     return data;
+}
+
+function filterDropdownSummaries(key, selected) {
+    return config.text.dropdown.filter(entry => entry[key] === selected)[0];
 }
