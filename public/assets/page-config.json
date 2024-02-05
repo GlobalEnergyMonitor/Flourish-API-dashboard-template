@@ -11,25 +11,36 @@
     "input_types": ["dropdown", "buttons", "combo"],
     "input_filter": "Country",
     "overall_summary": true,
-    "ticker_colour": "#BF532C",
     "ticker_font-size": "2.5rem",
     "tickers": [{
         "id": "ticker-1",
         "number_start": 0,
         "number_to": 1000,
-        "text": "<span style='color: {{color}};'>{{number_to}} GW</span><br> of operating coal power"
+        "text": "<span style='color: {{color}};'>{{number_to}} GW</span><br> of operating coal power",
+        "style": {
+            "color": "#BF532C",
+            "font-weight": "bold"
+        }
     },
     {
         "id": "ticker-2",
         "number_start": 0,
         "number_to": 179,
-        "text": "<span style='color: {{color}};'>{{number_to}}mins</span><br> spent on this"
+        "text": "<span style='color: {{color}};'>{{number_to}} mins</span><br> spent on this",
+        "style": {
+            "color": "#BF532C",
+            "font-weight": "bold"
+        }
     },
     {
         "id": "ticker-3",
         "number_start": 1000,
         "number_to": 56,
-        "text": "<span style='color: {{color}};'>{{number_to}}</span><br> hours left"
+        "text": "<span style='color: {{color}};'>{{number_to}}</span><br> hours left",
+        "style": {
+            "color": "#BF532C",
+            "font-weight": "bold"
+        }
     }
 ]
 }

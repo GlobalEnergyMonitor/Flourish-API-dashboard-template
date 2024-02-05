@@ -103,8 +103,8 @@ function renderIntroVis() {
             font_size: 2.5,
             font_unit: 'rem'
         }
-        // TO DO: get font size and colour from config
     };
+    // TO DO: get font size and colour from config
 
     config.dashboard.tickers.forEach((entry, i) => {
         const { id } = entry;
@@ -119,8 +119,9 @@ function renderIntroVis() {
             container: `#ticker-${i+1}`,
             state: {
                 ...options.state,
-                custom_template: config.dashboard.tickers[i].text.replace('number_to', config.dashboard.tickers[i].number_to)
+                custom_template: config.dashboard.tickers[i].text.replace('{{color}}', config.dashboard.tickers[i].style.color).replace('number_to', config.dashboard.tickers[i].number_to)
             }
+            // pull all styling variations from config
         }
         tickers[id] = new Flourish.Live(tickers[id].options);
     })
