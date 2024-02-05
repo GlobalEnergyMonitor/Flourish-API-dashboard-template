@@ -12,8 +12,21 @@
     "overall_summary": true,
     "tickers": [{
         "id": "ticker-1",
-        "number_from": 0,
+        "number_start": 0,
         "number_to": 1000,
         "text": "<span style='color: #BF532C;'>{{number_to}} GW</span><br> of operating coal power"
-    }]
+    },
+    {
+        "id": "ticker-2",
+        "number_start": 0,
+        "number_to": 179,
+        "text": "<span style='color: #BF532C;'>{{number_to}}mins</span><br> spent on this"
+    },
+    {
+        "id": "ticker-3",
+        "number_start": 1000,
+        "number_to": 56,
+        "text": "<span style='color: #BF532C;'>{{number_to}}</span><br> hours left"
+    }
+]
 }

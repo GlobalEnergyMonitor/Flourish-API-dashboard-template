@@ -84,33 +84,40 @@ function implementDropdown() {
 }
 
 function renderIntroVis() {
-    const tickers = config.dashboard.tickers;
-    tickers.forEach(entry => {
-        const {
-            id
-        } = entry;
+    config.dashboard.tickers.forEach(entry => {
+        const { id } = entry;
         console.log('id', id, entry);
         const container = document.createElement('div');
         container.id = id;
         container.classList.add('ticker-container');
         document.querySelector('.dashboard-intro').appendChild(container);
         const { state } = config.datasets.ticker;
-        console.log('state', state);
+        state.custom_template = entry.text.replace('number_to', entry.number_to);
+        state.number_start = entry.number_start;
         tickers[id] = {};
-        tickers[id].opts = {
+        // tickers[id].opts = {
+        //     template: "@flourish/number-ticker",
+        //     version: 1,
+        //     container: `#${id}`,
+        //     api_url: "/flourish",
+        //     api_key: "", //filled in server side
+        //     // base_visualisation_id: '16565310',
+        //     state
+        // };
+        tickers[id].flourish = new Flourish.Live({
             template: "@flourish/number-ticker",
             version: 1,
             container: `#${id}`,
             api_url: "/flourish",
             api_key: "", //filled in server side
-            base_visualisation_id: '16565310',
+            // base_visualisation_id: '16565310',
             state
-        };
-        tickers[id].opts.state.custom_template = entry.text.replace('number_to', entry.number_to),
-        tickers[id].opts.state.number_from = entry.number_from,
-        console.log('opts', tickers[id].opts);
-        tickers[id].flourish = new Flourish.Live(tickers[id].opts);
+        });
+        // tickers[id].opts.,
+        // tickers[id].opts.,
+        // console.log('opts', JSON.stringify(tickers[id].opts));
     })
+    console.log('tickers', tickers);
 }
 
 function renderVisualisation() {
