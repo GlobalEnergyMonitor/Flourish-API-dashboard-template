@@ -10,8 +10,8 @@ const dataset = {
 getData();
 
 async function getData() {
-    const urls = ["./assets/config.json", "./assets/text.json"];
-    const keys = ["dashboard", "text"];
+    const urls = ["./assets/page-config.json", "./assets/chart-config.json", "./assets/text.json"];
+    const keys = ["dashboard", "charts", "text"];
     const promises = [];
     for (const url of urls) {
         promises.push(fetch(url));
@@ -27,7 +27,7 @@ async function getData() {
         .then(() => {
             const dataURLS = [];
             config.dashboard.flourish_ids.forEach(id => {
-                dataURLS.push(`./assets/data/${config.dashboard[id].dataset}.json`);
+                dataURLS.push(`./assets/data/${config.charts[id].dataset}.json`);
                 config.datasets[id] = [];
             })
             const fetches = [];
@@ -48,6 +48,7 @@ async function getData() {
                 })
                 .then(() => {
                     document.querySelector('h1').innerText = config.text.title;
+                    if (config.text.intro) document.querySelector('.dashboard-intro').innerText = config.text.intro;
                     if (config.dashboard.input_type === 'dropdown') implementDropdown();
                     // add another to implement buttons
                 })
@@ -61,7 +62,7 @@ function implementDropdown() {
     label.for = "dropdown-selection"
     const dropdownEl = document.createElement('select');
     dropdownEl.id = "dropdown-selection";
-    const dropdownData = config.text.dropdown.map(entry => entry[config.dashboard.filter_key]);
+    const dropdownData = config.text.dropdown.map(entry => entry[config.dashboard.input_filter]);
     dropdownData.forEach(input => {
         const opt = document.createElement('option');
         opt.value = formatName(input);
@@ -86,17 +87,17 @@ function renderVisualisation() {
         container.id = `chart-${id}`;
         container.classList.add('chart-container');
         document.querySelector('.flourish-container').appendChild(container);
-        insertSummary(id);
+        insertChartSummary(id);
         implentGraph(id);
     })
 }
 
-function insertSummary(id) {
-    const currentGraph = config.dashboard[id];
+function insertChartSummary(id) {
+    const currentGraph = config.charts[id];
     if (currentGraph.summary) {
         const summary = document.createElement('p');
         summary.classList.add('chart-summary');
-        const summaryTextObj = filterDropdownSummaries(config.dashboard.filter_key, config.dashboard[id].initial_state);
+        const summaryTextObj = filterDropdownSummaries(currentGraph.filter_by, config.charts[id].initial_state);
         summary.innerText = summaryTextObj[currentGraph.summary];
         document.querySelector(`#chart-${id}`).appendChild(summary);
     }
@@ -105,7 +106,7 @@ function insertSummary(id) {
 function updateSummaries(key) {
     const dropdown = document.querySelector('select')
     const selectedText = dropdown[dropdown.selectedIndex].text;
-    const summaryTextObj = filterDropdownSummaries(config.dashboard.filter_key, selectedText);
+    const summaryTextObj = filterDropdownSummaries(config.dashboard.input_filter, selectedText);
     
     if (config.dashboard.overall_summary) updateOverallSummary(key, summaryTextObj);
     updateGraphSummaries(key, summaryTextObj);
@@ -122,7 +123,7 @@ function updateGraphSummaries(key) {
     graphIDs.forEach(id => {
         const currentGraph = config.dashboard[id];
         if (currentGraph.filterable && currentGraph.summary) {
-            const filteredData = config.datasets[id].filter(entry => formatName(entry[config.dashboard.filter_key]) === key);
+            const filteredData = config.datasets[id].filter(entry => formatName(entry[config.graphs[id].filter_by]) === key);
             const summary = document.querySelector(`#chart-${id} .chart-summary`);
             if (summary) summary.innerText = (filteredData.length <= 0 || !summaryTextObj[currentGraph.summary]) ? `No data available for ${selectedText}` : summaryTextObj[currentGraph.summary];
         }
@@ -140,8 +141,8 @@ function implentGraph(id) {
         base_visualisation_id: id,
         bindings: {
             data: {
-                label: config.dashboard[id].x_axis, // this seems to be the X axis
-                value: config.dashboard[id].values, // this is the actual bar
+                label: config.charts[id].x_axis, // this seems to be the X axis
+                value: config.charts[id].values, // this is the actual bar
                 // facet: "Year",
                 // filter: "DataHeader5", // assume this would be for a drop down or something
             }
@@ -151,12 +152,12 @@ function implentGraph(id) {
         },
         state: {
             layout: {
-                title: config.dashboard[id].title.replace('{{country}}', '')
+                title: config.charts[id].title.replace('{{country}}', '')
             }
         }
     };
-    if (config.dashboard[id].filterable) {
-        graphs[id].opts.bindings.data.metadata = config.dashboard[id].pop_up; // this is pop ups, can have multiple values
+    if (config.charts[id].filterable) {
+        graphs[id].opts.bindings.data.metadata = config.charts[id].pop_up; // this is pop ups, can have multiple values
     }
     graphs[id].flourish = new Flourish.Live(graphs[id].opts);
 }
@@ -164,15 +165,16 @@ function implentGraph(id) {
 function updateGraphs(key) {
     const graphIDs = config.dashboard.flourish_ids;
     graphIDs.forEach(id => {
-        if (config.dashboard[id].filterable) {
-            const filteredData = config.datasets[id].filter(entry => formatName(entry[config.dashboard.filter_key]) === key);
+        const currentGraph = config.charts[id];
+        if (currentGraph.filterable) {
+            const filteredData = config.datasets[id].filter(entry => formatName(entry[currentGraph.filter_by]) === key);
             if (filteredData.length !== 0) {
                 graphs[id].opts.data = {
                     data: filteredData
                 };
-                const { title_variation_initial, title_variation_filtered, title_flag } = config.text;
-                const replacementString = key === config.dashboard[id].initial_state.toLowerCase() ? title_variation_initial : title_variation_filtered.replace(title_flag, filteredData[0].Country);
-                graphs[id].opts.state.layout.title = config.dashboard[id].title.replace('?', ` ${replacementString}?`)
+                const { chart_title_variation_initial, chart_title_variation_filtered, chart_title_flag } = config.text;
+                const replacementString = key === currentGraph.initial_state.toLowerCase() ? chart_title_variation_initial : chart_title_variation_filtered.replace(chart_title_flag, filteredData[0].Country);
+                graphs[id].opts.state.layout.title = currentGraph.title.replace('?', ` ${replacementString}?`)
                 graphs[id].flourish.update(graphs[id].opts)   
                 document.querySelector(`#chart-${id} iframe`).style.opacity = 1;
             }
@@ -189,8 +191,8 @@ function formatName(string) {
 
 function initialData(id) {
     let data = config.datasets[id];
-    if (config.dashboard[id].filterable) {
-        data = config.datasets[id].filter(entry => entry[config.dashboard.filter_key] === config.dashboard[id].initial_state);
+    if (config.charts[id].filterable) {
+        data = config.datasets[id].filter(entry => entry[config.dashboard.input_filter] === config.charts[id].initial_state);
     }
     return data;
 }

@@ -84,16 +84,5 @@
         "initial_state": "Global",
         "filterable": true,
         "filter_by": "Country"
-    },
-    "flourish_ids": [
-        "16659638",
-        "16659864",
-        "16533187",
-        "16566530",
-        "15821879"
-
-    ],
-    "input_type": "dropdown",
-    "filter_key": "Country",
-    "overall_summary": true
+    }
 }
