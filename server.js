@@ -11,23 +11,16 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
 
-// add relevant request parsers
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.text());
 
 app.set("views", path.join(__dirname, "/public/views"));
-// set jade as view engine. 
 app.set("view engine", "jade");
 
 app.use("/", express.static("public"));
 
-console.log('process.env', process.env.FLOURISH_API_KEY)
-console.log('process.env', process.env.PORT)
-
-
-app.use("/flourish", ()=> {
-	createProxyMiddleware({
+app.use("/flourish", createProxyMiddleware({
 		target: "https://flourish-api.com/api/v1/live",
 		onProxyReq: (proxyReq) => {
 			const url = new URL(proxyReq.path, `${proxyReq.protocol}//${proxyReq.host}`);
@@ -37,8 +30,7 @@ app.use("/flourish", ()=> {
 		},
 		changeOrigin: true,
 		pathRewrite: { "^/flourish": "" }
-	})
-});
+	}));
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
