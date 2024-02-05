@@ -50,7 +50,7 @@ async function getData() {
                 })
                 .then(() => {
                     document.querySelector('h1').innerText = config.text.title;
-                    if (config.text.intro) document.querySelector('.dashboard-intro').innerText = config.text.intro;
+                    if (config.text.intro) document.querySelector('.dashboard-intro--para').innerText = config.text.intro;
                     if (config.dashboard.input_type === 'dropdown') implementDropdown();
                     // add another to implement buttons
                 })
@@ -84,27 +84,22 @@ function implementDropdown() {
 }
 
 function renderIntroVis() {
+    const container = document.createElement('div');
+    container.classList.add('tickers-container');
+    document.querySelector('.dashboard-intro').appendChild(container);
     config.dashboard.tickers.forEach(entry => {
         const { id } = entry;
         console.log('id', id, entry);
         const container = document.createElement('div');
         container.id = id;
         container.classList.add('ticker-container');
-        document.querySelector('.dashboard-intro').appendChild(container);
+        document.querySelector('.tickers-container').appendChild(container);
         const { state } = config.datasets.ticker;
         state.custom_template = entry.text.replace('number_to', entry.number_to);
         state.number_start = entry.number_start;
+        state.font_unit = 'rem'; // make this mobile responsive
         tickers[id] = {};
-        // tickers[id].opts = {
-        //     template: "@flourish/number-ticker",
-        //     version: 1,
-        //     container: `#${id}`,
-        //     api_url: "/flourish",
-        //     api_key: "", //filled in server side
-        //     // base_visualisation_id: '16565310',
-        //     state
-        // };
-        tickers[id].flourish = new Flourish.Live({
+        tickers[id].opts = {
             template: "@flourish/number-ticker",
             version: 1,
             container: `#${id}`,
@@ -112,7 +107,8 @@ function renderIntroVis() {
             api_key: "", //filled in server side
             // base_visualisation_id: '16565310',
             state
-        });
+        };
+        tickers[id].flourish = new Flourish.Live(tickers[id].opts);
         // tickers[id].opts.,
         // tickers[id].opts.,
         // console.log('opts', JSON.stringify(tickers[id].opts));
@@ -153,7 +149,7 @@ function updateSummaries(key) {
 }
 
 function updateOverallSummary(key, summaryTextObj) {
-    document.querySelector('.dashboard-intro').innerText = (summaryTextObj.overall_summary) ? summaryTextObj.overall_summary : 'insert generic sentence here';
+    document.querySelector('.dashboard-intro--para').innerText = (summaryTextObj.overall_summary) ? summaryTextObj.overall_summary : 'insert generic sentence here';
 }
 
 function updateGraphSummaries(key) {
