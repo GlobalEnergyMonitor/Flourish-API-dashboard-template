@@ -9,5 +9,11 @@
     ],
     "input_type": "dropdown",
     "input_filter": "Country",
-    "overall_summary": true
+    "overall_summary": true,
+    "tickers": [{
+        "id": "ticker-1",
+        "number_from": 0,
+        "number_to": 1000,
+        "text": "<span style='color: #BF532C;'>{{number_to}} GW</span><br> of operating coal power"
+    }]
 }
