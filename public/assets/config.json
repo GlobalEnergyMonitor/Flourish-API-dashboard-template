@@ -2,7 +2,7 @@
     "15821879": {
         "title": "Coal plant capacity starting construction outside China is on track for record annual low",
         "x_axis": "Period",
-        "bar_values": [
+        "values": [
             "Yearly Construction Starts"
         ],
         "pop_up": null,
@@ -12,7 +12,7 @@
     "16566530": {
         "title": "What is the age breakdown of coal plants?",
         "x_axis": "decade",
-        "bar_values": [
+        "values": [
             "CFB",
             "IGCC",
             "Subcritical",
@@ -31,7 +31,7 @@
     "16533187": {
         "title": "How has coal power capacity changed since 2000?",
         "x_axis": "Year",
-        "bar_values": [
+        "values": [
             "Capacity"
         ],
         "pop_up": [
@@ -45,7 +45,7 @@
     "16659638": {
         "title": "How has coal power capacity changed status in past decade?",
         "x_axis": "Year",
-        "bar_values": [
+        "values": [
             "operating",
             "construction",
             "permitted",
@@ -67,7 +67,7 @@
     "16659864": {
         "title": "How much coal power capacity has been added and retired each year since 2000?",
         "x_axis": "Year",
-        "bar_values": [
+        "values": [
             "Net change",
             "Added",
             "Retired"
