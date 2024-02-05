@@ -94,25 +94,68 @@ function renderIntroVis() {
         container.id = id;
         container.classList.add('ticker-container');
         document.querySelector('.tickers-container').appendChild(container);
-        const { state } = config.datasets.ticker;
-        state.custom_template = entry.text.replace('number_to', entry.number_to);
-        state.number_start = entry.number_start;
-        state.font_unit = 'rem'; // make this mobile responsive
-        tickers[id] = {};
-        tickers[id].opts = {
-            template: "@flourish/number-ticker",
-            version: 1,
-            container: `#${id}`,
-            api_url: "/flourish",
-            api_key: "", //filled in server side
-            // base_visualisation_id: '16565310',
-            state
-        };
-        tickers[id].flourish = new Flourish.Live(tickers[id].opts);
+        // const { state } = config.datasets.ticker;
+        // state.custom_template = entry.text.replace('number_to', entry.number_to);
+        // state.number_start = entry.number_start;
+        // state.font_unit = 'rem'; // make this mobile responsive
+        // tickers[id] = {};
+        // tickers[id].opts = {
+        //     template: "@flourish/number-ticker",
+        //     version: 1,
+        //     container: `#${id}`,
+        //     api_url: "/flourish",
+        //     api_key: "", //filled in server side
+        //     // base_visualisation_id: '16565310',
+        //     state
+        // };
+        // tickers[id].flourish = new Flourish.Live(tickers[id].opts);
         // tickers[id].opts.,
         // tickers[id].opts.,
         // console.log('opts', JSON.stringify(tickers[id].opts));
     })
+    const { state } = config.datasets.ticker;
+    const options1 = {
+        template: "@flourish/number-ticker",
+        version: '1.5.1',
+        container: "#ticker-1",
+        api_url: "/flourish",
+        api_key: "", //filled in server side
+        state: {
+            ...state,
+            custom_template: config.dashboard.tickers[0].text.replace('number_to', config.dashboard.tickers[0].number_to),
+            font_unit: 'rem'
+        }
+    };
+
+    const options2 = {
+        template: "@flourish/number-ticker",
+        version: '1.5.1',
+        container: "#ticker-1",
+        api_url: "/flourish",
+        api_key: "", //filled in server side
+        state: {
+            ...state,
+            custom_template: config.dashboard.tickers[1].text.replace('number_to', config.dashboard.tickers[1].number_to),
+            font_unit: 'rem'
+        }
+    };
+
+    const options3 = {
+        template: "@flourish/number-ticker",
+        version: '1.5.1',
+        container: "#ticker-1",
+        api_url: "/flourish",
+        api_key: "", //filled in server side
+        state: {
+            ...state,
+            custom_template: config.dashboard.tickers[2].text.replace('number_to', config.dashboard.tickers[2].number_to),
+            font_unit: 'rem'
+        }
+    };
+    
+    numberTicker1 = new Flourish.Live(options1);
+    numberTicker2 = new Flourish.Live(options2)
+    numberTicker3 = new Flourish.Live(options3)
     console.log('tickers', tickers);
 }
 
