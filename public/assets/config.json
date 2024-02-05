@@ -24,7 +24,7 @@
         "pop_up": [
             "text"
         ],
-        "summary": "age_text",
+        "summary": null,
         "dataset": "data_age",
         "initial_state": "Global",
         "filterable": true,
@@ -39,7 +39,7 @@
         "pop_up": [
             "description"
         ],
-        "summary": "cumulative_text",
+        "summary": null,
         "dataset": "data_cumulative",
         "initial_state": "Global",
         "filterable": true,
@@ -62,7 +62,7 @@
         "pop_up": [
             "text"
         ],
-        "summary": "status_text",
+        "summary": null,
         "dataset": "data_status",
         "initial_state": "Global",
         "filterable": true,
@@ -79,7 +79,7 @@
         "pop_up": [
             "description"
         ],
-        "summary": "change_text",
+        "summary": null,
         "dataset": "data_change",
         "initial_state": "Global",
         "filterable": true,
@@ -94,5 +94,6 @@
 
     ],
     "input_type": "dropdown",
-    "filter_key": "Country"
+    "filter_key": "Country",
+    "overall_summary": true
 }

@@ -74,7 +74,7 @@ function implementDropdown() {
 
     dropdownEl.addEventListener('change', (evt) => {
         const selectedValue = evt.target.value;
-        updateSummary(selectedValue);
+        updateSummaries(selectedValue);
         updateGraphs(selectedValue);
     })
 }
@@ -102,20 +102,29 @@ function insertSummary(id) {
     }
 }
 
-function updateSummary(key) {
+function updateSummaries(key) {
     const dropdown = document.querySelector('select')
     const selectedText = dropdown[dropdown.selectedIndex].text;
-    document.querySelector('.dashboard-intro').innerText = `Showing data for ${selectedText}`;
+    const summaryTextObj = filterDropdownSummaries(config.dashboard.filter_key, selectedText);
+    
+    if (config.dashboard.overall_summary) updateOverallSummary(key, summaryTextObj);
+    updateGraphSummaries(key, summaryTextObj);
+}
+
+function updateOverallSummary(key, summaryTextObj) {
+    document.querySelector('.dashboard-intro').innerText = (summaryTextObj.overall_summary) ? summaryTextObj.overall_summary : 'insert generic sentence here';
+}
+
+function updateGraphSummaries(key) {
+    const dropdown = document.querySelector('select')
+    const selectedText = dropdown[dropdown.selectedIndex].text;
     const graphIDs = config.dashboard.flourish_ids;
     graphIDs.forEach(id => {
         const currentGraph = config.dashboard[id];
-        if (currentGraph.filterable) {
+        if (currentGraph.filterable && currentGraph.summary) {
             const filteredData = config.datasets[id].filter(entry => formatName(entry[config.dashboard.filter_key]) === key);
-            const summaryTextObj = filterDropdownSummaries(config.dashboard.filter_key, selectedText);
             const summary = document.querySelector(`#chart-${id} .chart-summary`);
-            if (summary) {
-                summary.innerText = (filteredData.length <= 0 || !summaryTextObj[currentGraph.summary]) ? `No data available for ${selectedText}` : summaryTextObj[currentGraph.summary];
-            }
+            if (summary) summary.innerText = (filteredData.length <= 0 || !summaryTextObj[currentGraph.summary]) ? `No data available for ${selectedText}` : summaryTextObj[currentGraph.summary];
         }
     });
 }
