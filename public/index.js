@@ -47,6 +47,7 @@ async function getData() {
                     console.log('config', config)
                 })
                 .then(() => {
+                    document.querySelector('h1').innerText = config.text.title;
                     if (config.dashboard.input_type === 'dropdown') implementDropdown();
                     // add another to implement buttons
                 })

@@ -1,5 +1,6 @@
 {
-    "title": "This is a test title",
+    "title": "Coal dashbaord",
+    "intro": "Below is a container for a flourish viz",
     "dropdown_label": "Select a country",
     "title_variation_initial": "globally",
     "title_variation_filtered": "in {{country}}",
