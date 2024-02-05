@@ -1,12 +1,8 @@
-// https://docs.google.com/spreadsheets/d/e/2PACX-1vST2HEnH9gSQbpcsqJBMWOJZ6vuBtvl4n-PwpxJldD4GzyI_uRZ6hXcYOhkWRo_ZJmA32OfVNUJs99a/pub?gid=0&single=true&output=csv
-// const temp = '16659864';
 const config = {
     datasets: {}
 };
 const graphs = {};
-const dataset = {
 
-}
 getData();
 
 async function getData() {
@@ -121,7 +117,7 @@ function updateGraphSummaries(key) {
     const selectedText = dropdown[dropdown.selectedIndex].text;
     const graphIDs = config.dashboard.flourish_ids;
     graphIDs.forEach(id => {
-        const currentGraph = config.dashboard[id];
+        const currentGraph = config.charts[id];
         if (currentGraph.filterable && currentGraph.summary) {
             const filteredData = config.datasets[id].filter(entry => formatName(entry[config.graphs[id].filter_by]) === key);
             const summary = document.querySelector(`#chart-${id} .chart-summary`);
