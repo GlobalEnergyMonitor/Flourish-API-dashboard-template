@@ -155,16 +155,21 @@ function updateGraphs(key) {
     graphIDs.forEach(id => {
         if (config.dashboard[id].filterable) {
             const filteredData = config.datasets[id].filter(entry => formatName(entry[config.dashboard.filter_key]) === key);
-            graphs[id].opts.data = {
-                data: filteredData
-            };
-            const { title_variation_initial, title_variation_filtered, title_flag } = config.text;
-            const replacementString = key === config.dashboard[id].initial_state.toLowerCase() ? title_variation_initial : title_variation_filtered.replace(title_flag, filteredData[0].Country);
-            graphs[id].opts.state.layout.title = config.dashboard[id].title.replace('?', ` ${replacementString}?`)
-            graphs[id].flourish.update(graphs[id].opts)    
+            console.log('filtered: ', filteredData); 
             // add check - if no data to update to, show some sort of overlay to show no data / reduce opacity / default to global
-            if (filteredData.length === 0) {
-                // get id of current div and reduce opacity, remember to reset
+            if (filteredData.length !== 0) {
+                graphs[id].opts.data = {
+                    data: filteredData
+                };
+                const { title_variation_initial, title_variation_filtered, title_flag } = config.text;
+                const replacementString = key === config.dashboard[id].initial_state.toLowerCase() ? title_variation_initial : title_variation_filtered.replace(title_flag, filteredData[0].Country);
+                graphs[id].opts.state.layout.title = config.dashboard[id].title.replace('?', ` ${replacementString}?`)
+                graphs[id].flourish.update(graphs[id].opts)   
+                document.getElementById(`chart-${id}`).style.opacity = 1;
+            // currently data is zeroed so graphs render but empty - eg
+            }
+            else {
+                document.getElementById(`chart-${id}`).style.opacity = 0.3;
             }
         }
     });
