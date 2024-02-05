@@ -113,7 +113,11 @@ function updateSummary(key) {
         if (currentGraph.filterable) {
             const filteredData = config.datasets[id].filter(entry => formatName(entry[config.dashboard.filter_key]) === key);
             const summary = document.querySelector(`#chart-${id} .chart-summary`);
-            if (summary) summary.innerText = filteredData[0][currentGraph.summary]
+            
+            
+            if (summary) {
+                summary.innerText = (filteredData.length <= 0) ? `No data available for ${selectedText}` : filteredData[0][currentGraph.summary]
+            }
         }
     });
 }
@@ -165,11 +169,11 @@ function updateGraphs(key) {
                 const replacementString = key === config.dashboard[id].initial_state.toLowerCase() ? title_variation_initial : title_variation_filtered.replace(title_flag, filteredData[0].Country);
                 graphs[id].opts.state.layout.title = config.dashboard[id].title.replace('?', ` ${replacementString}?`)
                 graphs[id].flourish.update(graphs[id].opts)   
-                document.getElementById(`chart-${id}`).style.opacity = 1;
+                document.querySelector(`#chart-${id} iframe`).style.opacity = 1;
             // currently data is zeroed so graphs render but empty - eg
             }
             else {
-                document.getElementById(`chart-${id}`).style.opacity = 0.3;
+                document.querySelector(`#chart-${id} iframe`).style.opacity = 0.3;
             }
         }
     });
