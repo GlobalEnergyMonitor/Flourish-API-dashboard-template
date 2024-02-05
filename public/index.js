@@ -72,9 +72,9 @@ function implementDropdown() {
     controlsContainer.appendChild(dropdownEl);
 
     dropdownEl.addEventListener('change', (evt) => {
-        const selectedCountry = evt.target.value;
-        updateSummary(selectedCountry);
-        updateGraphs(selectedCountry);
+        const selectedValue = evt.target.value;
+        updateSummary(selectedValue);
+        updateGraphs(selectedValue);
     })
 }
 
@@ -103,7 +103,9 @@ function insertSummary(id) {
 }
 
 function updateSummary(key) {
-    console.log('key', key);
+    const dropdown = document.querySelector('select')
+    const selectedText = dropdown[dropdown.selectedIndex].text;
+    document.querySelector('.dashboard-intro').innerText = `Showing data for ${selectedText}`;
     const graphIDs = config.dashboard.flourish_ids;
     graphIDs.forEach(id => {
         const currentGraph = config.dashboard[id];
