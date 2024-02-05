@@ -9,8 +9,6 @@ const dataset = {
 }
 getData();
 
-// TO DO: read data from google sheets if poss, currently would need to download data for each vis and convert -> feels like could get unweildy and have performance issues
-
 async function getData() {
     const urls = ["./assets/config.json", "./assets/text.json"];
     const keys = ["dashboard", "text"];
@@ -75,7 +73,8 @@ function implementDropdown() {
 
     dropdownEl.addEventListener('change', (evt) => {
         const selectedCountry = evt.target.value;
-        updateGraphs(selectedCountry)
+        updateSummary(selectedCountry);
+        updateGraphs(selectedCountry);
     })
 }
 
@@ -87,9 +86,33 @@ function renderVisualisation() {
         container.classList.add('chart-container');
         document.querySelector('.flourish-container').appendChild(container);
         console.log('id', id, config.dashboard[id].title);
+        insertSummary(id);
         implentGraph(id);
     })
     // console.log('building', config);
+}
+
+function insertSummary(id) {
+    const currentGraph = config.dashboard[id];
+    if (currentGraph.summary) {
+        const summary = document.createElement('p');
+        summary.classList.add('chart-summary');
+        summary.innerText = initialData(id)[0][currentGraph.summary]
+        document.querySelector(`#chart-${id}`).appendChild(summary);
+    }
+}
+
+function updateSummary(key) {
+    console.log('key', key);
+    const graphIDs = config.dashboard.flourish_ids;
+    graphIDs.forEach(id => {
+        const currentGraph = config.dashboard[id];
+        if (currentGraph.filterable) {
+            const filteredData = config.datasets[id].filter(entry => formatName(entry[config.dashboard.filter_key]) === key);
+            const summary = document.querySelector(`#chart-${id} .chart-summary`);
+            if (summary) summary.innerText = filteredData[0][currentGraph.summary]
+        }
+    });
 }
 
 function implentGraph(id) {

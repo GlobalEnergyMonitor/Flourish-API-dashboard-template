@@ -7,6 +7,7 @@
         ],
         "pop_up": null,
         "dataset": "data_construction",
+        "summary": null,
         "filterable": false
     },
     "16566530": {
@@ -23,6 +24,7 @@
         "pop_up": [
             "text"
         ],
+        "summary": "text",
         "dataset": "data_age",
         "initial_state": "Global",
         "filterable": true,
@@ -37,6 +39,7 @@
         "pop_up": [
             "description"
         ],
+        "summary": "description",
         "dataset": "data_cumulative",
         "initial_state": "Global",
         "filterable": true,
@@ -59,6 +62,7 @@
         "pop_up": [
             "text"
         ],
+        "summary": "text",
         "dataset": "data_status",
         "initial_state": "Global",
         "filterable": true,
@@ -75,6 +79,7 @@
         "pop_up": [
             "description"
         ],
+        "summary": "description",
         "dataset": "data_change",
         "initial_state": "Global",
         "filterable": true,
