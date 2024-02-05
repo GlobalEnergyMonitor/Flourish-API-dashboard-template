@@ -104,7 +104,7 @@ function implentGraph(id) {
         bindings: {
             data: {
                 label: config.dashboard[id].x_axis, // this seems to be the X axis
-                value: config.dashboard[id].bar_values, // this is the actual bar
+                value: config.dashboard[id].values, // this is the actual bar
                 // facet: "Year",
                 // filter: "DataHeader5", // assume this would be for a drop down or something
             }
