@@ -25,6 +25,7 @@ label {
     font-size: 1.35rem;
     /* font-weight: bold; */
     padding: 0 0.25rem;
+    min-width: 20rem;
 }
 
 @media only screen and (min-width: 600px) {
