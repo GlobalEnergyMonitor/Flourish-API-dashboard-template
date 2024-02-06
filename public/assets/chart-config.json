@@ -24,7 +24,7 @@
         "pop_up": [
             "text"
         ],
-        "summary": "age_text",
+        "summary": null,
         "dataset": "data_age",
         "initial_state": "Global",
         "filterable": true,
@@ -39,14 +39,14 @@
         "pop_up": [
             "description"
         ],
-        "summary": "cumulative_text",
+        "summary": null,
         "dataset": "data_cumulative",
         "initial_state": "Global",
         "filterable": true,
         "filter_by": "Country"
     },
     "16659638": {
-        "title": "How has coal power capacity changed status in past decade?",
+        "title": "How has coal power capacity changed status in past decade in {{country}}?",
         "x_axis": "Year",
         "values": [
             "operating",
@@ -62,7 +62,7 @@
         "pop_up": [
             "text"
         ],
-        "summary": "status_text",
+        "summary": null,
         "dataset": "data_status",
         "initial_state": "Global",
         "filterable": true,
@@ -79,20 +79,10 @@
         "pop_up": [
             "description"
         ],
-        "summary": "change_text",
+        "summary": null,
         "dataset": "data_change",
         "initial_state": "Global",
         "filterable": true,
         "filter_by": "Country"
-    },
-    "flourish_ids": [
-        "16659638",
-        "16659864",
-        "16533187",
-        "16566530",
-        "15821879"
-
-    ],
-    "input_type": "dropdown",
-    "filter_key": "Country"
+    }
 }

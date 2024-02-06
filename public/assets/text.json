@@ -1,39 +1,43 @@
 {
-    "title": "Coal dashbaord",
-    "intro": "Below is a container for a flourish viz",
+    "title": "Coal dashboard",
+    "intro": "Intro text",
     "dropdown_label": "Select a country: ",
-    "title_variation_initial": "globally",
-    "title_variation_filtered": "in {{country}}",
-    "title_flag": "{{country}}",
+    "chart_title_variation_initial": "global",
+    "chart_title_variation_filtered": "in {{country}}",
+    "chart_title_flag": "{{country}}",
     "dropdown": [
-        {
-          "Country": "Global",
-          "cumulative_text": "coal capacity has almost doubled from 2000",
-          "change_text": "Need to develop a sentence for Global",
-          "status_text": "Global has 2,095,041 MW of operating coal power capacity and 557,465 MW under development",
-          "age_text": "The largest share of coal power in Global is 10-19 years old"
-        },
-        {
-          "Country": "Albania",
-          "cumulative_text": "has no operating coal power",
-          "change_text": "neither added or retired any coal",
-          "status_text": "Albania has 0 MW of operating coal power capacity and 0 MW under development",
-          "age_text": "Albania does not have any operating coal power"
-        },
-        {
-          "Country": "Argentina",
-          "cumulative_text": "increased its coal power capacity from 2000",
-          "change_text": "has not retired any coal since 2000",
-          "status_text": "Argentina has 495 MW of operating coal power capacity and 120 MW under development",
-          "age_text": "The largest share of coal power in Argentina is 40-49 years old"
-        },
-        {
-          "Country": "Australia",
-          "cumulative_text": "reduced its coal power capacity from 2000",
-          "change_text": "Need to develop a sentence for Australia",
-          "status_text": "Australia has 22,437 MW of operating coal power capacity and 1,000 MW under development",
-          "age_text": "The largest share of coal power in Australia is 30-39 years old"
-        },
+      {
+        "Country": "Global",
+        "overall_summary": "Global summary sentence here",
+        "cumulative_text": "coal capacity has almost doubled from 2000",
+        "change_text": "Need to develop a sentence for Global",
+        "status_text": "Global has 2,095,041 MW of operating coal power capacity and 557,465 MW under development",
+        "age_text": "The largest share of coal power in Global is 10-19 years old"
+      },
+      {
+        "Country": "Albania",
+        "overall_summary": "Albania summary sentence here",
+        "cumulative_text": "has no operating coal power",
+        "change_text": "neither added or retired any coal",
+        "status_text": "Albania has 0 MW of operating coal power capacity and 0 MW under development",
+        "age_text": "Albania does not have any operating coal power"
+      },
+      {
+        "Country": "Argentina",
+        "overall_summary": "Argentina summary sentence here",
+        "cumulative_text": "increased its coal power capacity from 2000",
+        "change_text": "has not retired any coal since 2000",
+        "status_text": "Argentina has 495 MW of operating coal power capacity and 120 MW under development",
+        "age_text": "The largest share of coal power in Argentina is 40-49 years old"
+      },
+      {
+        "Country": "Australia",
+        "overall_summary": "Australia summary sentence here",
+        "cumulative_text": "reduced its coal power capacity from 2000",
+        "change_text": "Need to develop a sentence for Australia",
+        "status_text": "Australia has 22,437 MW of operating coal power capacity and 1,000 MW under development",
+        "age_text": "The largest share of coal power in Australia is 30-39 years old"
+      },
         {
           "Country": "Austria",
           "cumulative_text": "retired all its coal power capacity from 2000",

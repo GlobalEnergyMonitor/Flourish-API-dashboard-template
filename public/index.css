@@ -14,6 +14,15 @@ label {
     text-align: left;
 }
 
+.tickers-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ticker-container {
+    flex-grow: 1;
+}
+
 .controls-container select {
     cursor: pointer;
     overflow: hidden;
@@ -40,5 +49,9 @@ label {
 
     .chart-summary {
         min-height: 3rem;
+    }
+
+    .ticker-container {
+        flex: 28%;
     }
   }
