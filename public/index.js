@@ -29,26 +29,29 @@ async function getData() {
                 dataURLS.push(`./assets/data/${config.charts[id].dataset}.json`);
                 config.datasets[id] = [];
             })
-            config.dashboard.tickers.forEach(entry => {
+            if (config.dashboard.tickers) {
                 dataURLS.push('https://public.flourish.studio/visualisation/16565310/visualisation.json') // this assumes we want the same template for all tickers
-                config.datasets.ticker = [];
-            })
+                dataURLS.push('./assets/data/data_ticker-demo.json') // can we specify the name this file always has to have?
+                config.datasets.ticker = {};
+            }
             const fetches = [];
             for (const url of dataURLS) {
                 fetches.push(fetch(url));
             }
             Promise.all(fetches)
                 .then(responses => {
-                    console.log('res', responses);
                     return Promise.all(responses.map(r => r.json()))
                 })
                 .then(jsonObjects => {
-                    console.log('obj', jsonObjects)
                     jsonObjects.forEach((obj, i) => {
-                        if (i < jsonObjects.length - 1) config.datasets[config.dashboard.flourish_ids[i]] = obj;
-                        else config.datasets.ticker = obj;
+                        if (i < jsonObjects.length - 2) { // TODO: make this not hard coded
+                            config.datasets[config.dashboard.flourish_ids[i]] = obj;
+                        }
+                        else {
+                            if (obj.template && obj.template === '@flourish/number-ticker') config.datasets.ticker.flourish_template = obj;
+                            else config.datasets.ticker.data = obj;
+                        }
                     })
-                    console.log('config', config)
                 })
                 .then(() => {
                     document.querySelector('h1').innerText = config.text.title;
@@ -86,13 +89,13 @@ function implementDropdown() {
 }
 
 function renderIntroVis() {
-    // TO DO: checks for no tickers / error handling
+    // TODO: checks for no tickers / error handling
     // Are the only intro vis types tickers?
     const container = document.createElement('div');
     container.classList.add('tickers-container');
     document.querySelector('.dashboard-intro').appendChild(container);
 
-    const { state } = config.datasets.ticker;
+    const { state } = config.datasets.ticker.flourish_template;
     const options = {
         template: "@flourish/number-ticker",
         version: '1.5.1',
@@ -104,7 +107,7 @@ function renderIntroVis() {
             font_unit: 'rem'
         }
     };
-    // TO DO: get font size and colour from config
+    // TODO: get font size and colour from config
 
     config.dashboard.tickers.forEach((entry, i) => {
         const { id } = entry;
@@ -119,15 +122,29 @@ function renderIntroVis() {
             container: `#ticker-${i+1}`,
             state: {
                 ...options.state,
-                custom_template: config.dashboard.tickers[i].text.replace('{{color}}', config.dashboard.tickers[i].style.color).replace('number_to', config.dashboard.tickers[i].number_to)
+                custom_template: config.dashboard.tickers[i].text
+                .replace('{{color}}', config.dashboard.tickers[i].style.color)
+                .replace('number_to', config.dashboard.tickers[i].number_to)
             }
             // pull all styling variations from config
         }
-        tickers[id] = new Flourish.Live(tickers[id].options);
+        tickers[id].flourish = new Flourish.Live(tickers[id].options);
     })
 }
 
-// TO DO: Add update tickers method
+function updateIntroVis() {
+    // TODO: checks for no tickers / error handling
+    config.dashboard.tickers.forEach((entry, i) => {
+        const { id } = entry;
+        const number_to = filterTickers(getDropdownText())[id];
+
+        tickers[id].options.state.custom_template= config.dashboard.tickers[i].text
+                .replace('{{color}}', config.dashboard.tickers[i].style.color)
+                .replace('number_to', number_to);
+        tickers[id].flourish.update(tickers[id].options)
+    })
+    
+}
 
 function renderVisualisation() {
     const graphIDs = config.dashboard.flourish_ids;
@@ -153,11 +170,10 @@ function insertChartSummary(id) {
 }
 
 function updateSummaries(key) {
-    const dropdown = document.querySelector('select')
-    const selectedText = dropdown[dropdown.selectedIndex].text;
-    const summaryTextObj = filterDropdownSummaries(config.dashboard.input_filter, selectedText);
+    const summaryTextObj = filterDropdownSummaries(config.dashboard.input_filter, getDropdownText());
 
     if (config.dashboard.overall_summary) updateOverallSummary(key, summaryTextObj);
+    updateIntroVis(key);
     updateGraphSummaries(key, summaryTextObj);
 }
 
@@ -166,15 +182,13 @@ function updateOverallSummary(key, summaryTextObj) {
 }
 
 function updateGraphSummaries(key) {
-    const dropdown = document.querySelector('select')
-    const selectedText = dropdown[dropdown.selectedIndex].text;
     const graphIDs = config.dashboard.flourish_ids;
     graphIDs.forEach(id => {
         const currentGraph = config.charts[id];
         if (currentGraph.filterable && currentGraph.summary) {
             const filteredData = config.datasets[id].filter(entry => formatName(entry[config.graphs[id].filter_by]) === key);
             const summary = document.querySelector(`#chart-${id} .chart-summary`);
-            if (summary) summary.innerText = (filteredData.length <= 0 || !summaryTextObj[currentGraph.summary]) ? `No data available for ${selectedText}` : summaryTextObj[currentGraph.summary];
+            if (summary) summary.innerText = (filteredData.length <= 0 || !summaryTextObj[currentGraph.summary]) ? `No data available for ${getDropdownText()}` : summaryTextObj[currentGraph.summary];
         }
     });
 }
@@ -253,4 +267,13 @@ function filterDropdownSummaries(key, selected) {
     return config.text.dropdown.filter(entry => entry[key] === selected)[0];
 }
 
-// TO DO: Add markdown to html handling for summary text and titles
+function filterTickers(key) {
+    return config.datasets.ticker.data.filter(entry => entry[config.dashboard.input_filter] === key)[0];
+}
+
+function getDropdownText() {
+    const dropdown = document.querySelector('select');
+    return dropdown[dropdown.selectedIndex].text;
+}
+
+// TODO: Add markdown to html handling for summary text and titles
