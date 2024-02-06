@@ -45,13 +45,16 @@ async function getData() {
                 })
                 .then(jsonObjects => {
                     jsonObjects.forEach((obj, i) => {
-                        if (i < jsonObjects.length - 2) { // TODO: make this not hard coded
-                            config.datasets[config.dashboard.flourish_ids[i]] = obj;
+                        if (config.dashboard.tickers) {
+                            if (i < jsonObjects.length - 2) { // TODO: make this not hard coded
+                                config.datasets[config.dashboard.flourish_ids[i]] = obj;
+                            }
+                            else {
+                                if (obj.template && obj.template === '@flourish/number-ticker') config.datasets.ticker.flourish_template = obj;
+                                else config.datasets.ticker.data = obj;
+                            }
                         }
-                        else {
-                            if (obj.template && obj.template === '@flourish/number-ticker') config.datasets.ticker.flourish_template = obj;
-                            else config.datasets.ticker.data = obj;
-                        }
+                        else config.datasets[config.dashboard.flourish_ids[i]] = obj;
                     })
                 })
                 .then(() => {
@@ -60,7 +63,7 @@ async function getData() {
                     if (config.dashboard.input_type === 'dropdown') implementDropdown();
                     // add another to implement buttons
                 })
-                .then(() => renderIntroVis())
+                .then(() => renderTickers())
                 .then(() => renderVisualisation())
         })
 }
@@ -89,60 +92,56 @@ function implementDropdown() {
     })
 }
 
-function renderIntroVis() {
-    // TODO: checks for no tickers / error handling
-    const container = document.createElement('div');
-    container.classList.add('tickers-container');
-    document.querySelector('.dashboard-intro').appendChild(container);
-    const initialData = initialTickerData()[0];
-
-    console.log('initial data', initialData);
-
-    const { state } = config.datasets.ticker.flourish_template;
-    // grab text size from config and split into size and unit needed in flourish:
-    const tickerTextSplit = config.dashboard["ticker_text_font-size"].match(/[a-zA-Z]+|[0-9]+(?:\.[0-9]+)?|\.[0-9]+/g);
-    console.log(tickerTextSplit);
-
-    const options = {
-        template: "@flourish/number-ticker",
-        version: '1.5.1',
-        api_url: "/flourish",
-        api_key: "", //filled in server side
-        state: {
-            ...state,
-            font_size: tickerTextSplit[0],
-            font_unit: tickerTextSplit[1]
-        }
-    };
-
-
-    config.dashboard.tickers.forEach((entry, i) => {
-        console.log('entry', entry);
-        const { id } = entry;
+function renderTickers() {
+    if (config.dashboard.tickers) {
         const container = document.createElement('div');
-        container.id = id;
-        container.classList.add('ticker-container');
-        document.querySelector('.tickers-container').appendChild(container);
+        container.classList.add('tickers-container');
+        document.querySelector('.dashboard-intro').appendChild(container);
+        const initialData = initialTickerData()[0];
 
-        const tickerConf = config.dashboard.tickers.filter( entry => entry.id === id)[0];
-        tickers[id] = {};
-        tickers[id].options = {
-            ...options,
-            container: `#${id}`,
+        const { state } = config.datasets.ticker.flourish_template;
+        const tickerTextSplit = config.dashboard["ticker_text_font-size"].match(/[a-zA-Z]+|[0-9]+(?:\.[0-9]+)?|\.[0-9]+/g); // grab text size from config and split into size and unit needed in flourish:
+
+        const options = {
+            template: "@flourish/number-ticker",
+            version: '1.5.1',
+            api_url: "/flourish",
+            api_key: "", //filled in server side
             state: {
-                ...options.state,
-                custom_template: formatWithTickerStyling(initialData[id], id),
-                value_format: {
-                    ...options.state.value_format,
-                    n_dec: tickerConf.decimal_places,
+                ...state,
+                font_size: tickerTextSplit[0],
+                font_unit: tickerTextSplit[1]
+            }
+        };
+
+        config.dashboard.tickers.forEach((entry, i) => {
+            console.log('entry', entry);
+            const { id } = entry;
+            const container = document.createElement('div');
+            container.id = id;
+            container.classList.add('ticker-container');
+            document.querySelector('.tickers-container').appendChild(container);
+
+            const tickerConf = config.dashboard.tickers.filter( entry => entry.id === id)[0];
+            tickers[id] = {};
+            tickers[id].options = {
+                ...options,
+                container: `#${id}`,
+                state: {
+                    ...options.state,
+                    custom_template: formatWithTickerStyling(initialData[id], id),
+                    value_format: {
+                        ...options.state.value_format,
+                        n_dec: tickerConf.decimal_places,
+                    }
                 }
             }
-        }
-        tickers[id].flourish = new Flourish.Live(tickers[id].options);
-    })
+            tickers[id].flourish = new Flourish.Live(tickers[id].options);
+        });
+    }
 }
 
-function updateIntroVis() {
+function updateTickers() {
     // TODO: checks for no tickers / error handling
     config.dashboard.tickers.forEach((entry, i) => {
         const { id } = entry;
@@ -186,7 +185,7 @@ function updateSummaries(key) {
     const summaryTextObj = filterDropdownSummaries(config.dashboard.input_filter, getDropdownText());
 
     if (config.dashboard.overall_summary) updateOverallSummary(summaryTextObj);
-    updateIntroVis(key);
+    if (config.dashboard.tickers) updateTickers(key);
     updateGraphSummaries(key, summaryTextObj);
 }
 
