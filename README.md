@@ -43,7 +43,8 @@ You can control which graphs are showing, and in what order from `public/assets/
 
     ],
     "input_type": "dropdown", // input type to add to the page: dropdown (or soon to be buttons)
-    "filter_key": "column-5" // what column in dataset to filter by
+    "filter_key": "column-5", // what column in dataset to filter by
+    "overall_summary": true // boolean to show/hide overall summary which updates on interaction
 }
 ```
 
@@ -100,9 +101,13 @@ All of this should be configurable. A lot of the main text (outside of the indiv
     "title": "Coal dashbaord",
     "intro": "Below is a container for a flourish viz",
     "dropdown_label": "Select a country: ",
+    "title_variation_initial": "globally",
+    "title_variation_filtered": "in {{country}}",
+    "title_flag": "{{country}}",
      "dropdown": [
         {
           "Country": "Global",
+          "overall_summary": "",
           "cumulative_text": "coal capacity has almost doubled from 2000",
           "change_text": "Need to develop a sentence for Global",
           "status_text": "Global has 2,095,041 MW of operating coal power capacity and 557,465 MW under development",
@@ -110,6 +115,7 @@ All of this should be configurable. A lot of the main text (outside of the indiv
         },
                 {
           "Country": "Albania",
+          "overall_summary": "",
           "cumulative_text": "has no operating coal power",
           "change_text": "neither added or retired any coal",
           "status_text": "Albania has 0 MW of operating coal power capacity and 0 MW under development",
