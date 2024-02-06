@@ -172,17 +172,18 @@ function insertChartSummary(id) {
 function updateSummaries(key) {
     const summaryTextObj = filterDropdownSummaries(config.dashboard.input_filter, getDropdownText());
 
-    if (config.dashboard.overall_summary) updateOverallSummary(key, summaryTextObj);
+    if (config.dashboard.overall_summary) updateOverallSummary(summaryTextObj);
     updateIntroVis(key);
     updateGraphSummaries(key, summaryTextObj);
 }
 
-function updateOverallSummary(key, summaryTextObj) {
-    document.querySelector('.dashboard-intro--para').innerText = (summaryTextObj.overall_summary) ? summaryTextObj.overall_summary : 'insert generic sentence here';
+function updateOverallSummary(summaryTextObj) {
+    document.querySelector('.dashboard-intro--para').innerText = (summaryTextObj.overall_summary) ? summaryTextObj.overall_summary : 'insert generic sentence here'; // TODO: grab default sentence from text config
 }
 
 function updateGraphSummaries(key, summaryTextObj) {
-    const graphIDs = config.dashboard.flourish_ids;
+    const graphIDs = config.charts.filter(entry => entry.filterable);
+    console.log('graph ids', graphIDs);
     graphIDs.forEach(id => {
         const currentGraph = config.charts[id];
         if (currentGraph.filterable && currentGraph.summary) {
