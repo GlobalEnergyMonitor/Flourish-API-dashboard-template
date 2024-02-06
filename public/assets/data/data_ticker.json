@@ -1,0 +1,653 @@
+[
+    {
+      "Country": "United States",
+      "summary_1": "<span>{{205.4}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0.4}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{118.9}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "United Kingdom",
+      "summary_1": "<span>{{2.7}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{18.5}} GW</span><br>less operating coal capacity than 2014",
+      "summary_4": "<span>{{28}} mins</span><br>testing"
+    },
+    {
+      "Country": "Ukraine",
+      "summary_1": "<span>{{7.9}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{16.3}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Germany",
+      "summary_1": "<span>{{40.4}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{9.9}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Spain",
+      "summary_1": "<span>{{2.9}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{8.4}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Australia",
+      "summary_1": "<span>{{22.4}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{1}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{5.9}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Canada",
+      "summary_1": "<span>{{4.7}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{5.3}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Russia",
+      "summary_1": "<span>{{38.3}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{3.823}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{5.1}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Romania",
+      "summary_1": "<span>{{2.3}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{4.5}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "France",
+      "summary_1": "<span>{{2.5}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{3.3}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Italy",
+      "summary_1": "<span>{{6.2}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{3.3}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Denmark",
+      "summary_1": "<span>{{1.6}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{2.1}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Greece",
+      "summary_1": "<span>{{2.9}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{2}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Portugal",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{2}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Bulgaria",
+      "summary_1": "<span>{{4.6}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{1.3}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Austria",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{1.2}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Finland",
+      "summary_1": "<span>{{1.5}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{1.1}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Czech Republic",
+      "summary_1": "<span>{{7.4}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{1}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Belgium",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.6}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Israel",
+      "summary_1": "<span>{{4.3}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.6}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Hong Kong",
+      "summary_1": "<span>{{6.1}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.5}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Hungary",
+      "summary_1": "<span>{{0.9}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.3}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Slovakia",
+      "summary_1": "<span>{{0.8}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.3}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Brazil",
+      "summary_1": "<span>{{3.2}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{1.326}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.2}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Netherlands",
+      "summary_1": "<span>{{3.5}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.2}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Chile",
+      "summary_1": "<span>{{4.3}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.1}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Croatia",
+      "summary_1": "<span>{{0.2}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.1}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Peru",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.1}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Sweden",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.1}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Syria",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.1}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Uzbekistan",
+      "summary_1": "<span>{{2.5}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0.6}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.1}} GW</span><br>less operating coal capacity than 2014"
+    },
+    {
+      "Country": "Albania",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Belarus",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Botswana",
+      "summary_1": "<span>{{0.7}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0.75}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "C�te d'Ivoire",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "DR Congo",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Djibouti",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Egypt",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "El Salvador",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Eswatini",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0.3}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Ethiopia",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Georgia",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Ghana",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Guadeloupe",
+      "summary_1": "<span>{{0.1}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.038}} GW</span><br>"
+    },
+    {
+      "Country": "Guinea",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Iran",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0.65}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Ireland",
+      "summary_1": "<span>{{0.9}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Jamaica",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Kenya",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0.064}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Kosovo",
+      "summary_1": "<span>{{1.3}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Latvia",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Madagascar",
+      "summary_1": "<span>{{0.1}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0.03}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Malawi",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0.4}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Mauritius",
+      "summary_1": "<span>{{0.2}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Mexico",
+      "summary_1": "<span>{{5.4}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Moldova",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Montenegro",
+      "summary_1": "<span>{{0.2}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Mozambique",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{1.2}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Namibia",
+      "summary_1": "<span>{{0.1}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "New Zealand",
+      "summary_1": "<span>{{0.5}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Niger",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0.2}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Nigeria",
+      "summary_1": "<span>{{0.3}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0.6}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.0385}} GW</span><br>"
+    },
+    {
+      "Country": "North Macedonia",
+      "summary_1": "<span>{{0.8}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Oman",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Papua New Guinea",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Serbia",
+      "summary_1": "<span>{{4.4}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0.35}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Sri Lanka",
+      "summary_1": "<span>{{0.9}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Sudan",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Tanzania",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0.8}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "United Arab Emirates",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Venezuela",
+      "summary_1": "<span>{{0}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0}} GW</span><br>change in operating coal capacity from 2014"
+    },
+    {
+      "Country": "Argentina",
+      "summary_1": "<span>{{0.5}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0.12}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.12}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Honduras",
+      "summary_1": "<span>{{0.1}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.105}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Kyrgyzstan",
+      "summary_1": "<span>{{0.8}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0.6}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.105}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Myanmar",
+      "summary_1": "<span>{{0.2}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.07}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Poland",
+      "summary_1": "<span>{{29.1}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0.1}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.063}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Senegal",
+      "summary_1": "<span>{{0.2}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.125}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Brunei",
+      "summary_1": "<span>{{0.2}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.22}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Guatemala",
+      "summary_1": "<span>{{0.4}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.217}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Mongolia",
+      "summary_1": "<span>{{1}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{1.85}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.21}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Panama",
+      "summary_1": "<span>{{0.3}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.186}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Slovenia",
+      "summary_1": "<span>{{1.1}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.2}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Bosnia and Herzegovina",
+      "summary_1": "<span>{{2.1}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{1.45}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.3}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Kazakhstan",
+      "summary_1": "<span>{{13}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{4.875}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.303}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Tajikistan",
+      "summary_1": "<span>{{0.4}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.3}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Zambia",
+      "summary_1": "<span>{{0.3}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0.3}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.33}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "North Korea",
+      "summary_1": "<span>{{3.3}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.35}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Thailand",
+      "summary_1": "<span>{{6.1}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0.6}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.355}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Zimbabwe",
+      "summary_1": "<span>{{1.3}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{5.175}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.385}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Colombia",
+      "summary_1": "<span>{{1.6}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.607}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Dominican Republic",
+      "summary_1": "<span>{{1.1}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{0.752}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Cambodia",
+      "summary_1": "<span>{{1.4}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{1.015}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{1.17}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Morocco",
+      "summary_1": "<span>{{4.3}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{1.736}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Laos",
+      "summary_1": "<span>{{1.9}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{7.036}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{1.878}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Bangladesh",
+      "summary_1": "<span>{{2.9}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{11.84}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{2.605}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Taiwan",
+      "summary_1": "<span>{{19.2}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{3.4153}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "South Africa",
+      "summary_1": "<span>{{43.6}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{4.555}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{4.8788}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Malaysia",
+      "summary_1": "<span>{{13.3}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{5.6}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Philippines",
+      "summary_1": "<span>{{12.1}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{3.125}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{6.2258}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "T�rkiye",
+      "summary_1": "<span>{{20.5}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{5.453}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{6.31}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Pakistan",
+      "summary_1": "<span>{{7.6}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{4.7415}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{7.488}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Japan",
+      "summary_1": "<span>{{54.6}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{1.15}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{9.43633}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "South Korea",
+      "summary_1": "<span>{{39.1}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{3.14}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{11.796}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Vietnam",
+      "summary_1": "<span>{{25.8}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{9.325}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{17.303}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Indonesia",
+      "summary_1": "<span>{{45.3}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{19.249}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{22.286}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "India",
+      "summary_1": "<span>{{235.9}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{67.573}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{64.706}} GW</span><br>more operating coal capacity than 2014"
+    },
+    {
+      "Country": "Global",
+      "summary_1": "<span>{{2095}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{557.4653}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{248.10333}} GW</span><br>more operating coal capacity than 2014",
+      "summary_4": "<span>{{37}} mins</span><br>testing"
+
+    },
+    {
+      "Country": "China",
+      "summary_1": "<span>{{1108.9}} GW</span><br>of operating coal power capacity",
+      "summary_2": "<span>{{391.6998}} GW</span><br>in development coal power capacity",
+      "summary_3": "<span>{{289.19175}} GW</span><br>more operating coal capacity than 2014"
+    }
+  ]

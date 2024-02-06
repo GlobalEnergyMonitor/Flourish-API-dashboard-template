@@ -4,43 +4,51 @@
         "16659864",
         "16533187",
         "16566530",
-        "15821879"
+        "15821879",
+        "16716119"
 
     ],
     "input_type": "dropdown",
     "input_types": ["dropdown", "buttons", "combo"],
     "input_filter": "Country",
+    "input_default": "Global",
     "overall_summary": true,
-    "ticker_font-size": "2.5rem",
+    "ticker_text_font-size": "2rem",
+    "ticker_data": "data_ticker",
     "tickers": [{
-        "id": "ticker-1",
-        "number_start": 0,
-        "number_to": 1000,
-        "text": "<span style='color: {{color}};'>{{number_to}} GW</span><br> of operating coal power",
+        "id": "summary_1",
+        "decimal_places": 0,
         "style": {
             "color": "#BF532C",
-            "font-weight": "bold"
+            "font-weight": "bold",
+            "font-size": "3.5rem"
         }
     },
     {
-        "id": "ticker-2",
-        "number_start": 0,
-        "number_to": 179,
-        "text": "<span style='color: {{color}};'>{{number_to}} mins</span><br> spent on this",
+        "id": "summary_2",
+        "decimal_places": 1,
         "style": {
-            "color": "#BF532C",
-            "font-weight": "bold"
+            "color": "#3f6950",
+            "font-weight": "bold",
+            "font-size": "3.5rem"
         }
     },
     {
-        "id": "ticker-3",
-        "number_start": 1000,
-        "number_to": 56,
-        "text": "<span style='color: {{color}};'>{{number_to}}</span><br> hours left",
+        "id": "summary_3",
+        "decimal_places": 2,
         "style": {
-            "color": "#BF532C",
-            "font-weight": "bold"
+            "color": "#761201",
+            "font-weight": "bold",
+            "font-size": "3.5rem"
         }
-    }
-]
+    },
+    {
+        "id": "summary_4",
+        "decimal_places": 2,
+        "style": {
+            "color": "#761201",
+            "font-weight": "bold",
+            "font-size": "3.5rem"
+        }
+    }]
 }

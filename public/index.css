@@ -51,7 +51,21 @@ label {
         min-height: 3rem;
     }
 
-    .ticker-container {
-        flex: 28%;
+    .ticker-container:first-child:nth-last-child(4),
+    .ticker-container:first-child:nth-last-child(4) ~ .ticker-container  {
+        flex: 50%;
+    }
+
+    .ticker-container:first-child:nth-last-child(3),
+    .ticker-container:first-child:nth-last-child(3) ~ .ticker-container  {
+        flex: 30%;
+
+    }
+  }
+
+  @media only screen and (min-width: 900px) {
+    .ticker-container:first-child:nth-last-child(4),
+    .ticker-container:first-child:nth-last-child(4) ~ .ticker-container {
+        flex: 25%;
     }
   }
