@@ -1,3 +1,4 @@
+const converter = new showdown.Converter();
 const config = {
     datasets: {}
 };
@@ -54,8 +55,8 @@ async function getData() {
                     })
                 })
                 .then(() => {
-                    document.querySelector('h1').innerText = config.text.title;
-                    if (config.text.intro) document.querySelector('.dashboard-intro--para').innerText = config.text.intro;
+                    document.querySelector('h1').innerHTML = markdownToHTML(config.text.title);
+                    if (config.text.intro) document.querySelector('.dashboard-intro--para').innerHTML = markdownToHTML(config.text.intro);
                     if (config.dashboard.input_type === 'dropdown') implementDropdown();
                     // add another to implement buttons
                 })
@@ -66,7 +67,7 @@ async function getData() {
 
 function implementDropdown() {
     const label = document.createElement('label');
-    label.innerText = config.text.dropdown_label;
+    label.innerHTML = markdownToHTML(config.text.dropdown_label);
     label.for = "dropdown-selection"
     const dropdownEl = document.createElement('select');
     dropdownEl.id = "dropdown-selection";
@@ -164,7 +165,7 @@ function insertChartSummary(id) {
         const summary = document.createElement('p');
         summary.classList.add('chart-summary');
         const summaryTextObj = filterDropdownSummaries(currentGraph.filter_by, config.charts[id].initial_state);
-        summary.innerText = summaryTextObj[currentGraph.summary];
+        summary.innerHTML = markdownToHTML(summaryTextObj[currentGraph.summary]);
         document.querySelector(`#chart-${id}`).appendChild(summary);
     }
 }
@@ -178,18 +179,17 @@ function updateSummaries(key) {
 }
 
 function updateOverallSummary(summaryTextObj) {
-    document.querySelector('.dashboard-intro--para').innerText = (summaryTextObj.overall_summary) ? summaryTextObj.overall_summary : 'insert generic sentence here'; // TODO: grab default sentence from text config
+    document.querySelector('.dashboard-intro--para').innerHTML = markdownToHTML((summaryTextObj.overall_summary) ? summaryTextObj.overall_summary : 'insert generic sentence here'); // TODO: grab default sentence from text config
 }
 
 function updateGraphSummaries(key, summaryTextObj) {
-    const graphIDs = config.charts.filter(entry => entry.filterable);
-    console.log('graph ids', graphIDs);
+    const graphIDs = config.dashboard.flourish_ids;
     graphIDs.forEach(id => {
         const currentGraph = config.charts[id];
         if (currentGraph.filterable && currentGraph.summary) {
             const filteredData = config.datasets[id].filter(entry => formatName(entry[currentGraph.filter_by]) === key);
             const summary = document.querySelector(`#chart-${id} .chart-summary`);
-            if (summary) summary.innerText = (filteredData.length <= 0 || !summaryTextObj[currentGraph.summary]) ? `No data available for ${getDropdownText()}` : summaryTextObj[currentGraph.summary];
+            if (summary) summary.innerHTML= markdownToHTML((filteredData.length <= 0 || !summaryTextObj[currentGraph.summary]) ? `No data available for ${getDropdownText()}` : summaryTextObj[currentGraph.summary]);
         }
     });
 }
@@ -270,6 +270,10 @@ function filterTickers(key) {
 function getDropdownText() {
     const dropdown = document.querySelector('select');
     return dropdown[dropdown.selectedIndex].text;
+}
+
+function markdownToHTML(string) {
+    return converter.makeHtml(string);
 }
 
 // TODO: Add markdown to html handling for summary text and titles
