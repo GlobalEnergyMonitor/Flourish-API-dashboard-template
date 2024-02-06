@@ -54,7 +54,6 @@ label {
     padding: 1rem;
     margin: 0.25rem;
     cursor: pointer;
-    /* height: ; */
   }
 
   .filter-button:hover,
@@ -79,10 +78,7 @@ label {
     z-index: -1;
   }
 
-  .filter-button:hover > label {
-    font-weight: bold;
-  }
-
+  .filter-button:hover > label,
   .filter-button input:checked + .filter-button label {
     font-weight: bold;
   }
