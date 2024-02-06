@@ -1,3 +1,4 @@
+const converter = new showdown.Converter();
 const config = {
     datasets: {}
 };
@@ -31,7 +32,7 @@ async function getData() {
             })
             if (config.dashboard.tickers) {
                 dataURLS.push('https://public.flourish.studio/visualisation/16565310/visualisation.json') // this assumes we want the same template for all tickers
-                dataURLS.push('./assets/data/data_ticker-demo.json') // can we specify the name this file always has to have?
+                dataURLS.push(`./assets/data/${config.dashboard.ticker_data}.json`)
                 config.datasets.ticker = {};
             }
             const fetches = [];
@@ -44,29 +45,32 @@ async function getData() {
                 })
                 .then(jsonObjects => {
                     jsonObjects.forEach((obj, i) => {
-                        if (i < jsonObjects.length - 2) { // TODO: make this not hard coded
-                            config.datasets[config.dashboard.flourish_ids[i]] = obj;
+                        if (config.dashboard.tickers) {
+                            if (i < jsonObjects.length - 2) { // TODO: make this not hard coded
+                                config.datasets[config.dashboard.flourish_ids[i]] = obj;
+                            }
+                            else {
+                                if (obj.template && obj.template === '@flourish/number-ticker') config.datasets.ticker.flourish_template = obj;
+                                else config.datasets.ticker.data = obj;
+                            }
                         }
-                        else {
-                            if (obj.template && obj.template === '@flourish/number-ticker') config.datasets.ticker.flourish_template = obj;
-                            else config.datasets.ticker.data = obj;
-                        }
+                        else config.datasets[config.dashboard.flourish_ids[i]] = obj;
                     })
                 })
                 .then(() => {
-                    document.querySelector('h1').innerText = config.text.title;
-                    if (config.text.intro) document.querySelector('.dashboard-intro--para').innerText = config.text.intro;
+                    document.querySelector('h1').innerHTML = markdownToHTML(config.text.title);
+                    if (config.text.intro) document.querySelector('.dashboard-intro--para').innerHTML = markdownToHTML(config.text.intro);
                     if (config.dashboard.input_type === 'dropdown') implementDropdown();
                     // add another to implement buttons
                 })
-                .then(() => renderIntroVis())
+                .then(() => renderTickers())
                 .then(() => renderVisualisation())
         })
 }
 
 function implementDropdown() {
     const label = document.createElement('label');
-    label.innerText = config.text.dropdown_label;
+    label.innerHTML = markdownToHTML(config.text.dropdown_label);
     label.for = "dropdown-selection"
     const dropdownEl = document.createElement('select');
     dropdownEl.id = "dropdown-selection";
@@ -88,62 +92,70 @@ function implementDropdown() {
     })
 }
 
-function renderIntroVis() {
-    // TODO: checks for no tickers / error handling
-    // Are the only intro vis types tickers?
-    const container = document.createElement('div');
-    container.classList.add('tickers-container');
-    document.querySelector('.dashboard-intro').appendChild(container);
-
-    const { state } = config.datasets.ticker.flourish_template;
-    const options = {
-        template: "@flourish/number-ticker",
-        version: '1.5.1',
-        api_url: "/flourish",
-        api_key: "", //filled in server side
-        state: {
-            ...state,
-            font_size: 2.5,
-            font_unit: 'rem'
-        }
-    };
-    // TODO: get font size and colour from config
-
-    config.dashboard.tickers.forEach((entry, i) => {
-        const { id } = entry;
+function renderTickers() {
+    if (config.dashboard.tickers) {
         const container = document.createElement('div');
-        container.id = id;
-        container.classList.add('ticker-container');
-        document.querySelector('.tickers-container').appendChild(container);
-        
-        tickers[id] = {};
-        tickers[id].options = {
-            ...options,
-            container: `#ticker-${i+1}`,
+        container.classList.add('tickers-container');
+        document.querySelector('.dashboard-intro').appendChild(container);
+        const initialData = initialTickerData()[0];
+
+        const { state } = config.datasets.ticker.flourish_template;
+        const tickerTextSplit = config.dashboard["ticker_text_font-size"].match(/[a-zA-Z]+|[0-9]+(?:\.[0-9]+)?|\.[0-9]+/g); // grab text size from config and split into size and unit needed in flourish:
+
+        const options = {
+            template: "@flourish/number-ticker",
+            version: '1.5.1',
+            api_url: "/flourish",
+            api_key: "", //filled in server side
             state: {
-                ...options.state,
-                custom_template: config.dashboard.tickers[i].text
-                .replace('{{color}}', config.dashboard.tickers[i].style.color)
-                .replace('number_to', config.dashboard.tickers[i].number_to)
+                ...state,
+                font_size: tickerTextSplit[0],
+                font_unit: tickerTextSplit[1]
             }
-            // pull all styling variations from config
-        }
-        tickers[id].flourish = new Flourish.Live(tickers[id].options);
-    })
+        };
+
+        config.dashboard.tickers.forEach((entry, i) => {
+            console.log('entry', entry);
+            const { id } = entry;
+            const container = document.createElement('div');
+            container.id = id;
+            container.classList.add('ticker-container');
+            document.querySelector('.tickers-container').appendChild(container);
+
+            const tickerConf = config.dashboard.tickers.filter( entry => entry.id === id)[0];
+            tickers[id] = {};
+            tickers[id].options = {
+                ...options,
+                container: `#${id}`,
+                state: {
+                    ...options.state,
+                    custom_template: formatWithTickerStyling(initialData[id], id),
+                    value_format: {
+                        ...options.state.value_format,
+                        n_dec: tickerConf.decimal_places,
+                    }
+                }
+            }
+            tickers[id].flourish = new Flourish.Live(tickers[id].options);
+        });
+    }
 }
 
-function updateIntroVis() {
+function updateTickers() {
     // TODO: checks for no tickers / error handling
     config.dashboard.tickers.forEach((entry, i) => {
         const { id } = entry;
-        const number_to = filterTickers(getDropdownText())[id];
-
-        tickers[id].options.state.custom_template= config.dashboard.tickers[i].text
-                .replace('{{color}}', config.dashboard.tickers[i].style.color)
-                .replace('number_to', number_to);
+        const text = filterTickerData(getDropdownText())[id];
+        tickers[id].options.state.custom_template = formatWithTickerStyling(text, id)
         tickers[id].flourish.update(tickers[id].options)
     })
     
+}
+
+function formatWithTickerStyling(text, id) {
+    const { style } = config.dashboard.tickers.filter( entry => entry.id === id)[0];
+    const styledSpan =  Object.entries(style).reduce((prev, [key, val]) => `${prev} ${key}: ${val};`, '<span style="') + '">';
+    return text.replace('<span>', styledSpan);
 }
 
 function renderVisualisation() {
@@ -164,7 +176,7 @@ function insertChartSummary(id) {
         const summary = document.createElement('p');
         summary.classList.add('chart-summary');
         const summaryTextObj = filterDropdownSummaries(currentGraph.filter_by, config.charts[id].initial_state);
-        summary.innerText = summaryTextObj[currentGraph.summary];
+        summary.innerHTML = markdownToHTML(summaryTextObj[currentGraph.summary]);
         document.querySelector(`#chart-${id}`).appendChild(summary);
     }
 }
@@ -172,23 +184,23 @@ function insertChartSummary(id) {
 function updateSummaries(key) {
     const summaryTextObj = filterDropdownSummaries(config.dashboard.input_filter, getDropdownText());
 
-    if (config.dashboard.overall_summary) updateOverallSummary(key, summaryTextObj);
-    updateIntroVis(key);
+    if (config.dashboard.overall_summary) updateOverallSummary(summaryTextObj);
+    if (config.dashboard.tickers) updateTickers(key);
     updateGraphSummaries(key, summaryTextObj);
 }
 
-function updateOverallSummary(key, summaryTextObj) {
-    document.querySelector('.dashboard-intro--para').innerText = (summaryTextObj.overall_summary) ? summaryTextObj.overall_summary : 'insert generic sentence here';
+function updateOverallSummary(summaryTextObj) {
+    document.querySelector('.dashboard-intro--para').innerHTML = markdownToHTML((summaryTextObj.overall_summary) ? summaryTextObj.overall_summary : 'insert generic sentence here'); // TODO: grab default sentence from text config
 }
 
-function updateGraphSummaries(key) {
+function updateGraphSummaries(key, summaryTextObj) {
     const graphIDs = config.dashboard.flourish_ids;
     graphIDs.forEach(id => {
         const currentGraph = config.charts[id];
         if (currentGraph.filterable && currentGraph.summary) {
-            const filteredData = config.datasets[id].filter(entry => formatName(entry[config.graphs[id].filter_by]) === key);
+            const filteredData = config.datasets[id].filter(entry => formatName(entry[currentGraph.filter_by]) === key);
             const summary = document.querySelector(`#chart-${id} .chart-summary`);
-            if (summary) summary.innerText = (filteredData.length <= 0 || !summaryTextObj[currentGraph.summary]) ? `No data available for ${getDropdownText()}` : summaryTextObj[currentGraph.summary];
+            if (summary) summary.innerHTML= markdownToHTML((filteredData.length <= 0 || !summaryTextObj[currentGraph.summary]) ? `No data available for ${getDropdownText()}` : summaryTextObj[currentGraph.summary]);
         }
     });
 }
@@ -235,13 +247,8 @@ function updateGraphs(key) {
                 graphs[id].opts.data = {
                     data: filteredData
                 };
-                const {
-                    chart_title_variation_initial,
-                    chart_title_variation_filtered,
-                    chart_title_flag
-                } = config.text;
-                const replacementString = key === currentGraph.initial_state.toLowerCase() ? chart_title_variation_initial : chart_title_variation_filtered.replace(chart_title_flag, filteredData[0].Country);
-                graphs[id].opts.state.layout.title = currentGraph.title.replace('?', ` ${replacementString}?`)
+                // const replacementString = key === currentGraph.initial_state.toLowerCase() ? chart_title_variation_initial : chart_title_variation_filtered.replace(chart_title_flag, filteredData[0].Country);
+                // graphs[id].opts.state.layout.title = currentGraph.title.replace('', ` ${replacementString}?`)
                 graphs[id].flourish.update(graphs[id].opts)
                 document.querySelector(`#chart-${id} iframe`).style.opacity = 1;
             } else {
@@ -263,17 +270,25 @@ function initialData(id) {
     return data;
 }
 
+function initialTickerData() {
+    return config.datasets.ticker.data.filter(entry => entry[config.dashboard.input_filter] === config.dashboard.input_default);
+}
+
 function filterDropdownSummaries(key, selected) {
     return config.text.dropdown.filter(entry => entry[key] === selected)[0];
 }
 
-function filterTickers(key) {
+function filterTickerData(key) {
     return config.datasets.ticker.data.filter(entry => entry[config.dashboard.input_filter] === key)[0];
 }
 
 function getDropdownText() {
     const dropdown = document.querySelector('select');
     return dropdown[dropdown.selectedIndex].text;
+}
+
+function markdownToHTML(string) {
+    return converter.makeHtml(string);
 }
 
 // TODO: Add markdown to html handling for summary text and titles

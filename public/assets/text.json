@@ -2,9 +2,6 @@
     "title": "Coal dashboard",
     "intro": "Intro text",
     "dropdown_label": "Select a country: ",
-    "chart_title_variation_initial": "global",
-    "chart_title_variation_filtered": "in {{country}}",
-    "chart_title_flag": "{{country}}",
     "dropdown": [
       {
         "Country": "Global",
@@ -16,7 +13,7 @@
       },
       {
         "Country": "Albania",
-        "overall_summary": "Albania summary sentence here",
+        "overall_summary": "_Albania_ summary sentence here",
         "cumulative_text": "has no operating coal power",
         "change_text": "neither added or retired any coal",
         "status_text": "Albania has 0 MW of operating coal power capacity and 0 MW under development",
@@ -24,7 +21,7 @@
       },
       {
         "Country": "Argentina",
-        "overall_summary": "Argentina summary sentence here",
+        "overall_summary": "**Argentina** summary sentence here",
         "cumulative_text": "increased its coal power capacity from 2000",
         "change_text": "has not retired any coal since 2000",
         "status_text": "Argentina has 495 MW of operating coal power capacity and 120 MW under development",

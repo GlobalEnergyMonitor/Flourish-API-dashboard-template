@@ -46,7 +46,7 @@
         "filter_by": "Country"
     },
     "16659638": {
-        "title": "How has coal power capacity changed status in past decade in {{country}}?",
+        "title": "How has coal power capacity changed status in past decade?",
         "x_axis": "Year",
         "values": [
             "operating",
@@ -62,7 +62,7 @@
         "pop_up": [
             "text"
         ],
-        "summary": null,
+        "summary": "status_text",
         "dataset": "data_status",
         "initial_state": "Global",
         "filterable": true,
@@ -81,6 +81,24 @@
         ],
         "summary": null,
         "dataset": "data_change",
+        "initial_state": "Global",
+        "filterable": true,
+        "filter_by": "Country"
+    },
+    "16716119": {
+        "title": "How has coal power capacity changed status in past decade?",
+        "x_axis": "Year",
+        "values": [
+            "operating",
+            "construction",
+            "permitted",
+            "pre-permit",
+            "announced",
+            "mothballed"
+        ],
+        "pop_up": null,
+        "summary": null,
+        "dataset": "data_buttons",
         "initial_state": "Global",
         "filterable": true,
         "filter_by": "Country"
