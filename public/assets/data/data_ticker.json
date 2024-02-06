@@ -9,7 +9,8 @@
       "Country": "United Kingdom",
       "summary_1": "<span>{{2.7}} GW</span><br>of operating coal power capacity",
       "summary_2": "<span>{{0}} GW</span><br>in development coal power capacity",
-      "summary_3": "<span>{{18.5}} GW</span><br>less operating coal capacity than 2014"
+      "summary_3": "<span>{{18.5}} GW</span><br>less operating coal capacity than 2014",
+      "summary_4": "<span>{{28}} mins</span><br>testing"
     },
     {
       "Country": "Ukraine",
@@ -639,7 +640,9 @@
       "Country": "Global",
       "summary_1": "<span>{{2095}} GW</span><br>of operating coal power capacity",
       "summary_2": "<span>{{557.4653}} GW</span><br>in development coal power capacity",
-      "summary_3": "<span>{{248.10333}} GW</span><br>more operating coal capacity than 2014"
+      "summary_3": "<span>{{248.10333}} GW</span><br>more operating coal capacity than 2014",
+      "summary_4": "<span>{{37}} mins</span><br>testing"
+
     },
     {
       "Country": "China",
