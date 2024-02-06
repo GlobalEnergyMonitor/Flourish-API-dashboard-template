@@ -99,6 +99,10 @@ function renderIntroVis() {
     console.log('initial data', initialData);
 
     const { state } = config.datasets.ticker.flourish_template;
+    // grab text size from config and split into size and unit needed in flourish:
+    const tickerTextSplit = config.dashboard["ticker_text_font-size"].match(/[a-zA-Z]+|[0-9]+(?:\.[0-9]+)?|\.[0-9]+/g);
+    console.log(tickerTextSplit);
+
     const options = {
         template: "@flourish/number-ticker",
         version: '1.5.1',
@@ -106,11 +110,11 @@ function renderIntroVis() {
         api_key: "", //filled in server side
         state: {
             ...state,
-            font_size: 2.5,
-            font_unit: 'rem'
+            font_size: tickerTextSplit[0],
+            font_unit: tickerTextSplit[1]
         }
-        // TODO: ^^ grab font size and spec from config
     };
+
 
     config.dashboard.tickers.forEach((entry, i) => {
         console.log('entry', entry);
