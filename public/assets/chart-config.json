@@ -62,7 +62,7 @@
         "pop_up": [
             "text"
         ],
-        "summary": null,
+        "summary": "status_text",
         "dataset": "data_status",
         "initial_state": "Global",
         "filterable": true,

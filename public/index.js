@@ -181,12 +181,12 @@ function updateOverallSummary(key, summaryTextObj) {
     document.querySelector('.dashboard-intro--para').innerText = (summaryTextObj.overall_summary) ? summaryTextObj.overall_summary : 'insert generic sentence here';
 }
 
-function updateGraphSummaries(key) {
+function updateGraphSummaries(key, summaryTextObj) {
     const graphIDs = config.dashboard.flourish_ids;
     graphIDs.forEach(id => {
         const currentGraph = config.charts[id];
         if (currentGraph.filterable && currentGraph.summary) {
-            const filteredData = config.datasets[id].filter(entry => formatName(entry[config.graphs[id].filter_by]) === key);
+            const filteredData = config.datasets[id].filter(entry => formatName(entry[currentGraph.filter_by]) === key);
             const summary = document.querySelector(`#chart-${id} .chart-summary`);
             if (summary) summary.innerText = (filteredData.length <= 0 || !summaryTextObj[currentGraph.summary]) ? `No data available for ${getDropdownText()}` : summaryTextObj[currentGraph.summary];
         }
