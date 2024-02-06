@@ -8,7 +8,7 @@
         "16716119"
 
     ],
-    "input_type": "dropdown",
+    "input_type": "buttons",
     "input_types": ["dropdown", "buttons", "combo"],
     "input_filter": "Country",
     "input_default": "Global",

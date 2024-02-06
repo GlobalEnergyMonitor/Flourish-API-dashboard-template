@@ -23,6 +23,7 @@ label {
     flex-grow: 1;
 }
 
+/* dropdown styling */
 .controls-container select {
     cursor: pointer;
     overflow: hidden;
@@ -36,6 +37,51 @@ label {
     padding: 0 0.25rem;
     min-width: 20rem;
 }
+
+/* filter button styling */
+.button-group {
+    position: relative;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .filter-button {
+    border: solid 1px #1f1f1f;
+    position: relative;
+    display: block;
+    flex: 50%;
+    padding: 1rem;
+    margin: 0.25rem;
+    cursor: pointer;
+  }
+
+  .filter-button:hover,
+  .filter-button:has(input:checked) {
+    background-color: #d9d9d9;
+    border: solid 1px #111;
+  }
+
+  .filter-button input {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .filter-button label {
+    z-index: -1;
+  }
+
+  .filter-button:hover > label,
+  .filter-button input:checked + .filter-button label {
+    font-weight: bold;
+  }
 
 @media only screen and (min-width: 600px) {
     .flourish-container {
@@ -59,7 +105,11 @@ label {
     .ticker-container:first-child:nth-last-child(3),
     .ticker-container:first-child:nth-last-child(3) ~ .ticker-container  {
         flex: 30%;
-
+    }
+    
+    .filter-button {
+        flex: 20%;
+        margin: 0.5rem;
     }
   }
 
