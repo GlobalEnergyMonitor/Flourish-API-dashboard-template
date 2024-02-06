@@ -146,8 +146,13 @@ function updateTickers() {
     config.dashboard.tickers.forEach((entry, i) => {
         const { id } = entry;
         const text = filterTickerData(getDropdownText())[id];
-        tickers[id].options.state.custom_template = formatWithTickerStyling(text, id)
-        tickers[id].flourish.update(tickers[id].options)
+        if (text) {
+            tickers[id].options.state.custom_template = formatWithTickerStyling(text, id)
+            tickers[id].flourish.update(tickers[id].options)
+            document.querySelector(`#${id} iframe`).style.opacity = 1;
+        }
+        else document.querySelector(`#${id} iframe`).style.opacity = 0.3;
+        
     })
     
 }
