@@ -123,9 +123,8 @@ function renderIntroVis() {
             container: `#ticker-${i+1}`,
             state: {
                 ...options.state,
-                custom_template: config.dashboard.tickers[i].text
-                .replace('{{color}}', config.dashboard.tickers[i].style.color)
-                .replace('number_to', config.dashboard.tickers[i].number_to)
+                custom_template: formatWithTickerStyling(config.dashboard.tickers[i])
+                    .replace('number_to', config.dashboard.tickers[i].number_to)
             }
             // pull all styling variations from config
         }
@@ -139,12 +138,17 @@ function updateIntroVis() {
         const { id } = entry;
         const number_to = filterTickers(getDropdownText())[id];
 
-        tickers[id].options.state.custom_template= config.dashboard.tickers[i].text
-                .replace('{{color}}', config.dashboard.tickers[i].style.color)
+        tickers[id].options.state.custom_template = formatWithTickerStyling(config.dashboard.tickers[i])
                 .replace('number_to', number_to);
         tickers[id].flourish.update(tickers[id].options)
     })
     
+}
+
+function formatWithTickerStyling(tickerConf) {
+    const { text, style } = tickerConf;
+    const styledSpan =  Object.entries(style).reduce((prev, [key, val]) => `${prev} ${key}: ${val};`, '<span style="') + '">';
+    return text.replace('<span>', styledSpan);
 }
 
 function renderVisualisation() {

@@ -16,30 +16,33 @@
         "id": "ticker-1",
         "number_start": 0,
         "number_to": 1000,
-        "text": "<span style='color: {{color}};'>{{number_to}} GW</span><br> of operating coal power",
+        "text": "<span>{{number_to}} GW</span><br>of operating coal power",
         "style": {
             "color": "#BF532C",
-            "font-weight": "bold"
+            "font-weight": "bold",
+            "font-size": "3.5rem"
         }
     },
     {
         "id": "ticker-2",
         "number_start": 0,
         "number_to": 179,
-        "text": "<span style='color: {{color}};'>{{number_to}} mins</span><br> spent on this",
+        "text": "<span>{{number_to}} GW</span><br>under development",
         "style": {
-            "color": "#BF532C",
-            "font-weight": "bold"
+            "color": "#3f6950",
+            "font-weight": "bold",
+            "font-size": "3.5rem"
         }
     },
     {
         "id": "ticker-3",
         "number_start": 1000,
         "number_to": 56,
-        "text": "<span style='color: {{color}};'>{{number_to}}</span><br> hours left",
+        "text": "<span>{{number_to}}%</span><br>change from last year",
         "style": {
-            "color": "#BF532C",
-            "font-weight": "bold"
+            "color": "#761201",
+            "font-weight": "bold",
+            "font-size": "3.5rem"
         }
     }
 ]
