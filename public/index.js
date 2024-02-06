@@ -235,13 +235,8 @@ function updateGraphs(key) {
                 graphs[id].opts.data = {
                     data: filteredData
                 };
-                const {
-                    chart_title_variation_initial,
-                    chart_title_variation_filtered,
-                    chart_title_flag
-                } = config.text;
-                const replacementString = key === currentGraph.initial_state.toLowerCase() ? chart_title_variation_initial : chart_title_variation_filtered.replace(chart_title_flag, filteredData[0].Country);
-                graphs[id].opts.state.layout.title = currentGraph.title.replace('?', ` ${replacementString}?`)
+                // const replacementString = key === currentGraph.initial_state.toLowerCase() ? chart_title_variation_initial : chart_title_variation_filtered.replace(chart_title_flag, filteredData[0].Country);
+                // graphs[id].opts.state.layout.title = currentGraph.title.replace('', ` ${replacementString}?`)
                 graphs[id].flourish.update(graphs[id].opts)
                 document.querySelector(`#chart-${id} iframe`).style.opacity = 1;
             } else {

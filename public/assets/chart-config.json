@@ -46,7 +46,7 @@
         "filter_by": "Country"
     },
     "16659638": {
-        "title": "How has coal power capacity changed status in past decade in {{country}}?",
+        "title": "How has coal power capacity changed status in past decade?",
         "x_axis": "Year",
         "values": [
             "operating",

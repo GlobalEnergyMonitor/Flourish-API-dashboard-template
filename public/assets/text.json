@@ -2,9 +2,6 @@
     "title": "Coal dashboard",
     "intro": "Intro text",
     "dropdown_label": "Select a country: ",
-    "chart_title_variation_initial": "global",
-    "chart_title_variation_filtered": "in {{country}}",
-    "chart_title_flag": "{{country}}",
     "dropdown": [
       {
         "Country": "Global",
