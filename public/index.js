@@ -32,7 +32,7 @@ async function getData() {
             })
             if (config.dashboard.tickers) {
                 dataURLS.push('https://public.flourish.studio/visualisation/16565310/visualisation.json') // this assumes we want the same template for all tickers
-                dataURLS.push('./assets/data/data_ticker-demo.json') // can we specify the name this file always has to have?
+                dataURLS.push(`./assets/data/${config.dashboard.ticker_data}.json`)
                 config.datasets.ticker = {};
             }
             const fetches = [];
@@ -91,10 +91,12 @@ function implementDropdown() {
 
 function renderIntroVis() {
     // TODO: checks for no tickers / error handling
-    // Are the only intro vis types tickers?
     const container = document.createElement('div');
     container.classList.add('tickers-container');
     document.querySelector('.dashboard-intro').appendChild(container);
+    const initialData = initialTickerData()[0];
+
+    console.log('initial data', initialData);
 
     const { state } = config.datasets.ticker.flourish_template;
     const options = {
@@ -107,10 +109,11 @@ function renderIntroVis() {
             font_size: 2.5,
             font_unit: 'rem'
         }
+        // TODO: ^^ grab font size and spec from config
     };
-    // TODO: get font size and colour from config
 
     config.dashboard.tickers.forEach((entry, i) => {
+        console.log('entry', entry);
         const { id } = entry;
         const container = document.createElement('div');
         container.id = id;
@@ -120,13 +123,11 @@ function renderIntroVis() {
         tickers[id] = {};
         tickers[id].options = {
             ...options,
-            container: `#ticker-${i+1}`,
+            container: `#${id}`,
             state: {
                 ...options.state,
-                custom_template: formatWithTickerStyling(config.dashboard.tickers[i])
-                    .replace('number_to', config.dashboard.tickers[i].number_to)
+                custom_template: formatWithTickerStyling(initialData[id], id)
             }
-            // pull all styling variations from config
         }
         tickers[id].flourish = new Flourish.Live(tickers[id].options);
     })
@@ -136,17 +137,15 @@ function updateIntroVis() {
     // TODO: checks for no tickers / error handling
     config.dashboard.tickers.forEach((entry, i) => {
         const { id } = entry;
-        const number_to = filterTickers(getDropdownText())[id];
-
-        tickers[id].options.state.custom_template = formatWithTickerStyling(config.dashboard.tickers[i])
-                .replace('number_to', number_to);
+        const text = filterTickerData(getDropdownText())[id];
+        tickers[id].options.state.custom_template = formatWithTickerStyling(text, id)
         tickers[id].flourish.update(tickers[id].options)
     })
     
 }
 
-function formatWithTickerStyling(tickerConf) {
-    const { text, style } = tickerConf;
+function formatWithTickerStyling(text, id) {
+    const { style } = config.dashboard.tickers.filter( entry => entry.id === id)[0];
     const styledSpan =  Object.entries(style).reduce((prev, [key, val]) => `${prev} ${key}: ${val};`, '<span style="') + '">';
     return text.replace('<span>', styledSpan);
 }
@@ -263,11 +262,15 @@ function initialData(id) {
     return data;
 }
 
+function initialTickerData() {
+    return config.datasets.ticker.data.filter(entry => entry[config.dashboard.input_filter] === config.dashboard.input_default);
+}
+
 function filterDropdownSummaries(key, selected) {
     return config.text.dropdown.filter(entry => entry[key] === selected)[0];
 }
 
-function filterTickers(key) {
+function filterTickerData(key) {
     return config.datasets.ticker.data.filter(entry => entry[config.dashboard.input_filter] === key)[0];
 }
 

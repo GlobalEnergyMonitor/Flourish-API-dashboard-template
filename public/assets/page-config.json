@@ -10,13 +10,12 @@
     "input_type": "dropdown",
     "input_types": ["dropdown", "buttons", "combo"],
     "input_filter": "Country",
+    "input_default": "Global",
     "overall_summary": true,
     "ticker_font-size": "2.5rem",
+    "ticker_data": "data_ticker",
     "tickers": [{
-        "id": "ticker-1",
-        "number_start": 0,
-        "number_to": 1000,
-        "text": "<span>{{number_to}} GW</span><br>of operating coal power",
+        "id": "summary_1",
         "style": {
             "color": "#BF532C",
             "font-weight": "bold",
@@ -24,10 +23,7 @@
         }
     },
     {
-        "id": "ticker-2",
-        "number_start": 0,
-        "number_to": 179,
-        "text": "<span>{{number_to}} GW</span><br>under development",
+        "id": "summary_2",
         "style": {
             "color": "#3f6950",
             "font-weight": "bold",
@@ -35,15 +31,11 @@
         }
     },
     {
-        "id": "ticker-3",
-        "number_start": 1000,
-        "number_to": 56,
-        "text": "<span>{{number_to}}%</span><br>change from last year",
+        "id": "summary_3",
         "style": {
             "color": "#761201",
             "font-weight": "bold",
             "font-size": "3.5rem"
         }
-    }
-]
+    }]
 }
