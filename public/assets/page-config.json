@@ -4,7 +4,8 @@
         "16659864",
         "16533187",
         "16566530",
-        "15821879"
+        "15821879",
+        "16716119"
 
     ],
     "input_type": "dropdown",
@@ -16,6 +17,7 @@
     "ticker_data": "data_ticker",
     "tickers": [{
         "id": "summary_1",
+        "decimal_places": 0,
         "style": {
             "color": "#BF532C",
             "font-weight": "bold",
@@ -24,6 +26,7 @@
     },
     {
         "id": "summary_2",
+        "decimal_places": 1,
         "style": {
             "color": "#3f6950",
             "font-weight": "bold",
@@ -32,6 +35,7 @@
     },
     {
         "id": "summary_3",
+        "decimal_places": 2,
         "style": {
             "color": "#761201",
             "font-weight": "bold",

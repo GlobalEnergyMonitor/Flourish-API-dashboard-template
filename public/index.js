@@ -119,14 +119,19 @@ function renderIntroVis() {
         container.id = id;
         container.classList.add('ticker-container');
         document.querySelector('.tickers-container').appendChild(container);
-        
+
+        const tickerConf = config.dashboard.tickers.filter( entry => entry.id === id)[0];
         tickers[id] = {};
         tickers[id].options = {
             ...options,
             container: `#${id}`,
             state: {
                 ...options.state,
-                custom_template: formatWithTickerStyling(initialData[id], id)
+                custom_template: formatWithTickerStyling(initialData[id], id),
+                value_format: {
+                    ...options.state.value_format,
+                    n_dec: tickerConf.decimal_places,
+                }
             }
         }
         tickers[id].flourish = new Flourish.Live(tickers[id].options);
