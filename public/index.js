@@ -61,6 +61,7 @@ async function getData() {
                     document.querySelector('h1').innerHTML = markdownToHTML(config.text.title);
                     if (config.text.intro) document.querySelector('.dashboard-intro--para').innerHTML = markdownToHTML(config.text.intro);
                     if (config.dashboard.input_type === 'dropdown') implementDropdown();
+                    if (config.dashboard.input_type === 'buttons') implementFilterButtons();
                     // add another to implement buttons
                 })
                 .then(() => renderTickers())
@@ -90,6 +91,55 @@ function implementDropdown() {
         updateSummaries(selectedValue);
         updateGraphs(selectedValue);
     })
+}
+
+function implementFilterButtons() {
+    const label = document.createElement('legend');
+    label.innerHTML = markdownToHTML(config.text.buttons_label);
+    label.for = "button-group"
+    const btnGroup = document.createElement('fieldset');
+    btnGroup.classList.add('button-group');
+    btnGroup.appendChild(label);
+
+
+    const buttonData = config.text.buttons.map(entry => entry[config.dashboard.input_filter]);
+    buttonData.forEach((button, i) => {
+        const btnContainer = document.createElement('div');
+        btnContainer.classList.add('filter-button');
+
+        const btn = document.createElement('input');
+        btn.type = 'radio';
+        if (i === 0) btn.checked = "checked";
+        // btn.classList.add('filter-button');
+        btn.value = formatName(button);
+        btn.id = formatName(button);
+        btn.text = button;
+        btn.name = 'filter';
+        const label = document.createElement('label');
+        label.innerHTML = button;
+        label.for = formatName(button);
+
+        btnContainer.appendChild(label);
+        btnContainer.appendChild(btn);
+        btnGroup.appendChild(btnContainer);
+    });
+    const controlsContainer = document.querySelector('.controls-container');
+    controlsContainer.appendChild(btnGroup);
+
+    const buttonEls = document.querySelectorAll('.filter-button input');
+    console.log('buttons', buttonEls)
+    buttonEls.forEach(btn => {
+        btn.addEventListener('click', (evt) => {
+            console.log('evt', evt);
+
+            buttonEls.forEach(btnEl => btnEl.checked = false);
+            evt.target.checked = "checked";
+
+            const selectedValue = evt.target.value;
+            updateSummaries(selectedValue);
+            updateGraphs(selectedValue);
+        })
+    });
 }
 
 function renderTickers() {
@@ -142,19 +192,16 @@ function renderTickers() {
 }
 
 function updateTickers() {
-    // TODO: checks for no tickers / error handling
     config.dashboard.tickers.forEach((entry, i) => {
         const { id } = entry;
-        const text = filterTickerData(getDropdownText())[id];
+        const text = filterTickerData(getSelectedText())[id];
         if (text) {
             tickers[id].options.state.custom_template = formatWithTickerStyling(text, id)
             tickers[id].flourish.update(tickers[id].options)
             document.querySelector(`#${id} iframe`).style.opacity = 1;
         }
         else document.querySelector(`#${id} iframe`).style.opacity = 0.3;
-        
-    })
-    
+    });
 }
 
 function formatWithTickerStyling(text, id) {
@@ -180,14 +227,14 @@ function insertChartSummary(id) {
     if (currentGraph.summary) {
         const summary = document.createElement('p');
         summary.classList.add('chart-summary');
-        const summaryTextObj = filterDropdownSummaries(currentGraph.filter_by, config.charts[id].initial_state);
+        const summaryTextObj = filterSummaries(currentGraph.filter_by, config.charts[id].initial_state);
         summary.innerHTML = markdownToHTML(summaryTextObj[currentGraph.summary]);
         document.querySelector(`#chart-${id}`).appendChild(summary);
     }
 }
 
 function updateSummaries(key) {
-    const summaryTextObj = filterDropdownSummaries(config.dashboard.input_filter, getDropdownText());
+    const summaryTextObj = filterSummaries(config.dashboard.input_filter, getSelectedText());
 
     if (config.dashboard.overall_summary) updateOverallSummary(summaryTextObj);
     if (config.dashboard.tickers) updateTickers(key);
@@ -205,7 +252,7 @@ function updateGraphSummaries(key, summaryTextObj) {
         if (currentGraph.filterable && currentGraph.summary) {
             const filteredData = config.datasets[id].filter(entry => formatName(entry[currentGraph.filter_by]) === key);
             const summary = document.querySelector(`#chart-${id} .chart-summary`);
-            if (summary) summary.innerHTML= markdownToHTML((filteredData.length <= 0 || !summaryTextObj[currentGraph.summary]) ? `No data available for ${getDropdownText()}` : summaryTextObj[currentGraph.summary]);
+            if (summary) summary.innerHTML= markdownToHTML((filteredData.length <= 0 || !summaryTextObj[currentGraph.summary]) ? `No data available for ${getSelectedText()}` : summaryTextObj[currentGraph.summary]);
         }
     });
 }
@@ -279,15 +326,27 @@ function initialTickerData() {
     return config.datasets.ticker.data.filter(entry => entry[config.dashboard.input_filter] === config.dashboard.input_default);
 }
 
-function filterDropdownSummaries(key, selected) {
-    return config.text.dropdown.filter(entry => entry[key] === selected)[0];
+function filterSummaries(key, selected) {
+    return config.text[(config.dashboard.input_type === 'dropdown') ? 'dropdown' : 'buttons'].filter(entry => entry[key] === selected)[0];
 }
 
 function filterTickerData(key) {
     return config.datasets.ticker.data.filter(entry => entry[config.dashboard.input_filter] === key)[0];
 }
 
-function getDropdownText() {
+function getSelectedText() {
+    if (config.dashboard.input_type === 'dropdown') {
+        const dropdown = document.querySelector('select');
+        return dropdown[dropdown.selectedIndex].text;
+    }
+    else if (config.dashboard.input_type === 'buttons') {
+        const selectedButton = document.querySelector('input[name="filter"]:checked');
+        console.log('return', selectedButton, selectedButton.text);
+        return selectedButton.text;
+    }
+}
+
+function getSelectedButton() {
     const dropdown = document.querySelector('select');
     return dropdown[dropdown.selectedIndex].text;
 }
@@ -295,5 +354,3 @@ function getDropdownText() {
 function markdownToHTML(string) {
     return converter.makeHtml(string);
 }
-
-// TODO: Add markdown to html handling for summary text and titles
