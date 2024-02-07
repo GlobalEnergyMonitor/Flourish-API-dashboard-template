@@ -101,6 +101,9 @@ function implementFilterButtons() {
     btnGroup.classList.add('button-group');
     btnGroup.appendChild(label);
 
+    btnsWrapper = document.createElement('div');
+    btnsWrapper.classList.add('buttons-wrapper');
+    btnGroup.appendChild(btnsWrapper);
 
     const buttonData = config.text.buttons.map(entry => entry[config.dashboard.input_filter]);
     buttonData.forEach((button, i) => {
@@ -121,7 +124,7 @@ function implementFilterButtons() {
 
         btnContainer.appendChild(label);
         btnContainer.appendChild(btn);
-        btnGroup.appendChild(btnContainer);
+        btnsWrapper.appendChild(btnContainer);
     });
     const controlsContainer = document.querySelector('.controls-container');
     controlsContainer.appendChild(btnGroup);
@@ -242,7 +245,10 @@ function updateSummaries(key) {
 }
 
 function updateOverallSummary(summaryTextObj) {
-    document.querySelector('.dashboard-intro--para').innerHTML = markdownToHTML((summaryTextObj.overall_summary) ? summaryTextObj.overall_summary : 'insert generic sentence here'); // TODO: grab default sentence from text config
+    document.querySelector('.dashboard-intro--para').innerHTML = 
+    markdownToHTML((summaryTextObj.overall_summary) ? 
+        summaryTextObj.overall_summary : config.text.no_data.replace("{{selected}}", summaryTextObj[config.dashboard.input_filter]
+    ));
 }
 
 function updateGraphSummaries(key, summaryTextObj) {
@@ -252,7 +258,11 @@ function updateGraphSummaries(key, summaryTextObj) {
         if (currentGraph.filterable && currentGraph.summary) {
             const filteredData = config.datasets[id].filter(entry => formatName(entry[currentGraph.filter_by]) === key);
             const summary = document.querySelector(`#chart-${id} .chart-summary`);
-            if (summary) summary.innerHTML= markdownToHTML((filteredData.length <= 0 || !summaryTextObj[currentGraph.summary]) ? `No data available for ${getSelectedText()}` : summaryTextObj[currentGraph.summary]);
+            if (summary) {
+                summary.innerHTML = markdownToHTML(
+                    (filteredData.length <= 0 || !summaryTextObj[currentGraph.summary]) ? 
+                    config.text.no_data.replace("{{selected}}", summaryTextObj[config.dashboard.input_filter]) : summaryTextObj[currentGraph.summary]);
+            }
         }
     });
 }
