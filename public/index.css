@@ -33,7 +33,6 @@ label {
     border-bottom: 1px solid rgba(51, 51, 51, 0.25);
     height: 2.5rem;
     font-size: 1.35rem;
-    /* font-weight: bold; */
     padding: 0 0.25rem;
     min-width: 20rem;
 }
@@ -42,27 +41,24 @@ label {
 .button-group {
     position: relative;
     border: none;
+}
+
+.buttons-wrapper {
     display: flex;
     flex-wrap: wrap;
-  }
+}
 
-  .filter-button {
+.filter-button {
     border: solid 1px #1f1f1f;
     position: relative;
     display: block;
-    flex: 50%;
     padding: 1rem;
     margin: 0.25rem;
     cursor: pointer;
-  }
+    flex: calc(50% - 0.5rem);
+}
 
-  .filter-button:hover,
-  .filter-button:has(input:checked) {
-    background-color: #d9d9d9;
-    border: solid 1px #111;
-  }
-
-  .filter-button input {
+.filter-button input {
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -72,22 +68,55 @@ label {
     opacity: 0;
     cursor: pointer;
     margin: 0;
-  }
+}
 
-  .filter-button label {
+.filter-button label {
     z-index: -1;
-  }
+}
 
-  .filter-button:hover > label,
-  .filter-button input:checked + .filter-button label {
+/* filter button hover ane selected styles */
+
+.filter-button:hover {
+    background-color: rgba(191, 83, 44, 0.5);
+}
+
+.filter-button:has(input:checked) {
+    background-color: #BF532C;
+    border: solid 1px #111;
+    color: white;
+}
+
+.filter-button:hover>label,
+.filter-button:has(input:checked)>label {
     font-weight: bold;
-  }
+}
+
+/* Media queries for different screen sizes */
+
+@media only screen and (min-width: 450px) {
+    .filter-button {
+        flex: 10%;
+    }
+
+    /* 5 filter buttons */
+    .buttons-wrapper div:first-child:nth-last-child(5),
+    .buttons-wrapper div:first-child:nth-last-child(5) ~ .filter-button {
+        flex: 1 1 24%;
+    }
+
+    /* 6 filter buttons */
+    .buttons-wrapper div:first-child:nth-last-child(6),
+    .buttons-wrapper div:first-child:nth-last-child(6) ~ .filter-button {
+        flex: 1 1 20%;
+    }
+}
 
 @media only screen and (min-width: 600px) {
     .flourish-container {
         display: flex;
         flex-wrap: wrap;
     }
+
     .chart-container {
         flex: 45%;
         margin: 1rem;
@@ -97,25 +126,37 @@ label {
         min-height: 3rem;
     }
 
+    /* 4 filter buttons */
+    .buttons-wrapper div:first-child:nth-last-child(4),
+    .buttons-wrapper div:first-child:nth-last-child(4) ~ .filter-button {
+        flex: 1 1 0px;
+    }
+
+    /* 4 tickers */
     .ticker-container:first-child:nth-last-child(4),
-    .ticker-container:first-child:nth-last-child(4) ~ .ticker-container  {
+    .ticker-container:first-child:nth-last-child(4)~.ticker-container {
         flex: 50%;
     }
 
+    /* 3 tickers */
     .ticker-container:first-child:nth-last-child(3),
-    .ticker-container:first-child:nth-last-child(3) ~ .ticker-container  {
+    .ticker-container:first-child:nth-last-child(3)~.ticker-container {
         flex: 30%;
     }
-    
-    .filter-button {
-        flex: 20%;
-        margin: 0.5rem;
-    }
-  }
+}
 
-  @media only screen and (min-width: 900px) {
+@media only screen and (min-width: 900px) {
+    /* 5 or 6 filter buttons */
+    .buttons-wrapper div:first-child:nth-last-child(5),
+    .buttons-wrapper div:first-child:nth-last-child(5) ~ .filter-button,
+    .buttons-wrapper div:first-child:nth-last-child(6),
+    .buttons-wrapper div:first-child:nth-last-child(6) ~ .filter-button {
+        flex: 1 1 10%;
+    }
+
+    /* 4 tickers */
     .ticker-container:first-child:nth-last-child(4),
-    .ticker-container:first-child:nth-last-child(4) ~ .ticker-container {
+    .ticker-container:first-child:nth-last-child(4)~.ticker-container {
         flex: 25%;
     }
-  }
+}
