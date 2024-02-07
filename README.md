@@ -235,6 +235,7 @@ Things to note
 # To create a new dashboard
 [TODO: TEST THIS AND UPDATE]
 1. To create a new dashboard, you will need to duplicate this template/repo. You can do this either via the GH dashboard or the terminal.
+    
     *via the GitHub UI*
     * Scroll to the top of this page and click code > Download Zip
     * Go to the GEM main page, and create a new repo, giving it a name etc
@@ -250,8 +251,9 @@ Things to note
     * Proceed to work with the new repo, make new branches or any changes you like
 
 2. Create a new instance on Heroku
-   * New app
+   * Create a new app
    * Connect to GitHub
+     * Enter the name of your new repo
      * Connect to main branch (or testing branch if you have one, but remember to change it to main when publishing)
      * Set to autoupdate
    * Go to the Settings tab 
