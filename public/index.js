@@ -46,7 +46,7 @@ async function getData() {
                 .then(jsonObjects => {
                     jsonObjects.forEach((obj, i) => {
                         if (config.dashboard.tickers) {
-                            if (i < jsonObjects.length - 2) { // TODO: make this not hard coded
+                            if (i < jsonObjects.length - 2) {
                                 config.datasets[config.dashboard.flourish_ids[i]] = obj;
                             }
                             else {
@@ -62,19 +62,26 @@ async function getData() {
                     if (config.text.intro) document.querySelector('.dashboard-intro--para').innerHTML = markdownToHTML(config.text.intro);
                     if (config.dashboard.input_type === 'dropdown') implementDropdown();
                     if (config.dashboard.input_type === 'buttons') implementFilterButtons();
-                    // add another to implement buttons
+                    // add another to implement combo
                 })
                 .then(() => renderTickers())
                 .then(() => renderVisualisation())
+                .catch((error) => {
+                    console.error(error);
+                });
         })
 }
 
 function implementDropdown() {
+    if (!config.text.dropdown_label) throw new Error('input_label not found or does not match input type. Check page and text configs');
     const label = document.createElement('label');
     label.innerHTML = markdownToHTML(config.text.dropdown_label);
     label.for = "dropdown-selection"
     const dropdownEl = document.createElement('select');
     dropdownEl.id = "dropdown-selection";
+
+    if (!config.text.dropdown) throw new Error('page-config specifies input of dropdown but text-config does not match')
+
     const dropdownData = config.text.dropdown.map(entry => entry[config.dashboard.input_filter]);
     dropdownData.forEach(input => {
         const opt = document.createElement('option');
@@ -94,6 +101,7 @@ function implementDropdown() {
 }
 
 function implementFilterButtons() {
+    if (!config.text.buttons_label) throw new Error('input_label not found or does not match input type. Check page and text configs')
     const label = document.createElement('legend');
     label.innerHTML = markdownToHTML(config.text.buttons_label);
     label.for = "button-group"
@@ -104,6 +112,8 @@ function implementFilterButtons() {
     btnsWrapper = document.createElement('div');
     btnsWrapper.classList.add('buttons-wrapper');
     btnGroup.appendChild(btnsWrapper);
+
+    if (!config.text.buttons) throw new Error('page-config specifies input of buttons but text-config does not match')
 
     const buttonData = config.text.buttons.map(entry => entry[config.dashboard.input_filter]);
     buttonData.forEach((button, i) => {
@@ -150,7 +160,12 @@ function renderTickers() {
         const initialData = initialTickerData()[0];
 
         const { state } = config.datasets.ticker.flourish_template;
-        const tickerTextSplit = config.dashboard["ticker_text_font-size"].match(/[a-zA-Z]+|[0-9]+(?:\.[0-9]+)?|\.[0-9]+/g); // grab text size from config and split into size and unit needed in flourish:
+        if (config.dashboard["ticker_text_font-size"]) {
+            const tickerTextSplit = config.dashboard["ticker_text_font-size"]
+            .match(/[a-zA-Z]+|[0-9]+(?:\.[0-9]+)?|\.[0-9]+/g); // grab text size from config and split into size and unit needed in flourish:
+            state.font_size = tickerTextSplit[0];
+            state.font_unit = tickerTextSplit[1]
+        }
 
         const options = {
             template: "@flourish/number-ticker",
@@ -158,9 +173,7 @@ function renderTickers() {
             api_url: "/flourish",
             api_key: "", //filled in server side
             state: {
-                ...state,
-                font_size: tickerTextSplit[0],
-                font_unit: tickerTextSplit[1]
+                ...state
             }
         };
 
@@ -274,8 +287,6 @@ function implentGraph(id) {
             data: {
                 label: config.charts[id].x_axis, // this seems to be the X axis
                 value: config.charts[id].values, // this is the actual bar
-                // facet: "Year",
-                // filter: "DataHeader5", // assume this would be for a drop down or something
             }
         },
         data: {

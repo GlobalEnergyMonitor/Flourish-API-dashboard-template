@@ -1,7 +1,7 @@
 {
     "16578845": {
         "title": "What is the age breakdown of oil and gas plants?",
-        "subtitle": "Oil and gas power capacity by age and type of plants, in megawatts (MW)",
+        "subtitle": "Oil and gas power capacity by age and type of plants, in megawatts (W)",
         "x_axis": "Decade",
         "values": [
             "Allam-Fetvedt Cycle",
@@ -36,7 +36,7 @@
     },
     "16578852": {
         "title": "How has gas and oil power capacity changed status recently?",
-        "subtitle": "Gas and oil power capacity by status, in megawatts (MW)",
+        "subtitle": "Gas and oil power capacity by status, in megawatts (GW)",
         "x_axis": "Year",
         "values": [
             "operating",
