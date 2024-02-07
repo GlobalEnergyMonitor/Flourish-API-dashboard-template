@@ -47,7 +47,7 @@
             "shelved"
         ],
         "summary": "status_text",
-        "dataset": "data_status",
+        "dataset": "gas_data_status",
         "initial_state": "Global",
         "filterable": true,
         "filter_by": "Country"
