@@ -174,8 +174,8 @@ To update a dashboard, you can open any of the config files above and make chnag
 {
     "title": "", // title of the whole dashboard
     "no_data": "No data available for {{selected}}", // no data message - {{selected}} will be replaced by an option from the buttons/dropdown. If not using filtering, remove this from the no data message.
-    "buttons_label": "",  // if using a dropdown, the key should be `dropdown_label`
-    "buttons": [ // if using a dropdown, the key should be `dropdown`. Each entry here reflects a dropdown/button option and the values that will be outputted when it is selected
+    "buttons_label": "",  // This is the CTA before the input. If using a dropdown, the key should be `dropdown_label`
+    "buttons": [ // Each entry here reflects a dropdown/button option and the values that will be outputted when it is selected. if using a dropdown, the key should be `dropdown`. 
       {
         "INPUT_FILTER": "INPUT_VALUE",
         "overall_summary": "", // summary shown above all graphs / in intro
