@@ -1,104 +1,49 @@
 {
-    "15821879": {
-        "title": "Coal plant capacity starting construction outside China is on track for record annual low",
-        "x_axis": "Period",
-        "values": [
-            "Yearly Construction Starts"
-        ],
-        "pop_up": null,
-        "dataset": "data_construction",
-        "summary": null,
-        "filterable": false
-    },
     "16566530": {
-        "title": "What is the age breakdown of coal plants?",
-        "x_axis": "decade",
+        "title": "What is the age breakdown of gas thingys?",
+        "x_axis": "Decade",
         "values": [
-            "CFB",
-            "IGCC",
-            "Subcritical",
-            "Supercritical",
-            "Ultra-supercritical",
+            "Allam-Fetvedt Cycle",
+            "Combined Cycle",
+            "Gas Turbine",
+            "Integrated Solar Combined Cycle",
+            "Internal Combustion",
+            "Internal Combustion Combined Cycle",
+            "Steam Turbine",
             "Unknown"
         ],
-        "pop_up": [
-            "text"
-        ],
-        "summary": null,
-        "dataset": "data_age",
-        "initial_state": "Global",
-        "filterable": true,
-        "filter_by": "Country"
-    },
-    "16533187": {
-        "title": "How has coal power capacity changed since 2000?",
-        "x_axis": "Year",
-        "values": [
-            "Capacity"
-        ],
-        "pop_up": [
-            "description"
-        ],
-        "summary": null,
-        "dataset": "data_cumulative",
-        "initial_state": "Global",
-        "filterable": true,
-        "filter_by": "Country"
-    },
-    "16659638": {
-        "title": "How has coal power capacity changed status in past decade?",
-        "x_axis": "Year",
-        "values": [
-            "operating",
-            "construction",
-            "permitted",
-            "pre-permit",
-            "announced",
-            "mothballed",
-            "shelved",
-            "cancelled",
-            "retired"
-        ],
-        "pop_up": [
-            "text"
-        ],
-        "summary": "status_text",
-        "dataset": "data_status",
+        "pop_up": null,
+        "summary": "age_text",
+        "dataset": "gas_data_age",
         "initial_state": "Global",
         "filterable": true,
         "filter_by": "Country"
     },
     "16659864": {
-        "title": "How much coal power capacity has been added and retired each year since 2000?",
+        "title": "How much gas has been added?",
         "x_axis": "Year",
         "values": [
-            "Net change",
-            "Added",
-            "Retired"
+            "Added (MW)"
         ],
-        "pop_up": [
-            "description"
-        ],
-        "summary": null,
-        "dataset": "data_change",
+        "summary": "additions_text",
+        "dataset": "gas_data_additions",
         "initial_state": "Global",
         "filterable": true,
         "filter_by": "Country"
     },
-    "16716119": {
-        "title": "How has coal power capacity changed status in past decade?",
+    "16659638": {
+        "title": "How has gas power capacity changed status in past decade?",
         "x_axis": "Year",
         "values": [
             "operating",
-            "construction",
-            "permitted",
-            "pre-permit",
+            "mothballed",
             "announced",
-            "mothballed"
+            "pre-construction",
+            "construction",
+            "shelved"
         ],
-        "pop_up": null,
-        "summary": null,
-        "dataset": "data_buttons",
+        "summary": "status_text",
+        "dataset": "data_status",
         "initial_state": "Global",
         "filterable": true,
         "filter_by": "Country"

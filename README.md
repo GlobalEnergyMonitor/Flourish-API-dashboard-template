@@ -16,7 +16,9 @@ There are a number of config files which control what the dashboard is showing. 
 
 
 # To update a dashboard
-To update a dashboard, you can open any of the config files above and make chnages to them. Pushing this to the main branch on github should trigger an automatic rebuild on heroku and your chnages should be reflected on a pubished dashboard almost instantly.
+To update a dashboard, you can open any of the config files above and make changes to them. 
+Any new data should be pushed to `public/assets/data` and be in `json` format.
+Pushing your changes to the main branch on github should trigger an automatic rebuild on heroku and your changes should be reflected on the published dashboard almost instantly.
 
 ## An overview of each config and the options expected
 
@@ -227,7 +229,28 @@ Things to note
 ```
 
 # To create a new dashboard
+[TODO: TEST THIS AND UPDATE]
+1. To create a new dashboard, you will need to duplicate this template/repo. You can do this either via the GH dashboard or the terminal.
 
+*via the GitHub UI*
+* Scroll to the top of this page and click code > Download Zip
+  ![Click 'code' then 'download zip'](image.png)
+* Create a new repo
+
+*via the terminal*
+
+1. Update the configs and datasets
+2. Create a new instance on heroku
+   * New project
+   * Add bundle (node.js)
+   * Set to auto update
+3. Add Flourish API key
+   * got to flourish
+   * add to heroku
+4. Check the URL
+5. Add page to GEM site
+   * go to wordpress
+   * create new page with tracker template
 
 # To develop the templates / use locally
 * open your terminal

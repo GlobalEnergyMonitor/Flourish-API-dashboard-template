@@ -1,0 +1,926 @@
+﻿[
+  {
+    "Country": "Global",
+    "summary_1": "<span>{{2042.86}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{299.01}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{783.24}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Afghanistan",
+    "summary_1": "<span>{{0}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.06}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Albania",
+    "summary_1": "<span>{{0}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.27}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Algeria",
+    "summary_1": "<span>{{22.94}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{3.09}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{4.58}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Angola",
+    "summary_1": "<span>{{0.72}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{1.77}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Antigua and Barbuda",
+    "summary_1": "<span>{{0}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.05}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Argentina",
+    "summary_1": "<span>{{22.4}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.03}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.55}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Armenia",
+    "summary_1": "<span>{{1.39}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{-0.45}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.05}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Aruba",
+    "summary_1": "<span>{{0.19}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.19}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Australia",
+    "summary_1": "<span>{{15.46}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{2.71}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{2.02}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Austria",
+    "summary_1": "<span>{{5.18}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.9}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Azerbaijan",
+    "summary_1": "<span>{{5.83}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.22}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{2.2}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Bahamas",
+    "summary_1": "<span>{{0.18}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.18}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Bahrain",
+    "summary_1": "<span>{{8.6}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.56}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.68}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Bangladesh",
+    "summary_1": "<span>{{18.64}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{8.55}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{41.17}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Barbados",
+    "summary_1": "<span>{{0.06}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.06}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Belarus",
+    "summary_1": "<span>{{8.41}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.03}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.92}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Belgium",
+    "summary_1": "<span>{{5.7}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.4}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{4.71}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Benin",
+    "summary_1": "<span>{{0.13}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.13}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.14}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Bermuda",
+    "summary_1": "<span>{{0.11}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.11}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Bolivia",
+    "summary_1": "<span>{{1.94}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.04}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.05}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Bosnia and Herzegovina",
+    "summary_1": "<span>{{0}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{1.3}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Botswana",
+    "summary_1": "<span>{{0.07}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.07}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Brazil",
+    "summary_1": "<span>{{20.73}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{7.77}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{64}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Brunei",
+    "summary_1": "<span>{{0.21}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Bulgaria",
+    "summary_1": "<span>{{0.78}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{-0.41}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{1.49}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Cambodia",
+    "summary_1": "<span>{{0.4}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.4}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Cameroon",
+    "summary_1": "<span>{{0.06}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.06}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.35}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Canada",
+    "summary_1": "<span>{{25.31}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{6.51}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{6.13}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Cayman Islands",
+    "summary_1": "<span>{{0.04}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.04}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.06}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Chile",
+    "summary_1": "<span>{{7.12}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{2.23}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.38}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "China",
+    "summary_1": "<span>{{121.15}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{22.03}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{164.22}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Colombia",
+    "summary_1": "<span>{{4.07}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.24}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{4.17}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Costa Rica",
+    "summary_1": "<span>{{0.2}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.2}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Croatia",
+    "summary_1": "<span>{{0.79}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{-0.1}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{1.22}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Cuba",
+    "summary_1": "<span>{{4.31}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{3.83}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Cyprus",
+    "summary_1": "<span>{{1.85}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.41}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.42}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Czech Republic",
+    "summary_1": "<span>{{1.66}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.4}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.54}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "C�te d'Ivoire",
+    "summary_1": "<span>{{1.28}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.36}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.76}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "DR Congo",
+    "summary_1": "<span>{{0}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.2}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Democratic Republic of the Congo",
+    "summary_1": "<span>{{0}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Denmark",
+    "summary_1": "<span>{{1.81}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.3}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.36}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Dominican Republic",
+    "summary_1": "<span>{{2.92}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.42}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{1.34}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Ecuador",
+    "summary_1": "<span>{{1.14}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.01}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.4}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Egypt",
+    "summary_1": "<span>{{52.91}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.11}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.38}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "El Salvador",
+    "summary_1": "<span>{{0.93}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.84}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Estonia",
+    "summary_1": "<span>{{0.39}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.22}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Eswatini",
+    "summary_1": "<span>{{0}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.25}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Ethiopia",
+    "summary_1": "<span>{{0}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Finland",
+    "summary_1": "<span>{{3.48}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.73}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.03}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "France",
+    "summary_1": "<span>{{11.06}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{3.47}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.13}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "French Guiana",
+    "summary_1": "<span>{{0.15}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.15}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Georgia",
+    "summary_1": "<span>{{1.14}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.68}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Germany",
+    "summary_1": "<span>{{32.33}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{8.68}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{7.41}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Ghana",
+    "summary_1": "<span>{{3.06}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.2}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.2}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Gibraltar",
+    "summary_1": "<span>{{0.09}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.09}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Greece",
+    "summary_1": "<span>{{7.97}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{2.75}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{5.34}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Guadeloupe",
+    "summary_1": "<span>{{0.29}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.29}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Guatemala",
+    "summary_1": "<span>{{0.41}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.41}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Guyana",
+    "summary_1": "<span>{{0}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.3}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Honduras",
+    "summary_1": "<span>{{0.75}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.75}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Hong Kong",
+    "summary_1": "<span>{{5.12}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.89}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{1.5}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Hungary",
+    "summary_1": "<span>{{3.14}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.29}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.5}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "India",
+    "summary_1": "<span>{{27.94}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{3.85}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{3.72}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Indonesia",
+    "summary_1": "<span>{{21.53}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{4.24}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{14.99}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Iran",
+    "summary_1": "<span>{{71.57}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{5.11}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{25.79}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Iraq",
+    "summary_1": "<span>{{41.34}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{11.85}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{27.22}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Ireland",
+    "summary_1": "<span>{{5}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.25}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{3.19}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Isle of Man",
+    "summary_1": "<span>{{0.09}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Israel",
+    "summary_1": "<span>{{12.2}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.75}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{10.08}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Italy",
+    "summary_1": "<span>{{49.39}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{7.42}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{6.19}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Jamaica",
+    "summary_1": "<span>{{0.72}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.3}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.14}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Japan",
+    "summary_1": "<span>{{106.62}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{26.5}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{6.64}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Jordan",
+    "summary_1": "<span>{{4.52}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.07}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Kazakhstan",
+    "summary_1": "<span>{{4.07}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.07}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{4.49}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Kenya",
+    "summary_1": "<span>{{0.72}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.72}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.7}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Kuwait",
+    "summary_1": "<span>{{19.51}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.4}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{20.65}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Kyrgyzstan",
+    "summary_1": "<span>{{0}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.91}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Latvia",
+    "summary_1": "<span>{{1.09}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.01}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Lebanon",
+    "summary_1": "<span>{{2.15}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.55}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{1.4}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Libya",
+    "summary_1": "<span>{{12.94}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{3.41}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{10.68}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Lithuania",
+    "summary_1": "<span>{{1.15}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.07}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.15}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Macao",
+    "summary_1": "<span>{{0.41}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.27}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.45}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Malaysia",
+    "summary_1": "<span>{{17.44}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{2.96}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{7.45}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Mali",
+    "summary_1": "<span>{{0}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Malta",
+    "summary_1": "<span>{{0.55}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.34}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Martinique",
+    "summary_1": "<span>{{0.32}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.32}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Mauritania",
+    "summary_1": "<span>{{0.42}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.42}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.12}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Mexico",
+    "summary_1": "<span>{{47.66}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.13}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{12.74}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Moldova",
+    "summary_1": "<span>{{0.97}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{-0.11}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Montenegro",
+    "summary_1": "<span>{{0}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.4}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Morocco",
+    "summary_1": "<span>{{1.9}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.03}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{2.86}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Mozambique",
+    "summary_1": "<span>{{0.37}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.12}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{3.27}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Myanmar",
+    "summary_1": "<span>{{2.21}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.7}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{8.23}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Namibia",
+    "summary_1": "<span>{{0}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.49}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Netherlands",
+    "summary_1": "<span>{{15.27}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.4}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "New Caledonia",
+    "summary_1": "<span>{{0.06}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.06}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "New Zealand",
+    "summary_1": "<span>{{2.08}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.78}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Nicaragua",
+    "summary_1": "<span>{{0.37}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.37}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.3}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Nigeria",
+    "summary_1": "<span>{{10.39}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{-0.08}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{21.24}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "North Macedonia",
+    "summary_1": "<span>{{0.44}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.21}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.36}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Norway",
+    "summary_1": "<span>{{0.6}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.6}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Oman",
+    "summary_1": "<span>{{13.6}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.91}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.26}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Pakistan",
+    "summary_1": "<span>{{21.73}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{6.45}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Palestine",
+    "summary_1": "<span>{{0.14}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.06}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.45}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Panama",
+    "summary_1": "<span>{{0.77}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.39}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{1.11}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Peru",
+    "summary_1": "<span>{{7.07}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.4}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.1}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Philippines",
+    "summary_1": "<span>{{4.51}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.2}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{28.3}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Poland",
+    "summary_1": "<span>{{3.49}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.88}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{7.59}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Portugal",
+    "summary_1": "<span>{{4.68}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.74}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Qatar",
+    "summary_1": "<span>{{12.58}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.44}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{4.9}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Republic of the Congo",
+    "summary_1": "<span>{{0.53}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.57}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Romania",
+    "summary_1": "<span>{{3.37}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{-0.07}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{4.17}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Russia",
+    "summary_1": "<span>{{111.04}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{5.59}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{10.81}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "R�union",
+    "summary_1": "<span>{{0.3}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.3}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Saudi Arabia",
+    "summary_1": "<span>{{91.88}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{48.65}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{9.01}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Senegal",
+    "summary_1": "<span>{{0.65}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.21}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.43}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Serbia",
+    "summary_1": "<span>{{0.55}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.19}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.12}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Sierra Leone",
+    "summary_1": "<span>{{0}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.09}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Singapore",
+    "summary_1": "<span>{{10.35}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.03}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.6}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Slovakia",
+    "summary_1": "<span>{{1}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.39}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Slovenia",
+    "summary_1": "<span>{{0.42}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{-0.01}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.11}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Somalia",
+    "summary_1": "<span>{{0.07}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.07}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "South Africa",
+    "summary_1": "<span>{{0.62}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.34}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{16.64}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "South Korea",
+    "summary_1": "<span>{{45.69}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{4.49}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{20.2}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Spain",
+    "summary_1": "<span>{{30.4}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{3.56}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Sri Lanka",
+    "summary_1": "<span>{{1.21}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.21}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{1.36}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Sudan",
+    "summary_1": "<span>{{2}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.78}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{2.61}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Suriname",
+    "summary_1": "<span>{{0.13}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.13}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Sweden",
+    "summary_1": "<span>{{2.58}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{2.18}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Switzerland",
+    "summary_1": "<span>{{0.06}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.06}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Syria",
+    "summary_1": "<span>{{6.92}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.19}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{7.89}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Taiwan",
+    "summary_1": "<span>{{20.7}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{2.93}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{24.73}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Tajikistan",
+    "summary_1": "<span>{{0.09}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{-0.19}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Tanzania",
+    "summary_1": "<span>{{0.24}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.3}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Thailand",
+    "summary_1": "<span>{{36.74}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{2.5}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{12.9}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Timor-Leste",
+    "summary_1": "<span>{{0.26}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.26}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Togo",
+    "summary_1": "<span>{{0.07}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.02}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Trinidad and Tobago",
+    "summary_1": "<span>{{2.06}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.07}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Tunisia",
+    "summary_1": "<span>{{5.77}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.14}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.9}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Turkey",
+    "summary_1": "<span>{{0}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{-24.21}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Turkmenistan",
+    "summary_1": "<span>{{6.95}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.38}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{1.71}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "T�rkiye",
+    "summary_1": "<span>{{27.82}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{27.82}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.92}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Ukraine",
+    "summary_1": "<span>{{2.65}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{-2.05}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "United Arab Emirates",
+    "summary_1": "<span>{{41.73}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{11.12}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{6.16}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "United Kingdom",
+    "summary_1": "<span>{{34.84}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.6}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{8.43}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "United States",
+    "summary_1": "<span>{{535.31}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{25.16}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{38.84}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Uruguay",
+    "summary_1": "<span>{{1.15}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.31}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Uzbekistan",
+    "summary_1": "<span>{{13.12}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{1.65}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{7.72}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Venezuela",
+    "summary_1": "<span>{{5.06}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.75}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Vietnam",
+    "summary_1": "<span>{{8.15}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{43.56}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Western Sahara",
+    "summary_1": "<span>{{0.07}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.07}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Yemen",
+    "summary_1": "<span>{{0.79}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0.45}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.75}} GW</span><br>of oil and gas power capacity in development"
+  },
+  {
+    "Country": "Zimbabwe",
+    "summary_1": "<span>{{0}} GW</span><br>of operating oil and gas power capacity",
+    "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
+    "summary_3": "<span>{{0.9}} GW</span><br>of oil and gas power capacity in development"
+  }
+]
