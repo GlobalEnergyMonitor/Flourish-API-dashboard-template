@@ -108,6 +108,7 @@ Pushing your changes to the main branch on github should trigger an automatic re
 {
     "FLOURISH_ID": {
         "title": "", // title of chart
+        "subtitle": "", // subtitle of chart
         "x_axis": "", // column name in data
         "values": [], // array of strings of column names to be represented. Can be one or more (eg for simple bar vs stacked column)
         "pop_up": [], // array of strings of column names to be shown in tool tip - can be one or more values. Make `null` if not needed
@@ -125,6 +126,7 @@ Pushing your changes to the main branch on github should trigger an automatic re
 {
     "15821879": {
         "title": "Coal plant capacity starting construction outside China is on track for record annual low",
+        "subtitle": "Coal-fired power capacity beginning construction outside China, in gigawatts (GW)",
         "x_axis": "Period",
         "values": [
             "Yearly Construction Starts"
@@ -136,6 +138,7 @@ Pushing your changes to the main branch on github should trigger an automatic re
     },
     "16566530": {
         "title": "What is the age breakdown of coal plants?",
+        "subtitle": "Coal-fired power capacity by age and type of coal plants, in megawatts (MW)",
         "x_axis": "decade",
         "values": [
             "CFB",
@@ -156,6 +159,7 @@ Pushing your changes to the main branch on github should trigger an automatic re
     },
     "16533187": {
         "title": "How has coal power capacity changed since 2000?",
+        "subtitle": "Coal-fired power capacity by status each year, in megawatts (MW)",
         "x_axis": "Year",
         "values": [
             "Capacity"
