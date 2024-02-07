@@ -1,20 +1,15 @@
 {
     "flourish_ids": [
-        "16659638",
-        "16659864",
-        "16533187",
         "16566530",
-        "15821879",
-        "16716119"
-
+        "16659864",
+        "16659638"
     ],
-    "input_type": "buttons",
-    "input_types": ["dropdown", "buttons", "combo"],
+    "input_type": "dropdown",
     "input_filter": "Country",
     "input_default": "Global",
     "overall_summary": true,
     "ticker_text_font-size": "2rem",
-    "ticker_data": "data_ticker",
+    "ticker_data": "gas_data_ticker",
     "tickers": [{
         "id": "summary_1",
         "decimal_places": 0,
@@ -35,15 +30,6 @@
     },
     {
         "id": "summary_3",
-        "decimal_places": 2,
-        "style": {
-            "color": "#761201",
-            "font-weight": "bold",
-            "font-size": "3.5rem"
-        }
-    },
-    {
-        "id": "summary_4",
         "decimal_places": 2,
         "style": {
             "color": "#761201",

@@ -1,0 +1,926 @@
+﻿[
+  {
+    "Country": "Global",
+    "status_text": "There is 299,013 MW more operating gas and oil power capacity globally than there was in 2021",
+    "age_text": "The largest share of gas and oil power plants in Global is 10-19 years old",
+    "additions_text": "Overall, global gas and oil power capacity since 2000 has increased by 1,483,701 MW"
+  },
+  {
+    "Country": "Afghanistan",
+    "status_text": "Afghanistan has no operating gas and oil power capacity",
+    "age_text": "Afghanistan does not have any operating gas and oil power",
+    "additions_text": "Overall, Afghanistan has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Albania",
+    "status_text": "Albania has no operating gas and oil power capacity",
+    "age_text": "Albania does not have any operating gas and oil power",
+    "additions_text": "Overall, Albania has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Algeria",
+    "status_text": "Algeria has 3,091 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Algeria is 0-9 years old",
+    "additions_text": "Overall Algeria has added 19,200 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Angola",
+    "status_text": "Angola has the same operating gas and oil power capacity as it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Angola is 0-9 years old",
+    "additions_text": "Overall Angola has added 720 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Antigua and Barbuda",
+    "status_text": "Antigua and Barbuda has no operating gas and oil power capacity",
+    "age_text": "Antigua and Barbuda does not have any operating gas and oil power",
+    "additions_text": "Overall, Antigua and Barbuda has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Argentina",
+    "status_text": "Argentina has 1,031 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Argentina is 20-29 years old",
+    "additions_text": "Overall Argentina has added 15,214 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Armenia",
+    "status_text": "Armenia has 446 MW less operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Armenia is 10-19 years old",
+    "additions_text": "Overall Armenia has added 976 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Aruba",
+    "status_text": "Aruba has 194 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Aruba is 0-9 years old",
+    "additions_text": "Overall Aruba has added 194 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Australia",
+    "status_text": "Australia has 2,706 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Australia is 10-19 years old",
+    "additions_text": "Overall Australia has added 11,878 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Austria",
+    "status_text": "Austria has 903 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Austria is 10-19 years old",
+    "additions_text": "Overall Austria has added 4,038 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Azerbaijan",
+    "status_text": "Azerbaijan has 1,221 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Azerbaijan is 30-39 years old",
+    "additions_text": "Overall Azerbaijan has added 3,327 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Bahamas",
+    "status_text": "Bahamas has 184 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Bahamas is 0-9 years old",
+    "additions_text": "Overall Bahamas has added 184 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Bahrain",
+    "status_text": "Bahrain has 1,558 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Bahrain is 0-9 years old",
+    "additions_text": "Overall Bahrain has added 7,107 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Bangladesh",
+    "status_text": "Bangladesh has 8,549 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Bangladesh is 0-9 years old",
+    "additions_text": "Overall Bangladesh has added 17,660 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Barbados",
+    "status_text": "Barbados has 60 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Barbados is 10-19 years old",
+    "additions_text": "Overall Barbados has added 60 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Belarus",
+    "status_text": "Belarus has 30 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Belarus is 20-29 years old",
+    "additions_text": "Overall Belarus has added 4,091 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Belgium",
+    "status_text": "Belgium has 400 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Belgium is 10-19 years old",
+    "additions_text": "Overall Belgium has added 3,369 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Benin",
+    "status_text": "Benin has 127 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Benin is 0-9 years old",
+    "additions_text": "Overall Benin has added 127 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Bermuda",
+    "status_text": "Bermuda has 113 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Bermuda is 10-19 years old",
+    "additions_text": "Overall Bermuda has added 113 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Bolivia",
+    "status_text": "Bolivia has 44 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Bolivia is 0-9 years old",
+    "additions_text": "Overall Bolivia has added 1,750 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Bosnia and Herzegovina",
+    "status_text": "Bosnia and Herzegovina has no operating gas and oil power capacity",
+    "age_text": "Bosnia and Herzegovina does not have any operating gas and oil power",
+    "additions_text": "Overall, Bosnia and Herzegovina has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Botswana",
+    "status_text": "Botswana has 70 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Botswana is 0-9 years old",
+    "additions_text": "Overall Botswana has added 70 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Brazil",
+    "status_text": "Brazil has 7,765 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Brazil is 10-19 years old",
+    "additions_text": "Overall Brazil has added 20,233 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Brunei",
+    "status_text": "Brunei has the same operating gas and oil power capacity as it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Brunei is 10-19 years old",
+    "additions_text": "Overall Brunei has added 212 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Bulgaria",
+    "status_text": "Bulgaria has 410 MW less operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Bulgaria is 40-49 years old",
+    "additions_text": "Overall Bulgaria has added 93 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Cambodia",
+    "status_text": "Cambodia has 400 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Cambodia is 0-9 years old",
+    "additions_text": "Overall Cambodia has added 400 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Cameroon",
+    "status_text": "Cameroon has 60 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Cameroon is 0-9 years old",
+    "additions_text": "Overall Cameroon has added 60 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Canada",
+    "status_text": "Canada has 6,507 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Canada is 10-19 years old",
+    "additions_text": "Overall Canada has added 17,005 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Cayman Islands",
+    "status_text": "Cayman Islands has 40 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Cayman Islands is 0-9 years old",
+    "additions_text": "Overall Cayman Islands has added 40 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Chile",
+    "status_text": "Chile has 2,230 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Chile is 20-29 years old",
+    "additions_text": "Overall Chile has added 5,243 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "China",
+    "status_text": "China has 22,034 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in China is 0-9 years old",
+    "additions_text": "Overall China has added 118,898 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Colombia",
+    "status_text": "Colombia has 239 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Colombia is 20-29 years old",
+    "additions_text": "Overall Colombia has added 1,986 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Costa Rica",
+    "status_text": "Costa Rica has 200 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Costa Rica is 10-19 years old",
+    "additions_text": "Overall Costa Rica has added 200 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Croatia",
+    "status_text": "Croatia has 95 MW less operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Croatia is 20-29 years old",
+    "additions_text": "Overall Croatia has added 535 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Cuba",
+    "status_text": "Cuba has 3,828 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Cuba is 0-9 years old",
+    "additions_text": "Overall Cuba has added 1,879 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Cyprus",
+    "status_text": "Cyprus has 1,413 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Cyprus is 10-19 years old",
+    "additions_text": "Overall Cyprus has added 1,223 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Czech Republic",
+    "status_text": "Czech Republic has 403 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Czech Republic is 0-9 years old",
+    "additions_text": "Overall Czech Republic has added 1,014 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "C�te d'Ivoire",
+    "status_text": "C�te d'Ivoire has 364 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in C�te d'Ivoire is 0-9 years old",
+    "additions_text": "Overall C�te d'Ivoire has added 1,168 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "DR Congo",
+    "status_text": "DR Congo has no operating gas and oil power capacity",
+    "age_text": "DR Congo does not have any operating gas and oil power",
+    "additions_text": "Overall, DR Congo has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Democratic Republic of the Congo",
+    "status_text": "Democratic Republic of the Congo has no operating gas and oil power capacity",
+    "age_text": "NA",
+    "additions_text": "NA"
+  },
+  {
+    "Country": "Denmark",
+    "status_text": "Denmark has 1,302 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Denmark is 20-29 years old",
+    "additions_text": "Overall Denmark has added 975 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Dominican Republic",
+    "status_text": "Dominican Republic has 1,424 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Dominican Republic is 0-9 years old",
+    "additions_text": "Overall Dominican Republic has added 2,624 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Ecuador",
+    "status_text": "Ecuador has 1,008 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Ecuador is 20-29 years old",
+    "additions_text": "Overall Ecuador has added 624 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Egypt",
+    "status_text": "Egypt has 111 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Egypt is 0-9 years old",
+    "additions_text": "Overall Egypt has added 45,508 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "El Salvador",
+    "status_text": "El Salvador has 837 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in El Salvador is 0-9 years old",
+    "additions_text": "Overall El Salvador has added 552 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Estonia",
+    "status_text": "Estonia has 216 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Estonia is 10-19 years old",
+    "additions_text": "Overall Estonia has added 216 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Eswatini",
+    "status_text": "Eswatini has no operating gas and oil power capacity",
+    "age_text": "Eswatini does not have any operating gas and oil power",
+    "additions_text": "Overall, Eswatini has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Ethiopia",
+    "status_text": "Ethiopia has no operating gas and oil power capacity",
+    "age_text": "Ethiopia does not have any operating gas and oil power",
+    "additions_text": "Overall, Ethiopia has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Finland",
+    "status_text": "Finland has 1,734 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Finland is 20-29 years old",
+    "additions_text": "Overall Finland has added 849 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "France",
+    "status_text": "France has 3,471 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in France is 10-19 years old",
+    "additions_text": "Overall France has added 9,406 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "French Guiana",
+    "status_text": "French Guiana has 151 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in French Guiana is 0-9 years old",
+    "additions_text": "Overall French Guiana has added 68 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Georgia",
+    "status_text": "Georgia has the same operating gas and oil power capacity as it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Georgia is 0-9 years old",
+    "additions_text": "Overall Georgia has added 570 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Germany",
+    "status_text": "Germany has 8,680 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Germany is 10-19 years old",
+    "additions_text": "Overall Germany has added 18,947 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Ghana",
+    "status_text": "Ghana has 197 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Ghana is 0-9 years old",
+    "additions_text": "Overall Ghana has added 2,729 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Gibraltar",
+    "status_text": "Gibraltar has 86 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Gibraltar is 0-9 years old",
+    "additions_text": "Overall Gibraltar has added 86 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Greece",
+    "status_text": "Greece has 2,748 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Greece is 10-19 years old",
+    "additions_text": "Overall Greece has added 6,198 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Guadeloupe",
+    "status_text": "Guadeloupe has 292 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Guadeloupe is 0-9 years old",
+    "additions_text": "Overall Guadeloupe has added 251 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Guatemala",
+    "status_text": "Guatemala has 406 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Guatemala is 20-29 years old",
+    "additions_text": "Overall Guatemala has added 163 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Guyana",
+    "status_text": "Guyana has no operating gas and oil power capacity",
+    "age_text": "Guyana does not have any operating gas and oil power",
+    "additions_text": "Overall, Guyana has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Honduras",
+    "status_text": "Honduras has 750 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Honduras is 10-19 years old",
+    "additions_text": "Overall Honduras has added 533 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Hong Kong",
+    "status_text": "Hong Kong has 892 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Hong Kong is 20-29 years old",
+    "additions_text": "Overall Hong Kong has added 1,610 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Hungary",
+    "status_text": "Hungary has 290 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Hungary is 10-19 years old",
+    "additions_text": "Overall Hungary has added 2,501 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "India",
+    "status_text": "India has 3,851 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in India is 10-19 years old",
+    "additions_text": "Overall India has added 19,029 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Indonesia",
+    "status_text": "Indonesia has 4,239 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Indonesia is 0-9 years old",
+    "additions_text": "Overall Indonesia has added 11,205 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Iran",
+    "status_text": "Iran has 5,112 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Iran is 10-19 years old",
+    "additions_text": "Overall Iran has added 54,732 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Iraq",
+    "status_text": "Iraq has 11,845 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Iraq is 0-9 years old",
+    "additions_text": "Overall Iraq has added 31,222 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Ireland",
+    "status_text": "Ireland has 1,248 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Ireland is 10-19 years old",
+    "additions_text": "Overall Ireland has added 3,424 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Isle of Man",
+    "status_text": "Isle of Man has the same operating gas and oil power capacity as it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Isle of Man is 20-29 years old",
+    "additions_text": "Overall Isle of Man has added 87 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Israel",
+    "status_text": "Israel has 1,752 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Israel is 10-19 years old",
+    "additions_text": "Overall Israel has added 9,681 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Italy",
+    "status_text": "Italy has 7,420 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Italy is 10-19 years old",
+    "additions_text": "Overall Italy has added 38,388 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Jamaica",
+    "status_text": "Jamaica has 301 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Jamaica is 0-9 years old",
+    "additions_text": "Overall Jamaica has added 641 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Japan",
+    "status_text": "Japan has 26,500 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Japan is 20-29 years old",
+    "additions_text": "Overall Japan has added 43,017 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Jordan",
+    "status_text": "Jordan has 1,074 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Jordan is 0-9 years old",
+    "additions_text": "Overall Jordan has added 3,833 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Kazakhstan",
+    "status_text": "Kazakhstan has 66 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Kazakhstan is 40-49 years old",
+    "additions_text": "Overall Kazakhstan has added 1,287 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Kenya",
+    "status_text": "Kenya has 716 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Kenya is 10-19 years old",
+    "additions_text": "Overall Kenya has added 582 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Kuwait",
+    "status_text": "Kuwait has 1,401 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Kuwait is 10-19 years old",
+    "additions_text": "Overall Kuwait has added 11,356 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Kyrgyzstan",
+    "status_text": "Kyrgyzstan has no operating gas and oil power capacity",
+    "age_text": "Kyrgyzstan does not have any operating gas and oil power",
+    "additions_text": "Overall, Kyrgyzstan has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Latvia",
+    "status_text": "Latvia has 14 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Latvia is 10-19 years old",
+    "additions_text": "Overall Latvia has added 1,087 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Lebanon",
+    "status_text": "Lebanon has 549 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Lebanon is 20-29 years old",
+    "additions_text": "Overall Lebanon has added 1,200 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Libya",
+    "status_text": "Libya has 3,414 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Libya is 10-19 years old",
+    "additions_text": "Overall Libya has added 9,770 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Lithuania",
+    "status_text": "Lithuania has 68 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Lithuania is 10-19 years old",
+    "additions_text": "Overall Lithuania has added 1,148 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Macao",
+    "status_text": "Macao has 271 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Macao is 30-39 years old",
+    "additions_text": "Overall Macao has added 136 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Malaysia",
+    "status_text": "Malaysia has 2,964 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Malaysia is 0-9 years old",
+    "additions_text": "Overall Malaysia has added 13,387 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Mali",
+    "status_text": "Mali has no operating gas and oil power capacity",
+    "age_text": "Mali does not have any operating gas and oil power",
+    "additions_text": "Overall, Mali has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Malta",
+    "status_text": "Malta has 343 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Malta is 0-9 years old",
+    "additions_text": "Overall Malta has added 358 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Martinique",
+    "status_text": "Martinique has 324 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Martinique is 10-19 years old",
+    "additions_text": "Overall Martinique has added 220 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Mauritania",
+    "status_text": "Mauritania has 420 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Mauritania is 0-9 years old",
+    "additions_text": "Overall Mauritania has added 180 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Mexico",
+    "status_text": "Mexico has 133 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Mexico is 0-9 years old",
+    "additions_text": "Overall Mexico has added 36,989 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Moldova",
+    "status_text": "Moldova has 112 MW less operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Moldova is 40-49 years old",
+    "additions_text": "Overall, Moldova has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Montenegro",
+    "status_text": "Montenegro has no operating gas and oil power capacity",
+    "age_text": "Montenegro does not have any operating gas and oil power",
+    "additions_text": "Overall, Montenegro has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Morocco",
+    "status_text": "Morocco has 1,031 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Morocco is 10-19 years old",
+    "additions_text": "Overall Morocco has added 1,601 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Mozambique",
+    "status_text": "Mozambique has 120 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Mozambique is 0-9 years old",
+    "additions_text": "Overall Mozambique has added 366 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Myanmar",
+    "status_text": "Myanmar has 701 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Myanmar is 0-9 years old",
+    "additions_text": "Overall Myanmar has added 1,794 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Namibia",
+    "status_text": "Namibia has no operating gas and oil power capacity",
+    "age_text": "Namibia does not have any operating gas and oil power",
+    "additions_text": "Overall, Namibia has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Netherlands",
+    "status_text": "Netherlands has 1,398 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Netherlands is 10-19 years old",
+    "additions_text": "Overall Netherlands has added 8,675 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "New Caledonia",
+    "status_text": "New Caledonia has 55 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in New Caledonia is 30-39 years old",
+    "additions_text": "Overall, New Caledonia has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "New Zealand",
+    "status_text": "New Zealand has 777 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in New Zealand is 10-19 years old",
+    "additions_text": "Overall New Zealand has added 1,019 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Nicaragua",
+    "status_text": "Nicaragua has 368 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Nicaragua is 0-9 years old",
+    "additions_text": "Overall Nicaragua has added 140 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Nigeria",
+    "status_text": "Nigeria has 82 MW less operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Nigeria is 10-19 years old",
+    "additions_text": "Overall Nigeria has added 7,178 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "North Macedonia",
+    "status_text": "North Macedonia has 210 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in North Macedonia is 10-19 years old",
+    "additions_text": "Overall North Macedonia has added 440 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Norway",
+    "status_text": "Norway has 603 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Norway is 10-19 years old",
+    "additions_text": "Overall Norway has added 294 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Oman",
+    "status_text": "Oman has 914 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Oman is 0-9 years old",
+    "additions_text": "Overall Oman has added 12,968 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Pakistan",
+    "status_text": "Pakistan has 6,448 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Pakistan is 0-9 years old",
+    "additions_text": "Overall Pakistan has added 12,174 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Palestine",
+    "status_text": "Palestine has 60 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Palestine is 20-29 years old",
+    "additions_text": "Overall, Palestine has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Panama",
+    "status_text": "Panama has 386 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Panama is 0-9 years old",
+    "additions_text": "Overall Panama has added 766 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Peru",
+    "status_text": "Peru has 397 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Peru is 10-19 years old",
+    "additions_text": "Overall Peru has added 6,760 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Philippines",
+    "status_text": "Philippines has 1,198 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Philippines is 20-29 years old",
+    "additions_text": "Overall Philippines has added 3,089 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Poland",
+    "status_text": "Poland has 876 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Poland is 0-9 years old",
+    "additions_text": "Overall Poland has added 3,208 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Portugal",
+    "status_text": "Portugal has 738 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Portugal is 10-19 years old",
+    "additions_text": "Overall Portugal has added 3,332 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Qatar",
+    "status_text": "Qatar has 435 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Qatar is 10-19 years old",
+    "additions_text": "Overall Qatar has added 11,534 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Republic of the Congo",
+    "status_text": "Republic of the Congo has the same operating gas and oil power capacity as it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Republic of the Congo is 10-19 years old",
+    "additions_text": "Overall Republic of the Congo has added 534 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Romania",
+    "status_text": "Romania has 69 MW less operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Romania is 10-19 years old",
+    "additions_text": "Overall Romania has added 1,233 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Russia",
+    "status_text": "Russia has 5,587 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Russia is 50+ years old",
+    "additions_text": "Overall Russia has added 34,464 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "R�union",
+    "status_text": "R�union has 300 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in R�union is 0-9 years old",
+    "additions_text": "Overall R�union has added 300 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Saudi Arabia",
+    "status_text": "Saudi Arabia has 48,650 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Saudi Arabia is 0-9 years old",
+    "additions_text": "Overall Saudi Arabia has added 78,591 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Senegal",
+    "status_text": "Senegal has 210 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Senegal is 0-9 years old",
+    "additions_text": "Overall Senegal has added 646 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Serbia",
+    "status_text": "Serbia has 189 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Serbia is 30-39 years old",
+    "additions_text": "Overall Serbia has added 189 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Sierra Leone",
+    "status_text": "Sierra Leone has no operating gas and oil power capacity",
+    "age_text": "Sierra Leone does not have any operating gas and oil power",
+    "additions_text": "Overall, Sierra Leone has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Singapore",
+    "status_text": "Singapore has 28 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Singapore is 10-19 years old",
+    "additions_text": "Overall Singapore has added 9,144 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Slovakia",
+    "status_text": "Slovakia has 393 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Slovakia is 10-19 years old",
+    "additions_text": "Overall Slovakia has added 684 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Slovenia",
+    "status_text": "Slovenia has 13 MW less operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Slovenia is 20-29 years old",
+    "additions_text": "Overall Slovenia has added 421 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Somalia",
+    "status_text": "Somalia has 65 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "Somalia does not have any operating gas and oil power",
+    "additions_text": "Overall, Somalia has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "South Africa",
+    "status_text": "South Africa has 342 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in South Africa is 40-49 years old",
+    "additions_text": "Overall South Africa has added 280 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "South Korea",
+    "status_text": "South Korea has 4,488 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in South Korea is 0-9 years old",
+    "additions_text": "Overall South Korea has added 35,700 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Spain",
+    "status_text": "Spain has 3,564 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Spain is 10-19 years old",
+    "additions_text": "Overall Spain has added 27,772 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Sri Lanka",
+    "status_text": "Sri Lanka has 1,207 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Sri Lanka is 20-29 years old",
+    "additions_text": "Overall Sri Lanka has added 812 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Sudan",
+    "status_text": "Sudan has 1,784 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Sudan is 0-9 years old",
+    "additions_text": "Overall Sudan has added 1,507 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Suriname",
+    "status_text": "Suriname has 126 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Suriname is 0-9 years old",
+    "additions_text": "Overall Suriname has added 126 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Sweden",
+    "status_text": "Sweden has 2,183 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Sweden is 50+ years old",
+    "additions_text": "Overall Sweden has added 250 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Switzerland",
+    "status_text": "Switzerland has 55 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Switzerland is 10-19 years old",
+    "additions_text": "Overall Switzerland has added 55 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Syria",
+    "status_text": "Syria has 1,192 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Syria is 10-19 years old",
+    "additions_text": "Overall Syria has added 3,854 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Taiwan",
+    "status_text": "Taiwan has 2,934 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Taiwan is 20-29 years old",
+    "additions_text": "Overall Taiwan has added 13,821 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Tajikistan",
+    "status_text": "Tajikistan has 194 MW less operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Tajikistan is 50+ years old",
+    "additions_text": "Overall, Tajikistan has not added any gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Tanzania",
+    "status_text": "Tanzania has the same operating gas and oil power capacity as it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Tanzania is 0-9 years old",
+    "additions_text": "Overall Tanzania has added 240 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Thailand",
+    "status_text": "Thailand has 2,497 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Thailand is 0-9 years old",
+    "additions_text": "Overall Thailand has added 32,085 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Timor-Leste",
+    "status_text": "Timor-Leste has 255 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Timor-Leste is 10-19 years old",
+    "additions_text": "Overall Timor-Leste has added 255 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Togo",
+    "status_text": "Togo has 18 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Togo is 0-9 years old",
+    "additions_text": "Overall Togo has added 65 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Trinidad and Tobago",
+    "status_text": "Trinidad and Tobago has 66 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Trinidad and Tobago is 10-19 years old",
+    "additions_text": "Overall Trinidad and Tobago has added 1,230 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Tunisia",
+    "status_text": "Tunisia has 137 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Tunisia is 0-9 years old",
+    "additions_text": "Overall Tunisia has added 4,034 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Turkey",
+    "status_text": "Turkey has 24,207 MW less operating gas and oil power capacity than it did in 2021",
+    "age_text": "NA",
+    "additions_text": "NA"
+  },
+  {
+    "Country": "Turkmenistan",
+    "status_text": "Turkmenistan has 382 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Turkmenistan is 0-9 years old",
+    "additions_text": "Overall Turkmenistan has added 4,639 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "T�rkiye",
+    "status_text": "T�rkiye has 27,824 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in T�rkiye is 10-19 years old",
+    "additions_text": "Overall T�rkiye has added 22,099 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Ukraine",
+    "status_text": "Ukraine has 2,046 MW less operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Ukraine is 0-9 years old",
+    "additions_text": "Overall Ukraine has added 1,178 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "United Arab Emirates",
+    "status_text": "United Arab Emirates has 11,124 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in United Arab Emirates is 10-19 years old",
+    "additions_text": "Overall United Arab Emirates has added 34,449 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "United Kingdom",
+    "status_text": "United Kingdom has 1,600 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in United Kingdom is 20-29 years old",
+    "additions_text": "Overall United Kingdom has added 21,685 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "United States",
+    "status_text": "United States has 25,162 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in United States is 20-29 years old",
+    "additions_text": "Overall United States has added 409,063 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Uruguay",
+    "status_text": "Uruguay has 306 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Uruguay is 0-9 years old",
+    "additions_text": "Overall Uruguay has added 920 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Uzbekistan",
+    "status_text": "Uzbekistan has 1,648 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Uzbekistan is 0-9 years old",
+    "additions_text": "Overall Uzbekistan has added 5,832 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Venezuela",
+    "status_text": "Venezuela has 752 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Venezuela is 0-9 years old",
+    "additions_text": "Overall Venezuela has added 4,327 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Vietnam",
+    "status_text": "Vietnam has the same operating gas and oil power capacity as it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Vietnam is 10-19 years old",
+    "additions_text": "Overall Vietnam has added 7,382 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Western Sahara",
+    "status_text": "Western Sahara has 72 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Western Sahara is 0-9 years old",
+    "additions_text": "Overall Western Sahara has added 72 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Yemen",
+    "status_text": "Yemen has 450 MW more operating gas and oil power capacity than it did in 2021",
+    "age_text": "The largest share of gas and oil power plants in Yemen is 10-19 years old",
+    "additions_text": "Overall Yemen has added 792 MW of gas and oil power capacity since 2000"
+  },
+  {
+    "Country": "Zimbabwe",
+    "status_text": "Zimbabwe has no operating gas and oil power capacity",
+    "age_text": "Zimbabwe does not have any operating gas and oil power",
+    "additions_text": "Overall, Zimbabwe has not added any gas and oil power capacity since 2000"
+  }
+]
