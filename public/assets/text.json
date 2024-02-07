@@ -35,6 +35,14 @@
         "change_text": "has not retired any coal since 2000",
         "status_text": "Albania has 495 MW of operating coal power capacity and 120 MW under development",
         "age_text": "The largest share of coal power in USA is 40-49 years old"
+      },
+      {
+        "Country": "Brazil",
+        "overall_summary": "**Brazil** summary sentence here",
+        "cumulative_text": "increased its coal power capacity from 2000",
+        "change_text": "has not retired any coal since 2000",
+        "status_text": "Brazil has 495 MW of operating coal power capacity and 120 MW under development",
+        "age_text": "The largest share of coal power in USA is 40-49 years old"
       }
     ]
 }
