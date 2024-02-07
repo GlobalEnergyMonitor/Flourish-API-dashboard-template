@@ -239,29 +239,41 @@ Things to note
 *via the GitHub UI*
 * Scroll to the top of this page and click code > Download Zip
   ![Click 'code' then 'download zip'](image.png)
-* Create a new repo
+* Go to the GEM main page, and create a new repo, giving it a name etc
+* You should see a page like this
+![screenshot of a new repo](image-1.png)
+Click 'uploading an existing file' (if not, you can add `/upload` to the url in the address bar)
+* Drag all the files from the downloaded zip file into the uploader
+* You can then make any changes you like from within github (or clone the project and work with it locally)
 
 *via the terminal*
+* Clone this repo
+* Create a new repo in GEM
+* Clone the new repo to your machine
+* Copy the files over, commit and push
+* Proceed to work with the new repo, make new branches or any changes you like
 
-1. Update the configs and datasets
-2. Create a new instance on heroku
-   * New project
-   * Add bundle (node.js)
-   * Set to auto update
-3. Add Flourish API key
-   * got to flourish
-   * add to heroku
-4. Check the URL
-5. Add page to GEM site
-   * go to wordpress
-   * create new page with tracker template
+2. Create a new instance on Heroku
+   * New app
+   * Connect to GitHub
+     * Connect to main branch (or testing branch if you have one, but remember to change it to main when publishing)
+     * Set to autoupdate
+   * Go to the Settings tab 
+     * Add buildpack -> nodejs
+     * Reveal config vars -> under 'KEY' add 'FLOURISH_API_KEY' and paste a valid Flourish API key here
+     _([Instructions for getting API Key here](https://developers.flourish.studio/api/getting-started/), or ask someone for an existing one)_
+3. Check the URL, hopefully it's all good!
+4. Add page to GEM site
+   * Go to WordPress
+   * Create new page with Tracker template
+   * Paste in Heroku page URL
 
 # To develop the templates / use locally
-* open your terminal
-* clone repo
+* Open your terminal
+* Clone repo
 * `cd` into project run `npm install`
-* get a flourish API key [following instructions here](https://developers.flourish.studio/api/getting-started/)
-* create `.env` file in the root of the project (this is important so the code knows where to find it and it doesn't get commited to github)
+* Get a flourish API key [following instructions here](https://developers.flourish.studio/api/getting-started/)
+* Create `.env` file in the root of the project (this is important so the code knows where to find it and it doesn't get commited to github)
 * copy the below into it and save:
 ```
 FLOURISH_API_KEY=YOUR_API_KEY_HERE
@@ -270,115 +282,3 @@ PORT=8080
 * run `npm start`
 * open your browser and navigate to http://localhost:8080/
 
-### To make changes / show different graphs
-You can control which graphs are showing, and in what order from `public/assets/config.json`
-
-**Overview:**
-```
-{
-    "flourish-id": {
-        "title": "Title of the graph", // this can be changed dynamically - eg replacing a flag `{{country}}` with a value
-        "x_axis": "column-1", // this references the column name of the linked dataset
-        "values": [ // array of column names of the linked dataset. One for classic bar chart/simple scatter, multiple for combined columns
-            "column-2",
-            "column-3",
-        ],
-        "pop_up": [
-            "column-4" // column name for any tool tip info - can have more than one value
-        ],
-        "summary": "key", // refers to entry in dropdowns in `text.json` to pull sentences from
-        "dataset": "data", // name of dataset. Currently this is local to the project, the dataset should be in `assets/data` and be a json file
-        "initial_state": "state-1", // landing state of graph (eg country set to filter to Global)
-        "filterable": true, // is the graph filterable eg by country. This value is a boolean true/false
-        "filter_by": "column-5" // what it is filterable by
-    },
-    "flourish_ids": [
-        "id-1", // order of flourish ids as the graphs will appear in the page. Must have corresponding ID in this json file
-        "id-2"
-
-    ],
-    "input_type": "dropdown", // input type to add to the page: dropdown (or soon to be buttons)
-    "filter_key": "column-5", // what column in dataset to filter by
-    "overall_summary": true // boolean to show/hide overall summary which updates on interaction
-}
-```
-
-**Example:**
-```
-{
-    "15821879": {
-        "title": "Coal plant capacity starting construction outside China is on track for record annual low",
-        "x_axis": "Period",
-        "values": [
-            "Yearly Construction Starts"
-        ],
-        "pop_up": null,
-        "summary": null,
-        "dataset": "data_construction",
-        "filterable": false
-    },
-    "16566530": {
-        "title": "What is the age breakdown of coal plants?",
-        "x_axis": "decade",
-        "values": [
-            "CFB",
-            "IGCC",
-            "Subcritical",
-            "Supercritical",
-            "Ultra-supercritical",
-            "Unknown"
-        ],
-        "pop_up": [
-            "text"
-        ],
-        "summary": "age_text",
-        "dataset": "data_age",
-        "initial_state": "Global",
-        "filterable": true,
-        "filter_by": "Country"
-    },
-    "flourish_ids": [
-        "15821879",
-        "16566530"
-
-    ],
-    "input_type": "dropdown",
-    "filter_key": "Country"
-}
-```
-
-## Updating text
-All of this should be configurable. A lot of the main text (outside of the individual graphics) is controlled through `text.json`
-
-**Overview**
-```
-{
-    "title": "Coal dashbaord",
-    "intro": "Below is a container for a flourish viz",
-    "dropdown_label": "Select a country: ",
-    "title_variation_initial": "globally",
-    "title_variation_filtered": "in {{country}}",
-    "title_flag": "{{country}}",
-     "dropdown": [
-        {
-          "Country": "Global",
-          "overall_summary": "",
-          "cumulative_text": "coal capacity has almost doubled from 2000",
-          "change_text": "Need to develop a sentence for Global",
-          "status_text": "Global has 2,095,041 MW of operating coal power capacity and 557,465 MW under development",
-          "age_text": "The largest share of coal power in Global is 10-19 years old"
-        },
-                {
-          "Country": "Albania",
-          "overall_summary": "",
-          "cumulative_text": "has no operating coal power",
-          "change_text": "neither added or retired any coal",
-          "status_text": "Albania has 0 MW of operating coal power capacity and 0 MW under development",
-          "age_text": "Albania does not have any operating coal power"
-        },
-        ...
-     ]
-}
-```
-* To update any of these values just navigate to `public/assets/text.json`
-* The text fields under 'dropdown' refer to summary text outputted for each variation of the graphs
