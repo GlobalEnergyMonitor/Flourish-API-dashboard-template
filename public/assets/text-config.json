@@ -2,6 +2,7 @@
     "title": "Coal dashboard",
     "intro": "Intro text",
     "buttons_label": "Select a country: ",
+    "no_data": "No data available for {{selected}}",
     "buttons": [
       {
         "Country": "Global",
@@ -16,7 +17,7 @@
         "overall_summary": "_UK_ summary sentence here",
         "cumulative_text": "has no operating coal power",
         "change_text": "neither added or retired any coal",
-        "status_text": "UK",
+        "status_text": "UK TEXT.CONFIG",
         "age_text": "UK"
       },
       {
@@ -26,6 +27,22 @@
         "change_text": "has not retired any coal since 2000",
         "status_text": "USA has 495 MW of operating coal power capacity and 120 MW under development",
         "age_text": "The largest share of coal power in USA is 40-49 years old"
+      },
+      {
+        "Country": "Albania",
+        "overall_summary": "**Albania** summary sentence here",
+        "cumulative_text": "increased its coal power capacity from 2000",
+        "change_text": "has not retired any coal since 2000",
+        "status_text": "Albania has 495 MW of operating coal power capacity and 120 MW under development",
+        "age_text": "The largest share of coal power in USA is 40-49 years old"
+      },
+      {
+        "Country": "Brazil",
+        "overall_summary": "**Brazil** summary sentence here",
+        "cumulative_text": "increased its coal power capacity from 2000",
+        "change_text": "has not retired any coal since 2000",
+        "status_text": "Brazil has 495 MW of operating coal power capacity and 120 MW under development",
+        "age_text": "The largest share of coal power in USA is 40-49 years old"
       }
-      ]
+    ]
 }

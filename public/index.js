@@ -10,7 +10,7 @@ const tickers = {
 getData();
 
 async function getData() {
-    const urls = ["./assets/page-config.json", "./assets/chart-config.json", "./assets/text.json"];
+    const urls = ["./assets/page-config.json", "./assets/chart-config.json", "./assets/text-config.json"];
     const keys = ["dashboard", "charts", "text"];
     const promises = [];
     for (const url of urls) {
@@ -101,6 +101,9 @@ function implementFilterButtons() {
     btnGroup.classList.add('button-group');
     btnGroup.appendChild(label);
 
+    btnsWrapper = document.createElement('div');
+    btnsWrapper.classList.add('buttons-wrapper');
+    btnGroup.appendChild(btnsWrapper);
 
     const buttonData = config.text.buttons.map(entry => entry[config.dashboard.input_filter]);
     buttonData.forEach((button, i) => {
@@ -121,17 +124,14 @@ function implementFilterButtons() {
 
         btnContainer.appendChild(label);
         btnContainer.appendChild(btn);
-        btnGroup.appendChild(btnContainer);
+        btnsWrapper.appendChild(btnContainer);
     });
     const controlsContainer = document.querySelector('.controls-container');
     controlsContainer.appendChild(btnGroup);
 
     const buttonEls = document.querySelectorAll('.filter-button input');
-    console.log('buttons', buttonEls)
     buttonEls.forEach(btn => {
         btn.addEventListener('click', (evt) => {
-            console.log('evt', evt);
-
             buttonEls.forEach(btnEl => btnEl.checked = false);
             evt.target.checked = "checked";
 
@@ -165,7 +165,6 @@ function renderTickers() {
         };
 
         config.dashboard.tickers.forEach((entry, i) => {
-            console.log('entry', entry);
             const { id } = entry;
             const container = document.createElement('div');
             container.id = id;
@@ -242,7 +241,10 @@ function updateSummaries(key) {
 }
 
 function updateOverallSummary(summaryTextObj) {
-    document.querySelector('.dashboard-intro--para').innerHTML = markdownToHTML((summaryTextObj.overall_summary) ? summaryTextObj.overall_summary : 'insert generic sentence here'); // TODO: grab default sentence from text config
+    document.querySelector('.dashboard-intro--para').innerHTML = 
+    markdownToHTML((summaryTextObj.overall_summary) ? 
+        summaryTextObj.overall_summary : config.text.no_data.replace("{{selected}}", summaryTextObj[config.dashboard.input_filter]
+    ));
 }
 
 function updateGraphSummaries(key, summaryTextObj) {
@@ -252,7 +254,11 @@ function updateGraphSummaries(key, summaryTextObj) {
         if (currentGraph.filterable && currentGraph.summary) {
             const filteredData = config.datasets[id].filter(entry => formatName(entry[currentGraph.filter_by]) === key);
             const summary = document.querySelector(`#chart-${id} .chart-summary`);
-            if (summary) summary.innerHTML= markdownToHTML((filteredData.length <= 0 || !summaryTextObj[currentGraph.summary]) ? `No data available for ${getSelectedText()}` : summaryTextObj[currentGraph.summary]);
+            if (summary) {
+                summary.innerHTML = markdownToHTML(
+                    (filteredData.length <= 0 || !summaryTextObj[currentGraph.summary]) ? 
+                    config.text.no_data.replace("{{selected}}", summaryTextObj[config.dashboard.input_filter]) : summaryTextObj[currentGraph.summary]);
+            }
         }
     });
 }
@@ -341,7 +347,6 @@ function getSelectedText() {
     }
     else if (config.dashboard.input_type === 'buttons') {
         const selectedButton = document.querySelector('input[name="filter"]:checked');
-        console.log('return', selectedButton, selectedButton.text);
         return selectedButton.text;
     }
 }
