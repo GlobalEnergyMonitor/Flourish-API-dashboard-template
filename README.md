@@ -238,10 +238,10 @@ Things to note
 
 *via the GitHub UI*
 * Scroll to the top of this page and click code > Download Zip
-  ![Click 'code' then 'download zip'](image.png)
+  ![Click 'code' then 'download zip'](/readme-img/clone.png)
 * Go to the GEM main page, and create a new repo, giving it a name etc
 * You should see a page like this
-![screenshot of a new repo](image-1.png)
+![screenshot of a new repo](/readme-img/new-repo.png)
 Click 'uploading an existing file' (if not, you can add `/upload` to the url in the address bar)
 * Drag all the files from the downloaded zip file into the uploader
 * You can then make any changes you like from within github (or clone the project and work with it locally)
