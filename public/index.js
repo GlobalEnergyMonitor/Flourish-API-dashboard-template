@@ -242,9 +242,7 @@ function updateSummaries(key) {
 
 function updateOverallSummary(summaryTextObj) {
     document.querySelector('.dashboard-intro--para').innerHTML = 
-    markdownToHTML((summaryTextObj.overall_summary) ? 
-        summaryTextObj.overall_summary : config.text.no_data.replace("{{selected}}", summaryTextObj[config.dashboard.input_filter]
-    ));
+        markdownToHTML((summaryTextObj.overall_summary) ? summaryTextObj.overall_summary : '');
 }
 
 function updateGraphSummaries(key, summaryTextObj) {
