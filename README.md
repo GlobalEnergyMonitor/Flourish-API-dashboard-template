@@ -238,11 +238,8 @@ Things to note
 
 *via the GitHub UI*
 * Scroll to the top of this page and click code > Download Zip
-  ![Click 'code' then 'download zip'](/readme-img/clone.png)
 * Go to the GEM main page, and create a new repo, giving it a name etc
-* You should see a page like this
-![screenshot of a new repo](/readme-img/new-repo.png)
-Click 'uploading an existing file' (if not, you can add `/upload` to the url in the address bar)
+* On the next page, click 'uploading an existing file' (if you can't see that, you can add `/upload` to the url in the address bar)
 * Drag all the files from the downloaded zip file into the uploader
 * You can then make any changes you like from within github (or clone the project and work with it locally)
 
@@ -253,7 +250,7 @@ Click 'uploading an existing file' (if not, you can add `/upload` to the url in 
 * Copy the files over, commit and push
 * Proceed to work with the new repo, make new branches or any changes you like
 
-2. Create a new instance on Heroku
+1. Create a new instance on Heroku
    * New app
    * Connect to GitHub
      * Connect to main branch (or testing branch if you have one, but remember to change it to main when publishing)
@@ -262,8 +259,8 @@ Click 'uploading an existing file' (if not, you can add `/upload` to the url in 
      * Add buildpack -> nodejs
      * Reveal config vars -> under 'KEY' add 'FLOURISH_API_KEY' and paste a valid Flourish API key here
      _([Instructions for getting API Key here](https://developers.flourish.studio/api/getting-started/), or ask someone for an existing one)_
-3. Check the URL, hopefully it's all good!
-4. Add page to GEM site
+2. Check the URL, hopefully it's all good!
+3. Add page to GEM site
    * Go to WordPress
    * Create new page with Tracker template
    * Paste in Heroku page URL
