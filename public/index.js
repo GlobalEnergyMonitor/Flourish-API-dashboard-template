@@ -283,7 +283,8 @@ function implentGraph(id) {
         },
         state: {
             layout: {
-                title: config.charts[id].title.replace('{{country}}', '')
+                title: config.charts[id].title.replace('{{country}}', ''),
+                subtitle: config.charts[id].subtitle,
             }
         }
     };

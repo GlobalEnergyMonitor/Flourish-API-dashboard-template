@@ -1,6 +1,7 @@
 {
     "16566530": {
         "title": "What is the age breakdown of gas thingys?",
+        "subtitle": "there needs to be a subtitle here",
         "x_axis": "Decade",
         "values": [
             "Allam-Fetvedt Cycle",
@@ -21,10 +22,12 @@
     },
     "16659864": {
         "title": "How much gas has been added?",
+        "subtitle": "there needs to be a subtitle here",
         "x_axis": "Year",
         "values": [
             "Added (MW)"
         ],
+        "pop_up": ["Added (MW)"],
         "summary": "additions_text",
         "dataset": "gas_data_additions",
         "initial_state": "Global",
@@ -33,6 +36,7 @@
     },
     "16659638": {
         "title": "How has gas power capacity changed status in past decade?",
+        "subtitle": "there needs to be a subtitle here",
         "x_axis": "Year",
         "values": [
             "operating",
