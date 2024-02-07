@@ -23,7 +23,7 @@ Pushing your changes to the main branch on github should trigger an automatic re
 ## An overview of each config and the options expected
 
 ### page-config.json
-** Overview **
+**Overview**
 ```
 {
     "flourish_ids": [], // array of ids of each flourish graphic
@@ -45,7 +45,7 @@ Pushing your changes to the main branch on github should trigger an automatic re
 }
 ```
 
-** Example: **
+**Example:**
 ```
 {
     "flourish_ids": [
@@ -103,7 +103,7 @@ Pushing your changes to the main branch on github should trigger an automatic re
 ```
 
 ### chart-config.json
-** Overview **
+**Overview**
 ```
 {
     "FLOURISH_ID": {
@@ -121,7 +121,7 @@ Pushing your changes to the main branch on github should trigger an automatic re
 }
 ```
 
-**Example: **
+**Example:**
 ```
 {
     "15821879": {
@@ -175,7 +175,7 @@ Pushing your changes to the main branch on github should trigger an automatic re
 ```
 
 ### text-config.json
-** Overview **
+**Overview**
 ```
 {
     "title": "", // title of the whole dashboard
@@ -196,7 +196,7 @@ Things to note
 * buttons/dropdown can handle any number of options. For buttons it is not recommended to use more than 6
   
 
-**Example: **
+**Example:**
 
 ```
 {
@@ -222,7 +222,7 @@ Things to note
       },
       {
         "Country": "United States",
-        "overall_summary": "**USA** summary sentence here",
+        "overall_summary": "**USA**summary sentence here",
         "cumulative_text": "increased its coal power capacity from 2000",
         "change_text": "has not retired any coal since 2000",
         "status_text": "USA has 495 MW of operating coal power capacity and 120 MW under development",
