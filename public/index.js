@@ -274,8 +274,6 @@ function implentGraph(id) {
             data: {
                 label: config.charts[id].x_axis, // this seems to be the X axis
                 value: config.charts[id].values, // this is the actual bar
-                // facet: "Year",
-                // filter: "DataHeader5", // assume this would be for a drop down or something
             }
         },
         data: {
