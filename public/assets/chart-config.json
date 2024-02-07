@@ -1,7 +1,7 @@
 {
-    "16566530": {
-        "title": "What is the age breakdown of gas thingys?",
-        "subtitle": "there needs to be a subtitle here",
+    "16578845": {
+        "title": "What is the age breakdown of oil and gas plants?",
+        "subtitle": "Oil and gas power capacity by age and type of plants, in megawatts (MW)",
         "x_axis": "Decade",
         "values": [
             "Allam-Fetvedt Cycle",
@@ -20,9 +20,9 @@
         "filterable": true,
         "filter_by": "Country"
     },
-    "16659864": {
-        "title": "How much gas has been added?",
-        "subtitle": "there needs to be a subtitle here",
+    "16578858": {
+        "title": "How much gas and oil power has been added since 2000?",
+        "subtitle": "Operating oil and gas power capacity added by country by plant start year, in gigawatts (GW)",
         "x_axis": "Year",
         "values": [
             "Added (MW)"
@@ -34,9 +34,9 @@
         "filterable": true,
         "filter_by": "Country"
     },
-    "16659638": {
-        "title": "How has gas power capacity changed status in past decade?",
-        "subtitle": "there needs to be a subtitle here",
+    "16578852": {
+        "title": "How has gas and oil power capacity changed status recently?",
+        "subtitle": "Gas and oil power capacity by status, in megawatts (MW)",
         "x_axis": "Year",
         "values": [
             "operating",
