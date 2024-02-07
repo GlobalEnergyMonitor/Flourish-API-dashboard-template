@@ -40,7 +40,7 @@ Pushing your changes to the main branch on github should trigger an automatic re
             "font-size": "" // optional font size for number value
         }
     }],
-    "ticker_text_font-size": "", // font size for the text in the ticker (not the number)
+    "ticker_text_font-size": "", // optional - font size for the text in the ticker (not the number)
     "ticker_data": "" // references the datset to feed the tickers, expected to live at `public/assets/data`. Without `.json` suffix
 }
 ```
