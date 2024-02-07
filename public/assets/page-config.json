@@ -9,7 +9,6 @@
 
     ],
     "input_type": "buttons",
-    "input_types": ["dropdown", "buttons", "combo"],
     "input_filter": "Country",
     "input_default": "Global",
     "overall_summary": true,

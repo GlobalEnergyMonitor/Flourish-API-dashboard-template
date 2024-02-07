@@ -1,6 +1,5 @@
 {
     "title": "Coal dashboard",
-    "intro": "Intro text",
     "buttons_label": "Select a country: ",
     "no_data": "No data available for {{selected}}",
     "buttons": [
