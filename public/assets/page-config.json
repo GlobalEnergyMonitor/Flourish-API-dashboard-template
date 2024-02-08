@@ -3,7 +3,7 @@
         "16647921",
         "16644559"
     ],
-    "input_type": "dropdown",
+    "input_type": "buttons",
     "input_filter": ["All", "Construction", "Permitted", "Pre-permit", "Announced"],
     "input_default": "All",
     "input_key": "status"
