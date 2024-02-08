@@ -253,6 +253,7 @@ Things to note
     * Make a new folder on your machine
     * Run:
     ```
+        git init
         git remote add origin https://github.com/GlobalEnergyMonitor/[NEW-GIT-REPO].git
         git branch -M main
         git push -u origin main
