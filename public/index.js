@@ -288,7 +288,6 @@ function updateGraphSummaries(key, summaryTextObj) {
 }
 
 function implentGraph(id) {
-    console.log('initial data', initialData(id));
     graphs[id] = {};
     graphs[id].opts = {
         template: "@flourish/line-bar-pie",
