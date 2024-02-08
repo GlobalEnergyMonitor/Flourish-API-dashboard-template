@@ -4,10 +4,7 @@ body {
     font-family: 'Open Sans';
     text-align: center;
     color: #1f1f1f;
-}
-
-label {
-    margin-right: 0.5rem;
+    max-width: 2500px;
 }
 
 .chart-container {
@@ -23,18 +20,32 @@ label {
     flex-grow: 1;
 }
 
+.controls-container {
+    padding: 0 0.5rem;
+    max-width: 450px;
+    margin: auto auto 2rem;
+    font-size: 1.125rem;
+}
+
 /* dropdown styling */
 .controls-container select {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvklEQVR4nO3RwQqDMBCE4aGHYt92j75XD7ZPZxEUSsCmarKZ1flhbznMRwCllFJKKeXZDSfYeAfwBNCDNwPwAvDIIcb5elLEON97DZNC2DCWbJsg3dpjVoxtQbBibA+CDWNHECwYK4FojbGSiFYYq4HwxlhNhBfGBVEb44qohWmCKI1piiiFoUAcxVAh9mIoEVsx1Ih/MSEQOUwoxNI0cEiGf98QAfHrZ8L8RA4TEpFiQiOWujMglFJKKaWu3AfcdLEudXvTswAAAABJRU5ErkJggg==) no-repeat 99% 80%;
+    background-size: 1rem;
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+    appearance: none;
+
     cursor: pointer;
     overflow: hidden;
     white-space: nowrap;
     position: relative;
     border: none;
-    border-bottom: 1px solid rgba(51, 51, 51, 0.25);
+    border-bottom: 1px solid #969696;
+    border-radius: 0;
     height: 2.5rem;
     font-size: 1.35rem;
     padding: 0 0.25rem;
-    min-width: 20rem;
+    width: 100%;
 }
 
 /* filter button styling */
