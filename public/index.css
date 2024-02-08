@@ -123,15 +123,17 @@ body {
     .flourish-container {
         display: flex;
         flex-wrap: wrap;
-    }
-
-    .chart-container {
-        flex: 45%;
-        margin: 1rem;
+        justify-content: center;
     }
 
     .chart-summary {
-        min-height: 3rem;
+        max-width: 600px;
+        padding: 0 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .chart-container {
+        margin-bottom: 1.5rem;
     }
 
     /* 4 filter buttons */
@@ -157,7 +159,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1000px) {
     /* 5 or 6 filter buttons */
     .buttons-wrapper div:first-child:nth-last-child(5),
     .buttons-wrapper div:first-child:nth-last-child(5) ~ .filter-button,
@@ -170,5 +172,11 @@ body {
     .ticker-container:first-child:nth-last-child(4),
     .ticker-container:first-child:nth-last-child(4)~.ticker-container {
         flex: 25%;
+    }
+
+    /* Charts displaying side by side */
+    .chart-container {
+        flex: 45%;
+        margin: 1rem;
     }
 }
