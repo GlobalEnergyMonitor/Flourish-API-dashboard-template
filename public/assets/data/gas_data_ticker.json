@@ -2,8 +2,11 @@
   {
     "Country": "Global",
     "summary_1": "<span>{{2042.86}} GW</span><br>of operating oil and gas power capacity",
+    "summary_1_color": "#c30712",
     "summary_2": "<span>{{299.01}} GW</span><br>change in operating oil and gas capacity from 2023",
-    "summary_3": "<span>{{783.24}} GW</span><br>of oil and gas power capacity in development"
+    "summary_2_color": "#c30712",
+    "summary_3": "<span>{{783.24}} GW</span><br>of oil and gas power capacity in development",
+    "summary_3_color": "#c30712"
   },
   {
     "Country": "Afghanistan",
@@ -14,6 +17,7 @@
   {
     "Country": "Albania",
     "summary_1": "<span>{{0}} GW</span><br>of operating oil and gas power capacity",
+    "summary_1_color": "#c30712",
     "summary_2": "<span>{{0}} GW</span><br>change in operating oil and gas capacity from 2023",
     "summary_3": "<span>{{0.27}} GW</span><br>of oil and gas power capacity in development"
   },

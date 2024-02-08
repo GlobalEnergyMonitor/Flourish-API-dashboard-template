@@ -191,7 +191,7 @@ function renderTickers() {
                 container: `#${id}`,
                 state: {
                     ...options.state,
-                    custom_template: formatWithTickerStyling(initialData[id], id),
+                    custom_template: formatWithTickerStyling(initialData, id),
                     value_format: {
                         ...options.state.value_format,
                         n_dec: tickerConf.decimal_places,
@@ -207,9 +207,9 @@ function renderTickers() {
 function updateTickers() {
     config.dashboard.tickers.forEach((entry, i) => {
         const { id } = entry;
-        const text = filterTickerData(getSelectedText())[id];
-        if (text) {
-            tickers[id].options.state.custom_template = formatWithTickerStyling(text, id)
+        const data = filterTickerData(getSelectedText());
+        if (data[id]) {
+            tickers[id].options.state.custom_template = formatWithTickerStyling(data, id)
             tickers[id].flourish.update(tickers[id].options)
             document.querySelector(`#${id} iframe`).style.opacity = 1;
         }
@@ -217,9 +217,12 @@ function updateTickers() {
     });
 }
 
-function formatWithTickerStyling(text, id) {
+function formatWithTickerStyling(data, id) {
+    console.log('data?', data);
+    const text = data[id];
     const { style } = config.dashboard.tickers.filter( entry => entry.id === id)[0];
-    const styledSpan =  Object.entries(style).reduce((prev, [key, val]) => `${prev} ${key}: ${val};`, '<span style="') + '">';
+    const colourOverride = data[`${id}_color`];
+    const styledSpan =  Object.entries(style).reduce((prev, [key, val]) => `${prev} ${key}: ${(key === 'color' && colourOverride) ? colourOverride : val};`, '<span style="') + '">';
     return text.replace('<span>', styledSpan);
 }
 
