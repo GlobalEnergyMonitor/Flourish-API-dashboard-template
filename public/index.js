@@ -83,13 +83,17 @@ function implementDropdown() {
 
     if (!config.text.dropdown) throw new Error('page-config specifies input of dropdown but text-config does not match')
 
-    const dropdownData = config.text.dropdown.map(entry => entry[config.dashboard.input_filter]);
+    let dropdownData = (typeof config.text.dropdown === 'string') ? 
+        config.text.dropdown.map(entry => entry[config.dashboard.input_filter])
+        : config.dashboard.input_filter;
+    
     dropdownData.forEach(input => {
         const opt = document.createElement('option');
         opt.value = formatName(input);
         opt.text = input;
         dropdownEl.appendChild(opt);
-    })
+    });
+
     const controlsContainer = document.querySelector('.controls-container');
     controlsContainer.appendChild(label);
     controlsContainer.appendChild(dropdownEl);
@@ -279,6 +283,7 @@ function updateGraphSummaries(key, summaryTextObj) {
 }
 
 function implentGraph(id) {
+    console.log('initial data', initialData(id));
     graphs[id] = {};
     graphs[id].opts = {
         template: "@flourish/line-bar-pie",
@@ -314,7 +319,24 @@ function updateGraphs(key) {
     graphIDs.forEach(id => {
         const currentGraph = config.charts[id];
         if (currentGraph.filterable) {
-            const filteredData = config.datasets[id].filter(entry => formatName(entry[currentGraph.filter_by]) === key);
+
+            let filteredData;
+            if (typeof config.charts[id].filter_by === 'string') {
+                filteredData = config.datasets[id].filter(entry => formatName(entry[currentGraph.filter_by]) === key);
+            }
+            else {
+                const filterValue = getUnformattedInputName(key);
+                const x_value = config.charts[id].x_axis;
+                filteredData = config.datasets[id].map(entry => {
+                    let output = {};
+                    output[filterValue] = entry[filterValue];
+                    output[x_value] = entry[x_value];
+                    return output;
+                });
+
+                console.log('data', filteredData)
+            }
+
             if (filteredData.length !== 0) {
                 graphs[id].opts.data = {
                     data: filteredData
@@ -334,10 +356,23 @@ function formatName(string) {
     return string.toLowerCase().replace(/ /g, "_");
 }
 
+function getUnformattedInputName(string) {
+    let output = '';
+    config.dashboard.input_filter.forEach(key => {
+        if (formatName(key) === string) output = key;
+    })
+    return output;
+}
+
 function initialData(id) {
     let data = config.datasets[id];
     if (config.charts[id].filterable) {
-        data = config.datasets[id].filter(entry => entry[config.dashboard.input_filter] === config.charts[id].initial_state);
+        if (typeof config.charts[id].filter_by === 'string') {
+            data = config.datasets[id].filter(entry => entry[config.dashboard.input_filter] === config.charts[id].initial_state);
+        }
+        else {
+            return data;
+        }
     }
     return data;
 }

@@ -1,0 +1,107 @@
+﻿[
+  {
+    "Province": "Beijing",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "Province": "Hainan",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "Province": "Tianjin",
+    "Construction": "0",
+    "Permitted": "1,320",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "Province": "Liaoning",
+    "Construction": "760",
+    "Permitted": "120",
+    "Pre-permit": "850",
+    "Announced": "0"
+  },
+  {
+    "Province": "Heilongjiang",
+    "Construction": "100",
+    "Permitted": "0",
+    "Pre-permit": "2,640",
+    "Announced": "0"
+  },
+  {
+    "Province": "Chongqing",
+    "Construction": "780",
+    "Permitted": "2,100",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "Province": "Shanghai",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "2,000",
+    "Announced": "1,200"
+  },
+  {
+    "Province": "Qinghai",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "1,980",
+    "Announced": "1,320"
+  },
+  {
+    "Province": "Sichuan",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "4,000",
+    "Announced": "0"
+  },
+  {
+    "Province": "Jilin",
+    "Construction": "0",
+    "Permitted": "340",
+    "Pre-permit": "184",
+    "Announced": "3,850"
+  },
+  {
+    "Province": "Yunnan",
+    "Construction": "700",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "4,100"
+  },
+  {
+    "Province": "Ningxia",
+    "Construction": "0",
+    "Permitted": "3,320",
+    "Pre-permit": "2,670",
+    "Announced": "0"
+  },
+  {
+    "Province": "Fujian",
+    "Construction": "2,550",
+    "Permitted": "3,735",
+    "Pre-permit": "2,020",
+    "Announced": "100"
+  },
+  {
+    "Province": "Zhejiang",
+    "Construction": "6,320",
+    "Permitted": "4,000",
+    "Pre-permit": "57",
+    "Announced": "0"
+  },
+  {
+    "Province": "Henan",
+    "Construction": "3,930",
+    "Permitted": "1,320",
+    "Pre-permit": "6,000",
+    "Announced": "60"
+  }
+]
