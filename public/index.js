@@ -83,16 +83,21 @@ function implementDropdown() {
 
     if (!config.text.dropdown) throw new Error('page-config specifies input of dropdown but text-config does not match')
 
-    const dropdownData = config.text.dropdown.map(entry => entry[config.dashboard.input_filter]);
+    let dropdownData = (typeof config.text.dropdown === 'string') ? 
+        config.text.dropdown.map(entry => entry[config.dashboard.input_filter])
+        : config.dashboard.input_filter;
+    
     dropdownData.forEach(input => {
         const opt = document.createElement('option');
         opt.value = formatName(input);
         opt.text = input;
         dropdownEl.appendChild(opt);
-    })
+    });
+
     const controlsContainer = document.querySelector('.controls-container');
     controlsContainer.appendChild(label);
     controlsContainer.appendChild(dropdownEl);
+    controlsContainer.classList.add('controls-container--dropdown');
 
     dropdownEl.addEventListener('change', (evt) => {
         const selectedValue = evt.target.value;
@@ -116,7 +121,10 @@ function implementFilterButtons() {
 
     if (!config.text.buttons) throw new Error('page-config specifies input of buttons but text-config does not match')
 
-    const buttonData = config.text.buttons.map(entry => entry[config.dashboard.input_filter]);
+    let buttonData = (typeof config.text.dropdown === 'string') ? 
+        config.text.buttons.map(entry => entry[config.dashboard.input_filter])
+        : config.dashboard.input_filter;
+
     buttonData.forEach((button, i) => {
         const btnContainer = document.createElement('div');
         btnContainer.classList.add('filter-button');
@@ -139,6 +147,7 @@ function implementFilterButtons() {
     });
     const controlsContainer = document.querySelector('.controls-container');
     controlsContainer.appendChild(btnGroup);
+    controlsContainer.classList.add('controls-container--buttons');
 
     const buttonEls = document.querySelectorAll('.filter-button input');
     buttonEls.forEach(btn => {
@@ -314,7 +323,16 @@ function updateGraphs(key) {
     graphIDs.forEach(id => {
         const currentGraph = config.charts[id];
         if (currentGraph.filterable) {
-            const filteredData = config.datasets[id].filter(entry => formatName(entry[currentGraph.filter_by]) === key);
+
+            let filteredData;
+            if (typeof config.charts[id].filter_by === 'string') {
+                filteredData = config.datasets[id].filter(entry => formatName(entry[currentGraph.filter_by]) === key);
+            }
+            else {
+                if (getUnformattedInputName(key) === 'All') filteredData = config.datasets[id];
+                else filteredData = filterDataOnColumnName(key, id);
+            }
+
             if (filteredData.length !== 0) {
                 graphs[id].opts.data = {
                     data: filteredData
@@ -334,12 +352,39 @@ function formatName(string) {
     return string.toLowerCase().replace(/ /g, "_");
 }
 
+function getUnformattedInputName(string) {
+    let output = '';
+    config.dashboard.input_filter.forEach(key => {
+        if (formatName(key) === string) output = key;
+    })
+    return output;
+}
+
 function initialData(id) {
     let data = config.datasets[id];
     if (config.charts[id].filterable) {
-        data = config.datasets[id].filter(entry => entry[config.dashboard.input_filter] === config.charts[id].initial_state);
+        if (typeof config.charts[id].filter_by === 'string') {
+            data = config.datasets[id].filter(entry => entry[config.dashboard.input_filter] === config.charts[id].initial_state);
+        }
+        else {
+            const defaultFilter = config.dashboard.input_default;
+            if (defaultFilter === "All") return data;
+            else return filterDataOnColumnName(formatName(defaultFilter), id)
+        }
     }
     return data;
+}
+
+function filterDataOnColumnName(key, id) {
+    const filterValue = getUnformattedInputName(key);
+    const x_value = config.charts[id].x_axis;
+    filteredData = config.datasets[id].map(entry => {
+        let output = {};
+        output[filterValue] = entry[filterValue];
+        output[x_value] = entry[x_value];
+        return output;
+    });
+    return filteredData;
 }
 
 function initialTickerData() {
