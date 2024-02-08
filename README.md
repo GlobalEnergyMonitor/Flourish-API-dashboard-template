@@ -179,6 +179,7 @@ Pushing your changes to the main branch on github should trigger an automatic re
 ```
 {
     "title": "", // title of the whole dashboard
+    "footer": "", // optional: text shown at the bottom of the page
     "no_data": "No data available for {{selected}}", // no data message - {{selected}} will be replaced by an option from the buttons/dropdown. If not using filtering, remove this from the no data message.
     "buttons_label": "",  // This is the CTA before the input. If using a dropdown, the key should be `dropdown_label`
     "buttons": [ // Each entry here reflects a dropdown/button option and the values that will be outputted when it is selected. if using a dropdown, the key should be `dropdown`. 
@@ -201,6 +202,7 @@ Things to note
 ```
 {
     "title": "Coal dashboard",
+    "footer": "Footer content here",
     "no_data": "No data available for {{selected}}",
     "buttons_label": "Select a country: ",
     "buttons": [

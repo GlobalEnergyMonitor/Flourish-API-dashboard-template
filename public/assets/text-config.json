@@ -1,5 +1,6 @@
 {
     "title": "Gas dashboard",
+    "footer": "Test footer",
     "dropdown_label": "Select a country: ",
     "no_data": "No data available for {{selected}}",
     "dropdown": [
