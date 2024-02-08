@@ -325,16 +325,8 @@ function updateGraphs(key) {
                 filteredData = config.datasets[id].filter(entry => formatName(entry[currentGraph.filter_by]) === key);
             }
             else {
-                const filterValue = getUnformattedInputName(key);
-                const x_value = config.charts[id].x_axis;
-                filteredData = config.datasets[id].map(entry => {
-                    let output = {};
-                    output[filterValue] = entry[filterValue];
-                    output[x_value] = entry[x_value];
-                    return output;
-                });
-
-                console.log('data', filteredData)
+                if (getUnformattedInputName(key) === 'All') filteredData = config.datasets[id];
+                else filteredData = filterDataOnColumnName(key, id);
             }
 
             if (filteredData.length !== 0) {
@@ -371,10 +363,24 @@ function initialData(id) {
             data = config.datasets[id].filter(entry => entry[config.dashboard.input_filter] === config.charts[id].initial_state);
         }
         else {
-            return data;
+            const defaultFilter = config.dashboard.input_default;
+            if (defaultFilter === "All") return data;
+            else return filterDataOnColumnName(formatName(defaultFilter), id)
         }
     }
     return data;
+}
+
+function filterDataOnColumnName(key, id) {
+    const filterValue = getUnformattedInputName(key);
+    const x_value = config.charts[id].x_axis;
+    filteredData = config.datasets[id].map(entry => {
+        let output = {};
+        output[filterValue] = entry[filterValue];
+        output[x_value] = entry[x_value];
+        return output;
+    });
+    return filteredData;
 }
 
 function initialTickerData() {
