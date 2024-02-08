@@ -367,5 +367,5 @@ function getSelectedButton() {
 }
 
 function markdownToHTML(string) {
-    return converter.makeHtml(string);
+    return converter.makeHtml(string).replace(/<\/?p[^>]*>/g, '');;
 }
