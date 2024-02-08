@@ -249,7 +249,7 @@ Things to note
     * Clone this repo
     * Create a new repo on GitHub in GEM organisation
     * Make a new folder on your machine
-    * Copy the files over from your cloned version of this repo, into the new folder
+    * Copy the files over from your cloned version of this repo, into the new folder. Make sure the `.gitignore` is also copied over. If you're doing this in Finder you can press `Command + Shift + . (period)` to show the hidden files. If you can't copy it, make a new one and copy the contents from this repo.
     * Make a new folder on your machine
     * Run:
     ```
