@@ -1,9 +1,9 @@
 {
     "title": "Gas dashboard",
     "footer": "Test footer",
-    "buttons_label": "Select a country: ",
+    "dropdown_label": "Select a country: ",
     "no_data": "No data available for {{selected}}",
-    "buttons": [
+    "dropdown": [
       {
         "Country": "Global",
         "status_text": "There is 299,013 MW more operating gas and oil power capacity globally than there was in 2021",

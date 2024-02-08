@@ -19,9 +19,12 @@ body {
 
 .controls-container {
     padding: 0 0.5rem;
-    /* max-width: 450px; */
     margin: auto auto 2rem;
     font-size: 1.125rem;
+}
+
+.controls-container--dropdown {
+    max-width: 450px;
 }
 
 .dashboard-intro {

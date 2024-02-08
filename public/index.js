@@ -97,6 +97,7 @@ function implementDropdown() {
     const controlsContainer = document.querySelector('.controls-container');
     controlsContainer.appendChild(label);
     controlsContainer.appendChild(dropdownEl);
+    controlsContainer.classList.add('controls-container--dropdown');
 
     dropdownEl.addEventListener('change', (evt) => {
         const selectedValue = evt.target.value;
@@ -146,6 +147,7 @@ function implementFilterButtons() {
     });
     const controlsContainer = document.querySelector('.controls-container');
     controlsContainer.appendChild(btnGroup);
+    controlsContainer.classList.add('controls-container--buttons');
 
     const buttonEls = document.querySelectorAll('.filter-button input');
     buttonEls.forEach(btn => {
