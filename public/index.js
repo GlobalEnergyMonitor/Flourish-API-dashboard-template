@@ -62,6 +62,7 @@ async function getData() {
                     if (config.text.intro) document.querySelector('.dashboard-intro--para').innerHTML = markdownToHTML(config.text.intro);
                     if (config.dashboard.input_type === 'dropdown') implementDropdown();
                     if (config.dashboard.input_type === 'buttons') implementFilterButtons();
+                    if (config.text.footer) document.querySelector('.dashboard-footer').innerHTML = markdownToHTML(config.text.footer);
                     // add another to implement combo
                 })
                 .then(() => renderTickers())
@@ -218,7 +219,6 @@ function updateTickers() {
 }
 
 function formatWithTickerStyling(data, id) {
-    console.log('data?', data);
     const text = data[id];
     const { style } = config.dashboard.tickers.filter( entry => entry.id === id)[0];
     const colourOverride = data[`${id}_color`];
