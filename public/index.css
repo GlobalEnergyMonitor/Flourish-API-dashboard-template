@@ -177,7 +177,9 @@ body {
     .ticker-container:first-child:nth-last-child(4)~.ticker-container {
         flex: 25%;
     }
+}
 
+@media only screen and (min-width: 1100px) {
     /* Charts displaying side by side */
     .chart-container {
         flex: 45%;
