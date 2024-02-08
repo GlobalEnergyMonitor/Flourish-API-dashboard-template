@@ -247,12 +247,19 @@ Things to note
 
     *via the terminal*
     * Clone this repo
-    * Create a new repo in GEM
-    * Clone the new repo to your machine
-    * Copy the files over, commit and push
+    * Create a new repo on GitHub in GEM organisation
+    * Make a new folder on your machine
+    * Copy the files over from your cloned version of this repo, into the new folder
+    * Make a new folder on your machine
+    * Run:
+    ```
+        git remote add origin https://github.com/GlobalEnergyMonitor/[NEW-GIT-REPO].git
+        git branch -M main
+        git push -u origin main
+    ```
     * Proceed to work with the new repo, make new branches or any changes you like
 
-2. Create a new instance on Heroku
+1. Create a new instance on Heroku
    * Create a new app
    * Connect to GitHub
      * Enter the name of your new repo
@@ -262,8 +269,8 @@ Things to note
      * Add buildpack -> nodejs
      * Reveal config vars -> under 'KEY' add 'FLOURISH_API_KEY' and paste a valid Flourish API key here
      _([Instructions for getting API Key here](https://developers.flourish.studio/api/getting-started/), or ask someone for an existing one)_
-3. Check the URL, hopefully it's all good!
-4. Add page to GEM site
+2. Check the URL, hopefully it's all good!
+3. Add page to GEM site
    * Go to WordPress
    * Create new page with Tracker template
    * Paste in Heroku page URL
