@@ -14,10 +14,7 @@ body {
 .tickers-container {
     display: flex;
     flex-wrap: wrap;
-}
-
-.ticker-container {
-    flex-grow: 1;
+    justify-content: center;
 }
 
 .controls-container {
@@ -141,6 +138,10 @@ body {
     .buttons-wrapper div:first-child:nth-last-child(4),
     .buttons-wrapper div:first-child:nth-last-child(4) ~ .filter-button {
         flex: 1 1 0px;
+    }
+    
+    .ticker-container {
+        flex: 1 1 0;
     }
 
     /* 4 tickers */

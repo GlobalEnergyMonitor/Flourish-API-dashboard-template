@@ -199,6 +199,7 @@ function renderTickers() {
                 }
             }
             tickers[id].flourish = new Flourish.Live(tickers[id].options);
+            tickers[id].flourish.iframe.style.width = "100%"; // needed to override full width in safari
         });
     }
 }
