@@ -1,0 +1,107 @@
+﻿[
+  {
+    "Region": "Northern Africa",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "Region": "Northern Europe",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "Region": "Western Europe",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "Region": "Melanesia",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "Region": "Northern America",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "400"
+  },
+  {
+    "Region": "Australia and New Zealand",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "1,000",
+    "Announced": "0"
+  },
+  {
+    "Region": "Latin America and the Caribbean",
+    "Construction": "120",
+    "Permitted": "600",
+    "Pre-permit": "726",
+    "Announced": "0"
+  },
+  {
+    "Region": "Southern Europe",
+    "Construction": "350",
+    "Permitted": "0",
+    "Pre-permit": "1,450",
+    "Announced": "0"
+  },
+  {
+    "Region": "Eastern Europe",
+    "Construction": "385",
+    "Permitted": "0",
+    "Pre-permit": "820",
+    "Announced": "2,718"
+  },
+  {
+    "Region": "Western Asia",
+    "Construction": "145",
+    "Permitted": "2,920",
+    "Pre-permit": "1,388",
+    "Announced": "1,000"
+  },
+  {
+    "Region": "Central Asia",
+    "Construction": "195",
+    "Permitted": "0",
+    "Pre-permit": "636",
+    "Announced": "5,244"
+  },
+  {
+    "Region": "Sub-Saharan Africa",
+    "Construction": "2,205",
+    "Permitted": "3,175",
+    "Pre-permit": "3,394",
+    "Announced": "5,600"
+  },
+  {
+    "Region": "South-eastern Asia",
+    "Construction": "21,574",
+    "Permitted": "8,070",
+    "Pre-permit": "6,680",
+    "Announced": "4,026"
+  },
+  {
+    "Region": "Southern Asia",
+    "Construction": "38,802",
+    "Permitted": "15,710",
+    "Pre-permit": "17,523",
+    "Announced": "12,770"
+  },
+  {
+    "Region": "Eastern Asia",
+    "Construction": "140,377",
+    "Permitted": "99,390",
+    "Pre-permit": "96,963",
+    "Announced": "61,110"
+  }
+]

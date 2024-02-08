@@ -1,0 +1,163 @@
+﻿[
+  {
+    "State": "Assam",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "State": "Delhi",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "State": "Himachal Pradesh",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "State": "Kerala",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "State": "Meghalaya",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "State": "Puducherry",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "State": "Punjab state",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "State": "Uttarakhand",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "State": "Haryana",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "800",
+    "Announced": "0"
+  },
+  {
+    "State": "Gujarat",
+    "Construction": "120",
+    "Permitted": "850",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "State": "Andhra Pradesh",
+    "Construction": "1,500",
+    "Permitted": "0",
+    "Pre-permit": "30",
+    "Announced": "0"
+  },
+  {
+    "State": "Karnataka",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "1,600"
+  },
+  {
+    "State": "Maharashtra",
+    "Construction": "660",
+    "Permitted": "0",
+    "Pre-permit": "1,320",
+    "Announced": "0"
+  },
+  {
+    "State": "Rajasthan",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "2,120",
+    "Announced": "250"
+  },
+  {
+    "State": "Bihar",
+    "Construction": "2,640",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "State": "West Bengal",
+    "Construction": "660",
+    "Permitted": "0",
+    "Pre-permit": "1,320",
+    "Announced": "800"
+  },
+  {
+    "State": "Madhya Pradesh",
+    "Construction": "0",
+    "Permitted": "4,180",
+    "Pre-permit": "660",
+    "Announced": "0"
+  },
+  {
+    "State": "Jharkhand",
+    "Construction": "3,720",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "1,600"
+  },
+  {
+    "State": "Telangana",
+    "Construction": "5,600",
+    "Permitted": "800",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "State": "Chhattisgarh",
+    "Construction": "3,000",
+    "Permitted": "1,600",
+    "Pre-permit": "2,193",
+    "Announced": "0"
+  },
+  {
+    "State": "Odisha",
+    "Construction": "1,400",
+    "Permitted": "4,070",
+    "Pre-permit": "1,700",
+    "Announced": "1,600"
+  },
+  {
+    "State": "Tamil Nadu",
+    "Construction": "5,700",
+    "Permitted": "1,320",
+    "Pre-permit": "2,640",
+    "Announced": "0"
+  },
+  {
+    "State": "Uttar Pradesh",
+    "Construction": "6,600",
+    "Permitted": "1,600",
+    "Pre-permit": "0",
+    "Announced": "2,920"
+  }
+]

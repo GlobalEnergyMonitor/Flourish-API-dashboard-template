@@ -1,0 +1,233 @@
+﻿[
+  {
+    "Country": "Madagascar",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "30",
+    "Announced": "0"
+  },
+  {
+    "Country": "Kenya",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "64",
+    "Announced": "0"
+  },
+  {
+    "Country": "Niger",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "200",
+    "Announced": "0"
+  },
+  {
+    "Country": "Eswatini",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "300",
+    "Announced": "0"
+  },
+  {
+    "Country": "Zambia",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "300"
+  },
+  {
+    "Country": "Malawi",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "400",
+    "Announced": "0"
+  },
+  {
+    "Country": "United States",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "400"
+  },
+  {
+    "Country": "Kyrgyzstan",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "600"
+  },
+  {
+    "Country": "Nigeria",
+    "Construction": "0",
+    "Permitted": "600",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "Country": "Thailand",
+    "Construction": "0",
+    "Permitted": "600",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "Country": "Uzbekistan",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "0",
+    "Announced": "600"
+  },
+  {
+    "Country": "Botswana",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "750",
+    "Announced": "0"
+  },
+  {
+    "Country": "Tanzania",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "600",
+    "Announced": "200"
+  },
+  {
+    "Country": "Australia",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "1,000",
+    "Announced": "0"
+  },
+  {
+    "Country": "Mozambique",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "300",
+    "Announced": "900"
+  },
+  {
+    "Country": "Brazil",
+    "Construction": "0",
+    "Permitted": "600",
+    "Pre-permit": "726",
+    "Announced": "0"
+  },
+  {
+    "Country": "Bosnia and Herzegovina",
+    "Construction": "0",
+    "Permitted": "0",
+    "Pre-permit": "1,450",
+    "Announced": "0"
+  },
+  {
+    "Country": "Cambodia",
+    "Construction": "315",
+    "Permitted": "700",
+    "Pre-permit": "0",
+    "Announced": "0"
+  },
+  {
+    "Country": "Japan",
+    "Construction": "650",
+    "Permitted": "0",
+    "Pre-permit": "500",
+    "Announced": "0"
+  },
+  {
+    "Country": "Mongolia",
+    "Construction": "350",
+    "Permitted": "450",
+    "Pre-permit": "400",
+    "Announced": "650"
+  },
+  {
+    "Country": "Russia",
+    "Construction": "285",
+    "Permitted": "0",
+    "Pre-permit": "820",
+    "Announced": "2,718"
+  },
+  {
+    "Country": "Philippines",
+    "Construction": "735",
+    "Permitted": "270",
+    "Pre-permit": "1,420",
+    "Announced": "700"
+  },
+  {
+    "Country": "Kazakhstan",
+    "Construction": "195",
+    "Permitted": "0",
+    "Pre-permit": "636",
+    "Announced": "4,044"
+  },
+  {
+    "Country": "T�rkiye",
+    "Construction": "145",
+    "Permitted": "2,920",
+    "Pre-permit": "1,388",
+    "Announced": "1,000"
+  },
+  {
+    "Country": "Pakistan",
+    "Construction": "732",
+    "Permitted": "1,290",
+    "Pre-permit": "2,720",
+    "Announced": "0"
+  },
+  {
+    "Country": "Zimbabwe",
+    "Construction": "605",
+    "Permitted": "1,120",
+    "Pre-permit": "750",
+    "Announced": "2,700"
+  },
+  {
+    "Country": "South Africa",
+    "Construction": "1,600",
+    "Permitted": "1,455",
+    "Pre-permit": "0",
+    "Announced": "1,500"
+  },
+  {
+    "Country": "Laos",
+    "Construction": "660",
+    "Permitted": "3,800",
+    "Pre-permit": "350",
+    "Announced": "2,226"
+  },
+  {
+    "Country": "Vietnam",
+    "Construction": "5,365",
+    "Permitted": "2,000",
+    "Pre-permit": "1,960",
+    "Announced": "0"
+  },
+  {
+    "Country": "Bangladesh",
+    "Construction": "5,820",
+    "Permitted": "0",
+    "Pre-permit": "2,020",
+    "Announced": "4,000"
+  },
+  {
+    "Country": "Indonesia",
+    "Construction": "14,499",
+    "Permitted": "700",
+    "Pre-permit": "2,950",
+    "Announced": "1,100"
+  },
+  {
+    "Country": "India",
+    "Construction": "31,600",
+    "Permitted": "14,420",
+    "Pre-permit": "12,783",
+    "Announced": "8,770"
+  },
+  {
+    "Country": "China",
+    "Construction": "136,237",
+    "Permitted": "98,940",
+    "Pre-permit": "96,063",
+    "Announced": "60,460"
+  }
+]

@@ -1,55 +1,31 @@
 {
-    "16578845": {
-        "title": "What is the age breakdown of oil and gas plants?",
-        "subtitle": "Oil and gas power capacity by age and type of plants, in megawatts (W)",
-        "x_axis": "Decade",
+    "16647921": {
+        "title": "Where in China is coal capacity under development?",
+        "subtitle": "Coal-fired power under development by status and Chinese province, megawatts (MW)",
+        "x_axis": "Province",
         "values": [
-            "Allam-Fetvedt Cycle",
-            "Combined Cycle",
-            "Gas Turbine",
-            "Integrated Solar Combined Cycle",
-            "Internal Combustion",
-            "Internal Combustion Combined Cycle",
-            "Steam Turbine",
-            "Unknown"
+            "Construction", "Permitted", "Pre-permit", "Announced"
         ],
         "pop_up": null,
-        "summary": "age_text",
-        "dataset": "gas_data_age",
-        "initial_state": "Global",
+        "dataset": "china_provinces_data",
+        "initial_state": "All",
         "filterable": true,
-        "filter_by": "Country"
+        "filter_by": [
+            "Construction", "Permitted", "Pre-permit", "Announced"
+        ]
     },
-    "16578858": {
-        "title": "How much gas and oil power has been added since 2000?",
-        "subtitle": "Operating oil and gas power capacity added by country by plant start year, in gigawatts (GW)",
-        "x_axis": "Year",
+    "16644559": {
+        "title": "Which regions have coal capacity under development?",
+        "subtitle": "Coal-fired power under development by status and by region, in megawatts (MW)",
+        "x_axis": "Region",
         "values": [
-            "Added (MW)"
+            "Construction", "Permitted", "Pre-permit", "Announced"
         ],
-        "pop_up": ["Added (MW)"],
-        "summary": "additions_text",
-        "dataset": "gas_data_additions",
-        "initial_state": "Global",
+        "dataset": "region_data",
+        "initial_state": "All",
         "filterable": true,
-        "filter_by": "Country"
-    },
-    "16578852": {
-        "title": "How has gas and oil power capacity changed status recently?",
-        "subtitle": "Gas and oil power capacity by status, in megawatts (GW)",
-        "x_axis": "Year",
-        "values": [
-            "operating",
-            "mothballed",
-            "announced",
-            "pre-construction",
-            "construction",
-            "shelved"
-        ],
-        "summary": "status_text",
-        "dataset": "gas_data_status",
-        "initial_state": "Global",
-        "filterable": true,
-        "filter_by": "Country"
+        "filter_by": [
+            "Construction", "Permitted", "Pre-permit", "Announced"
+        ]
     }
 }
