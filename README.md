@@ -28,8 +28,8 @@ Pushing your changes to the main branch on github should trigger an automatic re
 {
     "flourish_ids": [], // array of ids of each flourish graphic
     "input_type": "", // "buttons" or "dropdown"
-    "input_filter": "", // the value of datasets that should be filtered on, needs to match an id column in each dataset
-    "input_default": "", // the default value of this filter - needs to match a value in the id column
+    "input_filter": "", // string or array. If string: the value of datasets that should be filtered on, needs to match an id column in every dataset. if Array: names of columns which can be filtered on, must be present across graphs; can also have 'All' (optional)
+    "input_default": "", // the default value of this filter - needs to match a value in the id column or if using array/column approach the name of one of the columns or 'All' if added as an option
     "overall_summary": true, // boolean true/false - if there is an overall summary displayed above the graphs
     "tickers": [{ // array of objects, each representing a ticker to be shown in the intro. If no tickers needed, set to `null`
         "id": "", // id of ticker (must match dataset)
@@ -99,6 +99,33 @@ Pushing your changes to the main branch on github should trigger an automatic re
             "font-size": "3.5rem"
         }
     }]
+}
+```
+
+**Example with Column names for filtering**
+```
+{
+    "flourish_ids": [
+        "16647921",
+        "16644559"
+    ],
+    "input_type": "dropdown",
+    "input_filter": ["All", "Construction", "Permitted", "Pre-permit", "Announced"],
+    "input_default": "All",
+    "input_key": "status"
+}
+```
+If you don't want to have an 'All' option to combine the columns, you can remove it, eg:
+```
+{
+    "flourish_ids": [
+        "16647921",
+        "16644559"
+    ],
+    "input_type": "dropdown",
+    "input_filter": ["Construction", "Permitted", "Pre-permit", "Announced"],
+    "input_default": "Construction",
+    "input_key": "status"
 }
 ```
 
@@ -184,7 +211,7 @@ Pushing your changes to the main branch on github should trigger an automatic re
     "buttons_label": "",  // This is the CTA before the input. If using a dropdown, the key should be `dropdown_label`
     "buttons": [ // Each entry here reflects a dropdown/button option and the values that will be outputted when it is selected. if using a dropdown, the key should be `dropdown`. 
       {
-        "INPUT_FILTER": "INPUT_VALUE",
+        "INPUT_FILTER": "INPUT_VALUE", // this is only needed if filtering on ID value, using the string option for filter_input rather than the array option
         "overall_summary": "", // summary shown above all graphs / in intro
         "graph-1_text": "", // summary shown above graph 1
         "graph-2_text": "", // summary shown above graph 2
