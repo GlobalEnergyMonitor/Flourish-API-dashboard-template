@@ -5,6 +5,7 @@ body {
     text-align: center;
     color: #1f1f1f;
     max-width: 2500px;
+    padding-bottom: 1rem;
 }
 
 .chart-container {
