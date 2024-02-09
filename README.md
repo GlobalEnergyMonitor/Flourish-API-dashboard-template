@@ -322,7 +322,7 @@ PORT=8080
 * Copy the below into the code block:
     ```
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.9/iframeResizer.min.js"></script>
-    <iframe id="ID-OF-IFRAME" width="100%" src="LINK-TO-HEROKU-PAGE frameborder="0"></iframe>
+    <iframe id="ID-OF-IFRAME" width="100%" src="LINK-TO-HEROKU-PAGE" frameborder="0"></iframe>
     <script>
         iFrameResize({ checkOrigin: false }, '#ID-OF-IFRAME')
     </script>
