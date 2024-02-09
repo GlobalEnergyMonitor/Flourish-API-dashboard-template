@@ -317,3 +317,14 @@ PORT=8080
 * run `npm start`
 * open your browser and navigate to http://localhost:8080/
 
+# To embed as iframe
+* Navigate to WP page and insert HTML code block
+* Copy the below into the code block:
+    ```
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.9/iframeResizer.min.js"></script>
+    <iframe id="ID-OF-IFRAME" width="100%" src="LINK-TO-HEROKU-PAGE frameborder="0"></iframe>
+    <script>
+        iFrameResize({ checkOrigin: false }, '#ID-OF-IFRAME')
+    </script>
+    ```
+* That _should_ work 🤞 
