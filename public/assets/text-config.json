@@ -1,5 +1,5 @@
 {
-    "title": "Gas dashboard",
+    "title": "Test embed",
     "footer": "Test footer",
     "buttons_label": "Select a status: ",
     "no_data": "No data available for {{selected}}",
