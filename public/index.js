@@ -446,12 +446,15 @@ function markdownToHTML(string) {
 }
 
 function addExtraVisualisations() {
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('vis-container');
+    document.querySelector('body').insertBefore(wrapper, document.querySelector('.dashboard-footer'))
     const IDsToAdd = config.dashboard.extra_visualisations;
     IDsToAdd.forEach(id => {
         const container = document.createElement('div');
         container.id = `vis-${id}`;
         container.classList.add('chart-container');
-        document.querySelector('.flourish-container').appendChild(container);
+        wrapper.appendChild(container);
         new Flourish.Live({
             container: `#vis-${id}`,
             api_url: "/flourish",
