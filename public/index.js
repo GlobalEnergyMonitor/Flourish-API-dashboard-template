@@ -83,7 +83,7 @@ function implementDropdown() {
 
     if (!config.text.dropdown) throw new Error('page-config specifies input of dropdown but text-config does not match')
 
-    let dropdownData = (typeof config.text.dropdown === 'string') ? 
+    let dropdownData = (typeof config.dashboard.input_filter === 'string') ? 
         config.text.dropdown.map(entry => entry[config.dashboard.input_filter])
         : config.dashboard.input_filter;
     
@@ -252,14 +252,25 @@ function insertChartSummary(id) {
     if (currentGraph.summary) {
         const summary = document.createElement('p');
         summary.classList.add('chart-summary');
-        const summaryTextObj = filterSummaries(currentGraph.filter_by, config.charts[id].initial_state);
+        let summaryTextObj;
+
+        if (typeof currentGraph.filter_by === 'string') {
+            summaryTextObj = filterSummaries(currentGraph.filter_by, config.charts[id].initial_state);
+        }
+        else {
+            summaryTextObj = config.text[(config.dashboard.input_type === 'dropdown') ? 'dropdown' : 'buttons'].filter(entry => entry[config.dashboard.input_key] === config.dashboard.input_default)[0];
+        }
         summary.innerHTML = markdownToHTML(summaryTextObj[currentGraph.summary]);
         document.querySelector(`#chart-${id}`).appendChild(summary);
     }
 }
 
 function updateSummaries(key) {
-    const summaryTextObj = filterSummaries(config.dashboard.input_filter, getSelectedText());
+    console.log('input =>', key);
+    const filterKey = (typeof config.dashboard.input_filter === 'string') ? config.dashboard.input_filter : config.dashboard.input_key;
+    console.log('filter key', filterKey);
+    const summaryTextObj = filterSummaries(filterKey, getSelectedText());
+    console.log('summary text obj', summaryTextObj);
 
     if (config.dashboard.overall_summary) updateOverallSummary(summaryTextObj);
     if (config.dashboard.tickers) updateTickers(key);
@@ -272,11 +283,19 @@ function updateOverallSummary(summaryTextObj) {
 }
 
 function updateGraphSummaries(key, summaryTextObj) {
+    console.log('summary text', summaryTextObj);
     const graphIDs = config.dashboard.flourish_ids;
     graphIDs.forEach(id => {
         const currentGraph = config.charts[id];
         if (currentGraph.filterable && currentGraph.summary) {
-            const filteredData = config.datasets[id].filter(entry => formatName(entry[currentGraph.filter_by]) === key);
+            let filteredData;
+            if (typeof config.charts[id].filter_by === 'string') {
+                filteredData = config.datasets[id].filter(entry => formatName(entry[currentGraph.filter_by]) === key);
+            }
+            else {
+                if (getUnformattedInputName(key) === 'All') filteredData = config.datasets[id];
+                else filteredData = filterDataOnColumnName(key, id);
+            }
             const summary = document.querySelector(`#chart-${id} .chart-summary`);
             if (summary) {
                 summary.innerHTML = markdownToHTML(
@@ -392,7 +411,13 @@ function initialTickerData() {
 }
 
 function filterSummaries(key, selected) {
-    return config.text[(config.dashboard.input_type === 'dropdown') ? 'dropdown' : 'buttons'].filter(entry => entry[key] === selected)[0];
+    console.log('FILTER SUM', key, selected);
+    const summaryObj = config.text[(config.dashboard.input_type === 'dropdown') ? 'dropdown' : 'buttons'];
+    console.log('summary obj unfilterered', summaryObj);
+    summaryObj.map(entry => {
+        console.log(entry[key], entry, key, selected, entry[key] === selected);
+        return entry[key] === selected
+    })[0];
 }
 
 function filterTickerData(key) {
