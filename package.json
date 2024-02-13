@@ -1,6 +1,6 @@
 {
   "name": "flourish-api-test",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "testing ground for flourish api dashbaord",
   "main": "index.js",
   "scripts": {
