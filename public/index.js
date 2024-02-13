@@ -67,6 +67,9 @@ async function getData() {
                 })
                 .then(() => renderTickers())
                 .then(() => renderVisualisation())
+                .then(()=> {
+                    if (config.dashboard.extra_visualisations) addExtraVisualisations();
+                })
                 .catch((error) => {
                     console.error(error);
                 });
@@ -249,7 +252,8 @@ function renderVisualisation() {
 
 function insertOverallSummary() {
     let summaryObj = config.text[(config.dashboard.input_type === 'dropdown') ? 'dropdown' : 'buttons'];
-    summaryObj = summaryObj.filter(entry => entry[config.dashboard.input_filter] === config.dashboard.input_default)[0];
+    const filterKey = (typeof config.dashboard.input_filter === 'string') ? config.dashboard.input_filter : config.dashboard.input_key;
+    summaryObj = summaryObj.filter(entry => entry[filterKey] === config.dashboard.input_default)[0];
     return summaryObj.overall_summary;
 }
 
@@ -439,4 +443,20 @@ function getSelectedButton() {
 
 function markdownToHTML(string) {
     return converter.makeHtml(string).replace(/<\/?p[^>]*>/g, '');;
+}
+
+function addExtraVisualisations() {
+    const IDsToAdd = config.dashboard.extra_visualisations;
+    IDsToAdd.forEach(id => {
+        const container = document.createElement('div');
+        container.id = `vis-${id}`;
+        container.classList.add('chart-container');
+        document.querySelector('.flourish-container').appendChild(container);
+        new Flourish.Live({
+            container: `#vis-${id}`,
+            api_url: "/flourish",
+            api_key: "",
+            base_visualisation_id: id,
+        });
+    });
 }

@@ -7,5 +7,6 @@
     "input_filter": ["All", "Construction", "Permitted", "Pre-permit", "Announced"],
     "input_default": "All",
     "input_key": "status",
-    "overall_summary": true
+    "overall_summary": true,
+    "extra_visualisations": ["15745513"]
 }
