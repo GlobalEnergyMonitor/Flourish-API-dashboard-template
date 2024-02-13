@@ -9,6 +9,7 @@
         "pop_up": null,
         "dataset": "china_provinces_data",
         "initial_state": "All",
+        "summary": "status_text",
         "filterable": true,
         "filter_by": [
             "Construction", "Permitted", "Pre-permit", "Announced"
