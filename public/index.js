@@ -83,7 +83,7 @@ function implementDropdown() {
 
     if (!config.text.dropdown) throw new Error('page-config specifies input of dropdown but text-config does not match')
 
-    let dropdownData = (typeof config.text.dropdown === 'string') ? 
+    let dropdownData = (typeof config.dashboard.input_filter === 'string') ? 
         config.text.dropdown.map(entry => entry[config.dashboard.input_filter])
         : config.dashboard.input_filter;
     
