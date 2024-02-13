@@ -6,5 +6,6 @@
     "input_type": "buttons",
     "input_filter": ["All", "Construction", "Permitted", "Pre-permit", "Announced"],
     "input_default": "All",
-    "input_key": "status"
+    "input_key": "status",
+    "overall_summary": true
 }
