@@ -121,7 +121,7 @@ function implementFilterButtons() {
 
     if (!config.text.buttons) throw new Error('page-config specifies input of buttons but text-config does not match')
 
-    let buttonData = (typeof config.text.dropdown === 'string') ? 
+    let buttonData = (typeof config.dashboard.input_filter === 'string') ? 
         config.text.buttons.map(entry => entry[config.dashboard.input_filter])
         : config.dashboard.input_filter;
 
