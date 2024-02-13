@@ -266,15 +266,19 @@ function insertChartSummary(id) {
 }
 
 function updateSummaries(key) {
-    console.log('input =>', key);
     const filterKey = (typeof config.dashboard.input_filter === 'string') ? config.dashboard.input_filter : config.dashboard.input_key;
-    console.log('filter key', filterKey);
     const summaryTextObj = filterSummaries(filterKey, getSelectedText());
-    console.log('summary text obj', summaryTextObj);
 
     if (config.dashboard.overall_summary) updateOverallSummary(summaryTextObj);
     if (config.dashboard.tickers) updateTickers(key);
     updateGraphSummaries(key, summaryTextObj);
+}
+
+function filterSummaries(key, selected) {
+    const summaryObj = config.text[(config.dashboard.input_type === 'dropdown') ? 'dropdown' : 'buttons'];
+    return summaryObj.filter(entry => {
+        return entry[key] === selected
+    })[0];
 }
 
 function updateOverallSummary(summaryTextObj) {
@@ -283,7 +287,6 @@ function updateOverallSummary(summaryTextObj) {
 }
 
 function updateGraphSummaries(key, summaryTextObj) {
-    console.log('summary text', summaryTextObj);
     const graphIDs = config.dashboard.flourish_ids;
     graphIDs.forEach(id => {
         const currentGraph = config.charts[id];
@@ -408,16 +411,6 @@ function filterDataOnColumnName(key, id) {
 
 function initialTickerData() {
     return config.datasets.ticker.data.filter(entry => entry[config.dashboard.input_filter] === config.dashboard.input_default);
-}
-
-function filterSummaries(key, selected) {
-    console.log('FILTER SUM', key, selected);
-    const summaryObj = config.text[(config.dashboard.input_type === 'dropdown') ? 'dropdown' : 'buttons'];
-    console.log('summary obj unfilterered', summaryObj);
-    summaryObj.map(entry => {
-        console.log(entry[key], entry, key, selected, entry[key] === selected);
-        return entry[key] === selected
-    })[0];
 }
 
 function filterTickerData(key) {
