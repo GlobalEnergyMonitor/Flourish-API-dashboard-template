@@ -3,12 +3,9 @@
         "title": "Coal power capacity change since 2000",
         "subtitle": "Change in operating coal-fired power capacity from 2000 to 2023, in gigawatts (GW)",
         "x_axis": "Country",
-        "values": [
-             "Year", "Capacity"
-        ],
+        "y_axis": "Year",
         "pop_up": null,
         "dataset": "grouping_dumbbell_data",
-        "summary": "dumbbell_text",
         "initial_state": "G20",
         "filterable": true,
         "filter_by": "Grouping"
@@ -22,7 +19,6 @@
             "Operating", "Under development"
         ],
         "dataset": "grouping_bar_data",
-        "summary": "bar_text",
         "initial_state": "G20",
         "filterable": true,
         "filter_by": "Grouping"

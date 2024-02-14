@@ -3,7 +3,7 @@
         "16795370", 
         "16798215"
     ],
-    "overall_summary": false,
+    "overall_summary": true,
     "input_type": "buttons",
     "input_filter": "Grouping",
     "input_default": "G20",
