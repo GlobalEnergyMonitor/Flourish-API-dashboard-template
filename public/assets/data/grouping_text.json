@@ -1,0 +1,14 @@
+﻿[
+  {
+    "Grouping": "EU",
+    "overall_summary": "EU coal power capacity has gone down significantly in the past few years. This is quite significant",
+    "dumbbell_text": "Coal capacity in the EU has falled in all 27 countries since 2000",
+    "bar_text": "Only 100 MW of coal is currently under development country in the EU"
+  },
+  {
+    "Grouping": "G20",
+    "overall_summary": "G20 coal power capacity has remained largely the same in the past few years. This is quite significant",
+    "dumbbell_text": "Coal capacirt in G20 countries has remained largely unchanged",
+    "bar_text": "Only Turkey has coal currently under development in the G20"
+  }
+]

@@ -1,0 +1,296 @@
+﻿[
+  {
+    "Country": "Argentina",
+    "Year": "2000",
+    "Capacity": "375",
+    "description": "increased its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "Argentina",
+    "Year": "2023",
+    "Capacity": "495",
+    "description": "increased its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "Australia",
+    "Year": "2000",
+    "Capacity": "27748",
+    "description": "reduced its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "Australia",
+    "Year": "2023",
+    "Capacity": "22897",
+    "description": "reduced its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "Austria",
+    "Year": "2000",
+    "Capacity": "1993",
+    "description": "retired all its coal power capacity from 2000",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Austria",
+    "Year": "2023",
+    "Capacity": "0",
+    "description": "retired all its coal power capacity from 2000",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Belgium",
+    "Year": "2000",
+    "Capacity": "2593",
+    "description": "retired all its coal power capacity from 2000",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Belgium",
+    "Year": "2023",
+    "Capacity": "0",
+    "description": "retired all its coal power capacity from 2000",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Brazil",
+    "Year": "2000",
+    "Capacity": "1303",
+    "description": "more than doubled its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "Brazil",
+    "Year": "2023",
+    "Capacity": "3105",
+    "description": "more than doubled its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "Bulgaria",
+    "Year": "2000",
+    "Capacity": "5625",
+    "description": "reduced its coal power capacity from 2000",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Bulgaria",
+    "Year": "2023",
+    "Capacity": "5109",
+    "description": "reduced its coal power capacity from 2000",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Canada",
+    "Year": "2000",
+    "Capacity": "18564",
+    "description": "more than halved its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "Canada",
+    "Year": "2023",
+    "Capacity": "4877",
+    "description": "more than halved its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "France",
+    "Year": "2000",
+    "Capacity": "8402",
+    "description": "more than halved its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "France",
+    "Year": "2023",
+    "Capacity": "2507",
+    "description": "more than halved its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "France",
+    "Year": "2000",
+    "Capacity": "8402",
+    "description": "more than halved its coal power capacity from 2000",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "France",
+    "Year": "2023",
+    "Capacity": "2507",
+    "description": "more than halved its coal power capacity from 2000",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Italy",
+    "Year": "2000",
+    "Capacity": "8670",
+    "description": "reduced its coal power capacity from 2000",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Italy",
+    "Year": "2023",
+    "Capacity": "6806",
+    "description": "reduced its coal power capacity from 2000",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Italy",
+    "Year": "2000",
+    "Capacity": "8670",
+    "description": "reduced its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "Italy",
+    "Year": "2023",
+    "Capacity": "6806",
+    "description": "reduced its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "United Kingdom",
+    "Year": "2000",
+    "Capacity": "34657",
+    "description": "more than halved its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "United Kingdom",
+    "Year": "2023",
+    "Capacity": "2738",
+    "description": "more than halved its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "United States",
+    "Year": "2000",
+    "Capacity": "334239",
+    "description": "reduced its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "United States",
+    "Year": "2023",
+    "Capacity": "206942",
+    "description": "reduced its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "T�rkiye",
+    "Year": "2000",
+    "Capacity": "6591",
+    "description": "more than doubled its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "T�rkiye",
+    "Year": "2023",
+    "Capacity": "20854",
+    "description": "more than doubled its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "Poland",
+    "Year": "2000",
+    "Capacity": "29171",
+    "description": "reduced its coal power capacity from 2000",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Poland",
+    "Year": "2023",
+    "Capacity": "29160",
+    "description": "reduced its coal power capacity from 2000",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Portugal",
+    "Year": "2000",
+    "Capacity": "1978",
+    "description": "retired all its coal power capacity from 2000",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Portugal",
+    "Year": "2023",
+    "Capacity": "0",
+    "description": "retired all its coal power capacity from 2000",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Romania",
+    "Year": "2000",
+    "Capacity": "7735",
+    "description": "more than halved its coal power capacity from 2000",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Romania",
+    "Year": "2023",
+    "Capacity": "2955",
+    "description": "more than halved its coal power capacity from 2000",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Russia",
+    "Year": "2000",
+    "Capacity": "40283",
+    "description": "reduced its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "Russia",
+    "Year": "2023",
+    "Capacity": "37328",
+    "description": "reduced its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "South Africa",
+    "Year": "2000",
+    "Capacity": "38389",
+    "description": "increased its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "South Africa",
+    "Year": "2023",
+    "Capacity": "45895",
+    "description": "increased its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "South Korea",
+    "Year": "2000",
+    "Capacity": "14266",
+    "description": "more than doubled its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "South Korea",
+    "Year": "2023",
+    "Capacity": "39094",
+    "description": "more than doubled its coal power capacity from 2000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "Spain",
+    "Year": "2000",
+    "Capacity": "13801",
+    "description": "more than halved its coal power capacity from 2000",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Spain",
+    "Year": "2023",
+    "Capacity": "2909",
+    "description": "more than halved its coal power capacity from 2000",
+    "Grouping": "EU"
+  }
+]

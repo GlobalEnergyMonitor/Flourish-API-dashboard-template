@@ -18,6 +18,23 @@ body {
     justify-content: center;
 }
 
+.vis-container {
+    position: relative;
+    padding-top: 1rem;
+}
+
+.vis-container::before {
+    content: "";
+    background: #969696;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 50%;
+    right: 0;
+    margin-left: 25%;
+  }
+
 .controls-container {
     padding: 0 0.5rem;
     margin: auto auto 2rem;

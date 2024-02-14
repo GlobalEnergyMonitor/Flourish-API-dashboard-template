@@ -254,6 +254,7 @@ function insertOverallSummary() {
     let summaryObj = config.text[(config.dashboard.input_type === 'dropdown') ? 'dropdown' : 'buttons'];
     const filterKey = (typeof config.dashboard.input_filter === 'string') ? config.dashboard.input_filter : config.dashboard.input_key;
     summaryObj = summaryObj.filter(entry => entry[filterKey] === config.dashboard.input_default)[0];
+    if (!summaryObj.overall_summary) throw new Error('Overall Summary set to true but no text values given');
     return summaryObj.overall_summary;
 }
 
@@ -270,8 +271,10 @@ function insertChartSummary(id) {
         else {
             summaryTextObj = config.text[(config.dashboard.input_type === 'dropdown') ? 'dropdown' : 'buttons'].filter(entry => entry[config.dashboard.input_key] === config.dashboard.input_default)[0];
         }
-        summary.innerHTML = markdownToHTML(summaryTextObj[currentGraph.summary]);
-        document.querySelector(`#chart-${id}`).appendChild(summary);
+        if (summaryTextObj[currentGraph.summary]) {
+            summary.innerHTML = markdownToHTML(summaryTextObj[currentGraph.summary]);
+            document.querySelector(`#chart-${id}`).appendChild(summary);
+        }
     }
 }
 
@@ -446,12 +449,15 @@ function markdownToHTML(string) {
 }
 
 function addExtraVisualisations() {
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('vis-container');
+    document.querySelector('body').insertBefore(wrapper, document.querySelector('.dashboard-footer'))
     const IDsToAdd = config.dashboard.extra_visualisations;
     IDsToAdd.forEach(id => {
         const container = document.createElement('div');
         container.id = `vis-${id}`;
         container.classList.add('chart-container');
-        document.querySelector('.flourish-container').appendChild(container);
+        wrapper.appendChild(container);
         new Flourish.Live({
             container: `#vis-${id}`,
             api_url: "/flourish",
