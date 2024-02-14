@@ -1,0 +1,140 @@
+﻿[
+  {
+    "Country": "Austria",
+    "Operating": "1993",
+    "Under development": "0",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Belgium",
+    "Operating": "2593",
+    "Under development": "0",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Bulgaria",
+    "Operating": "5625",
+    "Under development": "0",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Italy",
+    "Operating": "8670",
+    "Under development": "0",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Poland",
+    "Operating": "29171",
+    "Under development": "100",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Portugal",
+    "Operating": "1978",
+    "Under development": "0",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Portugal",
+    "Operating": "1978",
+    "Under development": "0",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Romania",
+    "Operating": "7735",
+    "Under development": "0",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Romania",
+    "Operating": "7735",
+    "Under development": "0",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Spain",
+    "Operating": "13801",
+    "Under development": "0",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "France",
+    "Operating": "8402",
+    "Under development": "0",
+    "Grouping": "EU"
+  },
+  {
+    "Country": "Italy",
+    "Operating": "8670",
+    "Under development": "0",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "Argentina",
+    "Operating": "375",
+    "Under development": "120",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "Australia",
+    "Operating": "27748",
+    "Under development": "1000",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "Brazil",
+    "Operating": "1303",
+    "Under development": "1326",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "Canada",
+    "Operating": "18564",
+    "Under development": "0",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "France",
+    "Operating": "8402",
+    "Under development": "0",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "United Kingdom",
+    "Operating": "34657",
+    "Under development": "0",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "United States",
+    "Operating": "334239",
+    "Under development": "400",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "T�rkiye",
+    "Operating": "6591",
+    "Under development": "5453",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "Russia",
+    "Operating": "40283",
+    "Under development": "3823",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "South Africa",
+    "Operating": "38389",
+    "Under development": "4555",
+    "Grouping": "G20"
+  },
+  {
+    "Country": "South Korea",
+    "Operating": "14266",
+    "Under development": "3140",
+    "Grouping": "G20"
+  }
+]
