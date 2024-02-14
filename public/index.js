@@ -351,13 +351,14 @@ function implentGraph(id) {
             }
         };
         if (options.template === "@flourish/line-bar-pie") {
-            // graphs[id].opts.version = 25;
+            graphs[id].opts.version = 25;
             graphs[id].opts.bindings.data.label = config.charts[id].x_axis; // this seems to be the X axis
             graphs[id].opts.bindings.data.value = config.charts[id].values; // this is the actual bar
         }
         if (options.template === "@flourish/scatter") {
+            console.log('is scatter');
             graphs[id].opts.data.data = formatData(graphs[id].opts.data.data, options);
-            
+            console.log('meta', graphs[id].opts)
         }
         if (config.charts[id].filterable) {
             graphs[id].opts.bindings.data.metadata = config.charts[id].pop_up; // this is pop ups, can have multiple values
