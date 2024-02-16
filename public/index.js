@@ -94,6 +94,7 @@ function implementDropdown() {
         const opt = document.createElement('option');
         opt.value = formatName(input);
         opt.text = input;
+        if (input === config.input_default) opt.selected = true;
         dropdownEl.appendChild(opt);
     });
 
