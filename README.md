@@ -30,6 +30,7 @@ Pushing your changes to the main branch on github should trigger an automatic re
     "input_type": "", // "buttons" or "dropdown"
     "input_filter": "", // string or array. If string: the value of datasets that should be filtered on, needs to match an id column in every dataset. if Array: names of columns which can be filtered on, must be present across graphs; can also have 'All' (optional)
     "input_default": "", // the default value of this filter - needs to match a value in the id column or if using array/column approach the name of one of the columns or 'All' if added as an option
+    "input_key": "", // only needed if input_filter is an array - key in text-config dropdown/buttons option which references each filter value in input_filter
     "overall_summary": true, // boolean true/false - if there is an overall summary displayed above the graphs
     "tickers": [{ // array of objects, each representing a ticker to be shown in the intro. If no tickers needed, set to `null`
         "id": "", // id of ticker (must match dataset)
@@ -114,9 +115,11 @@ Pushing your changes to the main branch on github should trigger an automatic re
     "input_type": "dropdown",
     "input_filter": ["All", "Construction", "Permitted", "Pre-permit", "Announced"],
     "input_default": "All",
-    "input_key": "status"
+    "input_key": "status" // this is needed if using series filter
 }
 ```
+Make sure to add the property `"input_key"` which references the key used in the dropdown/buttons object in `text-config` to configure the different info shown on filter.
+
 If you don't want to have an 'All' option to combine the columns, you can remove it, eg:
 ```
 {
