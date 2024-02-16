@@ -1,40 +1,12 @@
 {
     "flourish_ids": [
-        "16795370", 
-        "16798215"
+        "16647921",
+        "16644559"
     ],
-    "overall_summary": false,
     "input_type": "buttons",
-    "input_filter": "Grouping",
-    "input_default": "G20",
-        "ticker_text_font-size": "2rem",
-    "ticker_data": "grouping_ticker_text",
-    "tickers": [{
-        "id": "summary_1",
-        "decimal_places": 0,
-        "style": {
-            "color": "#BF532C",
-            "font-weight": "bold",
-            "font-size": "3rem"
-        }
-    },
-    {
-        "id": "summary_2",
-        "decimal_places": 1,
-        "style": {
-            "color": "#3f6950",
-            "font-weight": "bold",
-            "font-size": "3rem"
-        }
-    },
-    {
-        "id": "summary_3",
-        "decimal_places": 2,
-        "style": {
-            "color": "#761201",
-            "font-weight": "bold",
-            "font-size": "3rem"
-        }
-    }],
-    "extra_visualisations": ["15745513"]
+    "input_filter": ["All", "Construction", "Permitted", "Pre-permit", "Announced"],
+    "input_default": "All",
+    "input_key": "status",
+    "overall_summary": true,
+    "extra_visualisations": ["15745513", "14662890"]
 }

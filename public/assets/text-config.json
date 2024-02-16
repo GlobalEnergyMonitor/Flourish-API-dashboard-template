@@ -1,26 +1,44 @@
 {
-    "title": "New dashboard test embed",
-    "footer": "All data comes from the Global Coal Plant Tracker. The data was last updated in July 2023",
-    "buttons_label": "Select a country grouping: ",
-    "no_data": "No data available for {{selected}}",
-    "buttons": [
-  {
-    "Grouping": "EU",
-    "summary_1": "<span>{{89681}} MW</span><br>operating coal power capacity",
-    "summary_1_color": "#bf532c",
-    "summary_2": "<span>{{100}} MW</span><br>coal power under development",
-    "summary_2_color": "#5f9e79",
-    "summary_3": "<span>{{30522}} MW</span><br>less coal than in 2000",
-    "summary_3_color": "#5f9e79"
-  },
-  {
-    "Grouping": "G20",
-    "summary_1": "<span>{{533487}} MW</span><br>operating coal power capacity",
-    "summary_1_color": "#bf532c",
-    "summary_2": "<span>{{19817}} MW</span><br>coal power under development",
-    "summary_2_color": "#f27d16",
-    "summary_3": "<span>{{139949}} MW</span><br>less coal than in 2000",
-    "summary_3_color": "#5f9e79"
-  }
-]
+  "title": "Test embed",
+  "footer": "Test footer",
+  "buttons_label": "Select a status: ",
+  "no_data": "No data available for {{selected}}",
+  "buttons": [
+    {
+      "status": "All",
+      "overall_summary": "La la la",
+      "status_text": "There is xxxx and _yyyyy",
+      "china_regions_text": "The largest share of gas and oil power plants in Global is 10-19 years old",
+      "additions_text": "Overall, global gas and oil power capacity since 2000 has increased by 1,483,701 MW"
+    },
+    {
+      "status": "Construction",
+      "overall_summary": "La la la",
+      "status_text": "Afghanistan has no operating gas and oil power capacity",
+      "china_regions_text": "The largest share of gas and oil power plants in Global is 10-19 years old",
+      "additions_text": "Overall, Afghanistan has not added any gas and oil power capacity since 2000"
+    },
+    {
+      "status": "Permitted",
+      "overall_summary": "La la la",
+      "status_text": "Albania has no operating gas and oil power capacity",
+      "age_text": "Albania does not have any operating gas and oil power",
+      "china_regions_text": "The largest share of gas and oil power plants in Global is 10-19 years old",
+      "additions_text": "Overall, Albania has not added any gas and oil power capacity since 2000"
+    },
+    {
+      "status": "Pre-permit",
+      "overall_summary": "La la la",
+      "status_text": "Algeria has 3,091 MW more operating gas and oil power capacity than it did in 2021",
+      "china_regions_text": "The largest share of gas and oil power plants in Global is 10-19 years old",  
+      "additions_text": "Overall Algeria has added 19,200 MW of gas and oil power capacity since 2000"
+    },
+    {
+      "status": "Announced",
+      "overall_summary": "La la la",
+      "status_text": "Angola has the same operating gas and oil power capacity as it did in 2021",
+      "china_regions_text": "The largest share of gas and oil power plants in Global is 10-19 years old",
+      "additions_text": "Overall Angola has added 720 MW of gas and oil power capacity since 2000"
+    }
+  ]
 }

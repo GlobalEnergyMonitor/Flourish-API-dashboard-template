@@ -140,7 +140,6 @@ If you don't want to have an 'All' option to combine the columns, you can remove
         "subtitle": "", // subtitle of chart
         "x_axis": "", // column name in data
         "values": [], // array of strings of column names to be represented. Can be one or more (eg for simple bar vs stacked column)
-        "pop_up": [], // array of strings of column names to be shown in tool tip - can be one or more values. Make `null` if not needed
         "summary": "", // the key in `text-config.json` to show as a summary above the chart. Make`null` if not needed
         "dataset": "", // the name of the datset, expected to live at `public/assets/data`. Without `.json` suffix
         "filterable": true, // boolean true/false: if chart responds to page level filtering
@@ -160,7 +159,6 @@ If you don't want to have an 'All' option to combine the columns, you can remove
         "values": [
             "Yearly Construction Starts"
         ],
-        "pop_up": null,
         "dataset": "data_construction",
         "summary": null,
         "filterable": false
@@ -177,9 +175,6 @@ If you don't want to have an 'All' option to combine the columns, you can remove
             "Ultra-supercritical",
             "Unknown"
         ],
-        "pop_up": [
-            "text"
-        ],
         "summary": null,
         "dataset": "data_age",
         "initial_state": "Global",
@@ -193,7 +188,6 @@ If you don't want to have an 'All' option to combine the columns, you can remove
         "values": [
             "Capacity"
         ],
-        "pop_up": null,
         "summary": "cumulative_summary",
         "dataset": "data_cumulative",
         "initial_state": "Global",
