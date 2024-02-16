@@ -421,11 +421,14 @@ function filterDataOnColumnName(key, id) {
 }
 
 function initialTickerData() {
-    return config.datasets.ticker.data.filter(entry => entry[config.dashboard.input_filter] === config.dashboard.input_default);
+    let data = config.datasets.ticker.data;
+    if (typeof config.dashboard.input_filter === 'string') return data.filter(entry => entry[config.dashboard.input_filter] === config.dashboard.input_default);
+    return data;
 }
 
 function filterTickerData(key) {
-    return config.datasets.ticker.data.filter(entry => entry[config.dashboard.input_filter] === key)[0];
+    const inputKey = (typeof config.dashboard.input_filter === 'string') ? 'input_filter' : 'input_key';
+    return config.datasets.ticker.data.filter(entry => entry[config.dashboard[inputKey]] === key)[0];
 }
 
 function getSelectedText() {
