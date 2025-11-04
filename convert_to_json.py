@@ -7,7 +7,7 @@ import numpy as np
 
 
 
-def convert_data(key, countries, years_dict, capacity, statuses_lng, statuses_gas, subregions, tracker):
+def convert_data(prioritize, key, countries, years_dict, capacity, statuses_lng, statuses_gas, subregions, tracker):
     client_secret_full_path = os.path.expanduser("~/") + client_secret
 
     # Set up Google Sheets API credentials
@@ -20,7 +20,12 @@ def convert_data(key, countries, years_dict, capacity, statuses_lng, statuses_ga
     gsheets = gspread_creds.open_by_key(key)  
     sheet_names = [sheet.title for sheet in gsheets.worksheets()]
     print(f'This is sheet_names: \n {sheet_names}')
-    for sn in sheet_names:
+    if prioritize != [""]:
+        sn_list = prioritize
+    else:
+        sn_list = sheet_names
+        
+    for sn in sn_list:
         print(sn)
         data = pd.DataFrame(gsheets.worksheet(sn).get_all_records(expected_headers=[])) # get_all_records(expected_headers=[]) get_all_values()
         data.fillna(0.0, inplace=True)
@@ -43,7 +48,7 @@ def convert_data(key, countries, years_dict, capacity, statuses_lng, statuses_ga
             else:
                 data[capcol] = 0.0
             
-            data.to_json(f'trackers/ggpft-dashboard/public/assets/data_2025/{sn}_ggft_output_filled.json', orient='records', force_ascii=False, indent=2)
+            data.to_json(f'../trackers/ggpft-dashboard/public/assets/data_2025/{sn}_ggft_output_filled.json', orient='records', force_ascii=False, indent=2)
             
             
         
@@ -59,9 +64,17 @@ def convert_data(key, countries, years_dict, capacity, statuses_lng, statuses_ga
         elif sn in ['25071902','25071855']:
             print(sn)
             print(data)
-
+            input('Check out the $ situation before')
+            
+            data['Known project finance, million $US'] = data['Known project finance, million $US'].apply(
+                lambda x: f"${float(x):,.1f}" if isinstance(x, (int, float)) or (isinstance(x, str) and x.replace('.','',1).isdigit()) else x
+            )
+            
+            print(sn)
+            print(data)
+            input('Check out the $ situation after')
             # Optionally, save the updated dataframe to JSON
-            data.to_json(f'trackers/ggpft-dashboard/public/assets/data_2025/{sn}_ggft_output_filled.json', orient='records', force_ascii=False, indent=2)
+            data.to_json(f'../trackers/ggpft-dashboard/public/assets/data_2025/{sn}_ggft_output_filled.json', orient='records', force_ascii=False, indent=2)
         
         elif sn in ['25051331', '25051458']:
             if sn in ['25051331']:
@@ -105,7 +118,7 @@ def convert_data(key, countries, years_dict, capacity, statuses_lng, statuses_ga
                 mask = (data['Country'] == row['Country']) & (data['Status'] == row['Status'])
                 data.loc[mask, capcol] = row[capcol]
             
-            data.to_json(f'trackers/ggpft-dashboard/public/assets/data_2025/{sn}_ggft_output_filled.json', orient='records', force_ascii=False, indent=2)
+            data.to_json(f'../trackers/ggpft-dashboard/public/assets/data_2025/{sn}_ggft_output_filled.json', orient='records', force_ascii=False, indent=2)
 
         elif sn in ['25052602', '25052730']:   
             capcol = capacity[sn]
@@ -145,14 +158,14 @@ def convert_data(key, countries, years_dict, capacity, statuses_lng, statuses_ga
                 axis=1
             )
             
-            data.to_json(f'trackers/ggpft-dashboard/public/assets/data_2025/{sn}_ggft_output_filled.json', orient='records', force_ascii=False, indent=2)
-                                         
+            data.to_json(f'../trackers/ggpft-dashboard/public/assets/data_2025/{sn}_ggft_output_filled.json', orient='records', force_ascii=False, indent=2)
+                                        
                     
         elif sn in ['Operating bioenergy capacity', 'Bioenergy Capacity by Fuel Type', 'Woody Biomass Operating Capacity']:
             
             snupdated = sn.lower().replace(' ', '_')
-            data.to_json(f'trackers/{tracker}-dashboard/public/assets/data_2025/{snupdated}_{tracker}_output_filled.json', orient='records', force_ascii=False, indent=2)
-             
+            data.to_json(f'../trackers/{tracker}-dashboard/public/assets/data_2025/{snupdated}_{tracker}_output_filled.json', orient='records', force_ascii=False, indent=2)
+            
         elif sn in ['24825200']:
             
             # make total_capacity column
@@ -235,7 +248,7 @@ def convert_data(key, countries, years_dict, capacity, statuses_lng, statuses_ga
             print(data[data['Country/Area'] == 'World'])            
             snupdated = sn.lower().replace(' ', '_')
             # then fill in this data into the df
-            data.to_json(f'trackers/{tracker}-dashboard/public/assets/data_2025/{snupdated}_{tracker}_output_filled.json', orient='records', force_ascii=False, indent=2)
+            data.to_json(f'../trackers/{tracker}-dashboard/public/assets/data_2025/{snupdated}_{tracker}_output_filled.json', orient='records', force_ascii=False, indent=2)
             
     
     sheetdata = gsheets.worksheet(sn) 
@@ -248,7 +261,7 @@ def convert_data(key, countries, years_dict, capacity, statuses_lng, statuses_ga
 
 
 if __name__ == "__main__":
-    trackeracro = 'gbpt' #ggpft
+    trackeracro = 'ggpft' # 'gbpt' #ggpft
     ggft_countries = [
         "All",
         "Bangladesh",
@@ -278,6 +291,11 @@ if __name__ == "__main__":
     gbpt_key = '10iz-Yz_fXq8sbywNQMbOIKgtqUr6FoRKv44kLQI3G9I'
     if trackeracro in ['gbpt']:
         key = gbpt_key
+    else:
+        key = ggft_key
+        
+    prioritize = ['25071855', '25071902']
+        
         
     capacity_col = {'25088546': 'capacity (mtpa)',
                     '25088647': 'capacity (MW)',
@@ -287,7 +305,7 @@ if __name__ == "__main__":
                     '25052730': 'capacity (MW)'}
     
     
-    data = convert_data(key, ggft_countries, years_dict, capacity_col, statuses_lng, statuses_gas, subregions, trackeracro)
+    data = convert_data(prioritize, key, ggft_countries, years_dict, capacity_col, statuses_lng, statuses_gas, subregions, trackeracro)
 
 # dataticker file
 
