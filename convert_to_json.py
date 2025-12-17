@@ -7,7 +7,7 @@ import numpy as np
 
 
 
-def convert_data(prioritize, key, countries, years_dict, capacity, statuses_lng, statuses_gas, subregions, tracker):
+def convert_data(prioritize, key, countries, years_dict, capacity, statuses_lng, statuses_gas, subregions, tracker, concat_phrase_financier_known):
     client_secret_full_path = os.path.expanduser("~/") + client_secret
 
     # Set up Google Sheets API credentials
@@ -19,20 +19,28 @@ def convert_data(prioritize, key, countries, years_dict, capacity, statuses_lng,
 
     gsheets = gspread_creds.open_by_key(key)  
     sheet_names = [sheet.title for sheet in gsheets.worksheets()]
+    done_sn = []
     print(f'This is sheet_names: \n {sheet_names}')
-    if prioritize != [""]:
+    if prioritize != []:
         sn_list = prioritize
     else:
         sn_list = sheet_names
         
     for sn in sn_list:
         print(sn)
-        data = pd.DataFrame(gsheets.worksheet(sn).get_all_records(expected_headers=[])) # get_all_records(expected_headers=[]) get_all_values()
+        done_sn.append(sn)
+        data = pd.DataFrame(gsheets.worksheet(sn).get_all_records(head=1)) # get_all_records(expected_headers=[]) get_all_values()
+        # make it so capcol for sn is a number on intake
         data.fillna(0.0, inplace=True)
-        data = data.replace("", "0.0")
+        data = data.replace("", 0.0)
         if sn in ['25088546', '25088647']:
-            capcol = capacity[sn]
+            capcol = capacity[sn][0]
+            finalcapcol = capacity[sn][1]
+
             print(f'this is capacity col: {capcol}')
+
+            print(f'This is unique capacity types for {sn}: {set(data[capcol].to_list())}')
+
             # Ensure all country-year combinations exist, fill missing with capacity 0.0
             expected_years = years_dict[sn]
             expected_rows = []
@@ -48,6 +56,10 @@ def convert_data(prioritize, key, countries, years_dict, capacity, statuses_lng,
             else:
                 data[capcol] = 0.0
             
+            
+            data.rename(columns={capcol:finalcapcol}, inplace=True)
+            
+            
             data.to_json(f'../trackers/ggpft-dashboard/public/assets/data_2025/{sn}_ggft_output_filled.json', orient='records', force_ascii=False, indent=2)
             
             
@@ -60,20 +72,68 @@ def convert_data(prioritize, key, countries, years_dict, capacity, statuses_lng,
                     summary_text = summary_text.replace('placeholder', str(summary_sum))
                     print(f'New summary text: {summary_text}')
                     data.loc[row, f'summary_{i}'] = summary_text
+            
+            data.to_json(f'../trackers/ggpft-dashboard/public/assets/data_2025/{sn}_ggft_output_filled.json', orient='records', force_ascii=False, indent=2)
+
                     
         elif sn in ['25071902','25071855']:
+
+            # first first adjust Financier Name to have the hover of Known Projects Financed
+            # use concat_phrase_financier_known as the in between for Financier Name and Known Projects Financed 
+            
+            data['Financier'] = data.apply(lambda row: f"{row['Financier Name']}{concat_phrase_financier_known}{row['Known Projects Financed']}", axis=1)
+            
+            # then rename the column to Financier
+
+            # first handle the strings that should be floats so sorting works. 
+        
+            # if finacne value isa string replace. $ with '' and , with ''
+            print(f'this is set of known financing')
+            # TODO check this now convert all to int
+            data['Known project finance, million $US'] = data['Known project finance, million $US'].replace('Unknown/unspecified', 0.0)
+            print(set(data['Known project finance, million $US'].to_list()))
+            # not there anymore $
+            # data['Known project finance, million $US'] = data['Known project finance, million $US'].apply(
+            #     lambda x: x.replace('$', '').replace(',','')
+            # )         
+            
+            # handles for converting to numeric and replacing unknown with na
+            data['Known project finance, million $US'] = pd.to_numeric(data['Known project finance, million $US'], errors='coerce')
+               
+            # # second handle Unknown/unspecified
+            # data['Known project finance, million $US'] = data['Known project finance, million $US'].apply(
+            #     lambda x: pd.NA if pd.isna(x) or str(x).lower() == 'unknown/unspecified' else x
+            # )
+            # lambda x:  isinstance(x, (int, float)) or (isinstance(x, str) and x.replace('.','',1).isdigit()float(x) if pd.isna(x) == False else x
+          
+            # data['Known project finance, million $US'] = data['Known project finance, million $US'].apply(
+            #     lambda x: float(x) if pd.isna(x) == False else x
+            # )
+            
+            # sort by descending order for Known Project Finance in Country (or ALL), US$ Million
+            data.sort_values(by=['Country', 'Debt or Equity','Known project finance, million $US'], ascending=[True, True, False],inplace=True,) # na_position={'last'} not working not sure why
+            print(data[['Country', 'Debt or Equity','Known project finance, million $US']])
+            input('Check out sorting results')
+            
             print(sn)
             print(data)
             input('Check out the $ situation before')
-            
+            # update for new column name for finance data key 
             data['Known project finance, million $US'] = data['Known project finance, million $US'].apply(
-                lambda x: f"${float(x):,.1f}" if isinstance(x, (int, float)) or (isinstance(x, str) and x.replace('.','',1).isdigit()) else x
+                lambda x: f"${float(x):,.1f}" if isinstance(x, (int, float)) and (pd.isna(x) ==False) or (isinstance(x, str) and x.replace('.','',1).isdigit()) else x
             )
+
+            data.fillna('Unknown/unspecified', inplace=True) 
+
+            # remove excess columns
+            data = data[['Country','Financier', 'Debt or Equity', 'Known project finance, million $US']]
+            
             
             print(sn)
             print(data)
             input('Check out the $ situation after')
-            # Optionally, save the updated dataframe to JSON
+            
+            
             data.to_json(f'../trackers/ggpft-dashboard/public/assets/data_2025/{sn}_ggft_output_filled.json', orient='records', force_ascii=False, indent=2)
         
         elif sn in ['25051331', '25051458']:
@@ -86,8 +146,12 @@ def convert_data(prioritize, key, countries, years_dict, capacity, statuses_lng,
             print(data)
             expected_rows = []
             
-            capcol = capacity[sn]
+            capcol = capacity[sn][0]
+            finalcapcol = capacity[sn][1]
             print(f'this is capacity col: {capcol}')
+
+            print(f'This is unique capacity types for {sn}: {set(data[capcol].to_list())}')
+
             for country in countries:
                 for status in statuses:
                     expected_rows.append({'Country': country, 'Status': status})
@@ -96,6 +160,8 @@ def convert_data(prioritize, key, countries, years_dict, capacity, statuses_lng,
             merged = pd.DataFrame(expected_rows)
             data = pd.merge(merged, data, on=['Country', 'Status'], how='left')
             if capcol in data.columns:
+                # coerce it to numberic then fillna or just replace ""
+                data[capcol] = data[capcol].replace("", 0.0)
                 data[capcol] = data[capcol].fillna(0.0)
             else:
                 data[capcol] = 0.0
@@ -108,7 +174,9 @@ def convert_data(prioritize, key, countries, years_dict, capacity, statuses_lng,
                 statusnow = all_rows.loc[row,'Status']
                 # Calculate the sum of capacity for the current status (excluding 'All')
                 status_mask = (data['Status'] == statusnow) & (data['Country'] != 'All')
-                total_capacity = data.loc[status_mask, capcol].sum()
+                # TODO issue here in that it is not all numbers need to coerce and remove '' probably
+                
+                total_capacity = data.loc[status_mask, capcol].sum() 
                 all_rows.loc[row, capcol] = int(total_capacity)
                 
             
@@ -118,47 +186,53 @@ def convert_data(prioritize, key, countries, years_dict, capacity, statuses_lng,
                 mask = (data['Country'] == row['Country']) & (data['Status'] == row['Status'])
                 data.loc[mask, capcol] = row[capcol]
             
+            data.rename(columns={capcol:finalcapcol}, inplace=True)
+
+            
             data.to_json(f'../trackers/ggpft-dashboard/public/assets/data_2025/{sn}_ggft_output_filled.json', orient='records', force_ascii=False, indent=2)
 
-        elif sn in ['25052602', '25052730']:   
-            capcol = capacity[sn]
-            print(f'this is capacity col: {capcol}')
-            # Ensure all country-year combinations exist, fill missing with capacity 0.0
-            expected_years = years_dict[sn]
-            expected_rows = []
-            for country in countries:
-                for year in expected_years:
-                    expected_rows.append({'Country': country, 'Start year': year})
-            # this fills in for each country all the years we need
-            merged = pd.DataFrame(expected_rows)
-            data = pd.merge(
-                merged, data, 
-                on=['Country', 'Start year'], 
-                how='left'
-            )
-            if capcol in data.columns:
-                data[capcol] = data[capcol].fillna(0.0)
-            else:
-                data[capcol] = 0.0
+        # elif sn in ['25052602', '25052730']:   
+        #     capcol = capacity[sn]
+        #     print(f'this is capacity col: {capcol}')
+
+        #     print(f'This is unique capacity types for {sn}: {set(data[capcol].to_list())}')
+
+        #     # Ensure all country-year combinations exist, fill missing with capacity 0.0
+        #     expected_years = years_dict[sn]
+        #     expected_rows = []
+        #     for country in countries:
+        #         for year in expected_years:
+        #             expected_rows.append({'Country': country, 'Start year': year})
+        #     # this fills in for each country all the years we need
+        #     merged = pd.DataFrame(expected_rows)
+        #     data = pd.merge(
+        #         merged, data, 
+        #         on=['Country', 'Start year'], 
+        #         how='left'
+        #     )
+        #     if capcol in data.columns:
+        #         data[capcol] = data[capcol].fillna(0.0)
+        #     else:
+        #         data[capcol] = 0.0
                 
-            # now we need to make sure the subregion is copied from the coutnry's subregion for all that are new
-            # nullsr = data[data['Subregion'].isna()]
-            # for idx, row in data.iterrows():
-            #     mask = (nullsr['Country'] == row['Country'])
-            #     data.loc[mask, 'Subregion'] = row['Subregion']
+        #     # now we need to make sure the subregion is copied from the coutnry's subregion for all that are new
+        #     # nullsr = data[data['Subregion'].isna()]
+        #     # for idx, row in data.iterrows():
+        #     #     mask = (nullsr['Country'] == row['Country'])
+        #     #     data.loc[mask, 'Subregion'] = row['Subregion']
             
-            # mapping
+        #     # mapping
             
-            # Create a mapping from country to subregion (excluding missing subregions)
-            country_to_subregion_dict = data.dropna(subset=['Subregion']).drop_duplicates(subset=['Country'])[['Country', 'Subregion']].set_index('Country')['Subregion'].to_dict()
+        #     # Create a mapping from country to subregion (excluding missing subregions)
+        #     country_to_subregion_dict = data.dropna(subset=['Subregion']).drop_duplicates(subset=['Country'])[['Country', 'Subregion']].set_index('Country')['Subregion'].to_dict()
             
-            # Assign subregion to rows where it's missing, based on country
-            data['Subregion'] = data.apply(
-                lambda row: country_to_subregion_dict.get(row['Country'], row['Subregion']) if pd.isna(row['Subregion']) else row['Subregion'],
-                axis=1
-            )
+        #     # Assign subregion to rows where it's missing, based on country
+        #     data['Subregion'] = data.apply(
+        #         lambda row: country_to_subregion_dict.get(row['Country'], row['Subregion']) if pd.isna(row['Subregion']) else row['Subregion'],
+        #         axis=1
+        #     )
             
-            data.to_json(f'../trackers/ggpft-dashboard/public/assets/data_2025/{sn}_ggft_output_filled.json', orient='records', force_ascii=False, indent=2)
+        #     data.to_json(f'../trackers/ggpft-dashboard/public/assets/data_2025/{sn}_ggft_output_filled.json', orient='records', force_ascii=False, indent=2)
                                         
                     
         elif sn in ['Operating bioenergy capacity', 'Bioenergy Capacity by Fuel Type', 'Woody Biomass Operating Capacity']:
@@ -264,11 +338,14 @@ if __name__ == "__main__":
     trackeracro = 'ggpft' # 'gbpt' #ggpft
     ggft_countries = [
         "All",
+        "Australia",
         "Bangladesh",
+        "Canada",
         "Cambodia",
         "Indonesia",
         "Japan",
         "Malaysia",
+        "Mexico",
         "Myanmar",
         "Pakistan",
         "Philippines",
@@ -276,36 +353,47 @@ if __name__ == "__main__":
         "South Korea",
         "Taiwan",
         "Thailand",
-        "Vietnam"
+        "Vietnam",
+        
     ]
-    subregions = ['South Asia', 'Southeast Asia', 'East Asia', 'Southeast Asia', 'East Asia', 'Southeast Asia']
-    years_dict = {'25088546': list(range(2025,2032)),
-                  '25088647': list(range(2025, 2042)),
-                  '25052602': list(range(2025,2032)),
-                  '25052730': list(range(2025, 2042))}
     
-    statuses_lng = ['Proposed', 'Construction', 'Shelved/shelved-inferred']
+    
+    ### ESTABLISH THE DATA BUCKET CONSTRAINTS  FOR EACH CHART 
+    subregions = ['South Asia', 'Southeast Asia', 'North America', 'Oceania']
+    years_dict = {'25088546': list(range(2022,2032)),
+                  '25088647': list(range(2025, 2042))
+                  }
+    
+    statuses_lng = ['Proposed', 'Construction', 'Shelved/shelved-inferred', 'Idle', 'Operating']
     statuses_gas = ['Announced', 'Pre-construction', 'Construction', 'Shelved/shelved-inferred']
-
+       
+    prioritize = [] # '25071855', '25071902'
+    
+    # Between Financier Name and Known Projects Financed
+    concat_phrase_financier_known = " >> <b>Known projects financed:</b> "
+    
     ggft_key = '19H_FlvKGPrlYokHPcdlDxCY1-Wb5zFxWcKtCeMGcpls'
+    # ggft_key_for_financing_only = '18-Nc_38Tc_BLWcnjT_FE949roJWnI-LYY7w99prt43k' # was for iterative fixes for first time
+    # ggft_key_financing_alice = '17KopMnSzt_PUUO_0EbcfYFnIyVe7BStWOPAv3sudVSE'
     gbpt_key = '10iz-Yz_fXq8sbywNQMbOIKgtqUr6FoRKv44kLQI3G9I'
     if trackeracro in ['gbpt']:
         key = gbpt_key
+    elif '25071855' and '25071902' in prioritize:
+        # key = ggft_key_financing_alice
+        key = ggft_key_for_financing_only
     else:
         key = ggft_key
+
+    print(f'This is key: {key}')
         
-    prioritize = ['25071855', '25071902']
-        
-        
-    capacity_col = {'25088546': 'capacity (mtpa)',
-                    '25088647': 'capacity (MW)',
-                    '25051331': 'capacity (mtpa)', 
-                    '25051458': 'capacity (MW)',
-                    '25052602': 'capacity (mtpa)',
-                    '25052730': 'capacity (MW)'}
+    capacity_col = {'25088546': ('capacity (mtpa)', 'New LNG capacity (mtpa)'),
+                    '25088647': ('capacity (MW)', 'New gas capacity (MW)'),
+                    '25051331': ('capacity (mtpa)', 'Capacity (mtpa)'), 
+                    '25051458': ('capacity (MW)', 'Capacity (MW)') ,
+                    }
     
     
-    data = convert_data(prioritize, key, ggft_countries, years_dict, capacity_col, statuses_lng, statuses_gas, subregions, trackeracro)
+    data = convert_data(prioritize, key, ggft_countries, years_dict, capacity_col, statuses_lng, statuses_gas, subregions, trackeracro, concat_phrase_financier_known)
 
 # dataticker file
 
